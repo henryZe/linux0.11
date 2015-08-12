@@ -1,0 +1,713 @@
+00000000000i[     ] Bochs x86 Emulator 2.3.7
+00000000000i[     ]   Build from CVS snapshot, on June 3, 2008
+00000000000i[     ] System configuration
+00000000000i[     ]   processors: 1 (cores=1, HT threads=1)
+00000000000i[     ]   A20 line support: yes
+00000000000i[     ]   APIC support: no
+00000000000i[     ] CPU configuration
+00000000000i[     ]   level: 5
+00000000000i[     ]   SMP support: no
+00000000000i[     ]   FPU support: yes
+00000000000i[     ]   MMX support: yes
+00000000000i[     ]   SSE support: no
+00000000000i[     ]   CLFLUSH support: no
+00000000000i[     ]   VME support: yes
+00000000000i[     ]   3dnow! support: no
+00000000000i[     ]   PAE support: no
+00000000000i[     ]   PGE support: no
+00000000000i[     ]   PSE support: yes
+00000000000i[     ]   x86-64 support: no
+00000000000i[     ]   SEP support: no
+00000000000i[     ]   MWAIT support: no
+00000000000i[     ]   XSAVE support: no
+00000000000i[     ]   AES support: no
+00000000000i[     ] Optimization configuration
+00000000000i[     ]   Guest2HostTLB support: no
+00000000000i[     ]   RepeatSpeedups support: no
+00000000000i[     ]   Icache support: no
+00000000000i[     ]   Trace cache support: no
+00000000000i[     ]   Fast function calls: no
+00000000000i[     ] Devices configuration
+00000000000i[     ]   ACPI support: no
+00000000000i[     ]   NE2000 support: no
+00000000000i[     ]   PCI support: no
+00000000000i[     ]   SB16 support: no
+00000000000i[     ]   USB support: no
+00000000000i[     ]   VGA extension support: vbe 
+00000000000i[MEM0 ] allocated memory at 0xb5eba008. after alignment, vector=0xb5ebb000
+00000000000i[MEM0 ] 16.00MB
+00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('../bochs/BIOS-bochs-latest')
+00000000000i[MEM0 ] rom at 0xc0000/39424 ('../bochs/vgabios.bin')
+00000000000i[CMOS ] Using local time for initial clock
+00000000000i[CMOS ] Setting initial clock to: Thu Jul  9 02:33:56 2015 (time0=1436434436)
+00000000000i[DMA  ] channel 4 used by cascade
+00000000000i[DMA  ] channel 2 used by Floppy Drive
+00000000000i[FDD  ] fd0: '../linux-0.11/Image' ro=0, h=2,t=80,spt=18
+00000000000i[MEM0 ] Register memory access handlers: 0x000a0000 - 0x000bffff
+00000000000i[XGUI ] test_alloc_colors: 16 colors available out of 16 colors tried
+00000000000i[XGUI ] font 8 wide x 16 high, display depth = 24
+00000000000i[VGA  ] interval=300000
+00000000000i[MEM0 ] Register memory access handlers: 0xe0000000 - 0xe07fffff
+00000000000i[VGA  ] VBE Bochs Display Extension Enabled
+00000000000i[     ] init_mem of 'harddrv' plugin device by virtual method
+00000000000i[     ] init_mem of 'keyboard' plugin device by virtual method
+00000000000i[     ] init_mem of 'serial' plugin device by virtual method
+00000000000i[     ] init_mem of 'parallel' plugin device by virtual method
+00000000000i[     ] init_mem of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] init_mem of 'speaker' plugin device by virtual method
+00000000000i[     ] init_dev of 'harddrv' plugin device by virtual method
+00000000000i[HD   ] HD on ata0-0: '../hdc-0.11.img' 'flat' mode 
+00000000000i[HD   ] translation on ata0-0 set to 'none'
+00000000000i[HD   ] Using boot sequence floppy, none, none
+00000000000i[HD   ] Floppy boot signature check is enabled
+00000000000i[     ] init_dev of 'keyboard' plugin device by virtual method
+00000000000i[KBD  ] will paste characters every 1000 keyboard ticks
+00000000000i[     ] init_dev of 'serial' plugin device by virtual method
+00000000000i[SER  ] com1 at 0x03f8 irq 4
+00000000000i[     ] init_dev of 'parallel' plugin device by virtual method
+00000000000i[PAR  ] parallel port 1 at 0x0378 irq 7
+00000000000i[     ] init_dev of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] init_dev of 'speaker' plugin device by virtual method
+00000000000i[SPEAK] Failed to open /dev/console: Resource temporarily unavailable
+00000000000i[SPEAK] Deactivating beep on console
+00000000000i[     ] register state of 'harddrv' plugin device by virtual method
+00000000000i[     ] register state of 'keyboard' plugin device by virtual method
+00000000000i[     ] register state of 'serial' plugin device by virtual method
+00000000000i[     ] register state of 'parallel' plugin device by virtual method
+00000000000i[     ] register state of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] register state of 'speaker' plugin device by virtual method
+00000000000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+00000000000i[CPU  ] cpu hardware reset
+00000000000i[     ] reset of 'harddrv' plugin device by virtual method
+00000000000i[     ] reset of 'keyboard' plugin device by virtual method
+00000000000i[     ] reset of 'serial' plugin device by virtual method
+00000000000i[     ] reset of 'parallel' plugin device by virtual method
+00000000000i[     ] reset of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] reset of 'speaker' plugin device by virtual method
+00000000000i[XGUI ] [x] Mouse off
+00000000000i[GDBST] addr 30 len 4
+00000000000i[GDBST] setting breakpoint at 669d
+00000000000i[GDBST] setting breakpoint at 6694
+00000003445i[BIOS ] $Revision: 1.194 $ $Date: 2007/12/23 19:46:27 $
+00000317645i[KBD  ] reset-disable command received
+00000336389i[BIOS ] Starting rombios32
+00000337085i[BIOS ] ram_size=0x00f00000
+00000337599i[BIOS ] Found 1 cpu(s)
+00000562097i[VBIOS] VGABios $Id: vgabios.c,v 1.66 2006/07/10 07:47:51 vruppert Exp $
+00000562168i[VGA  ] VBE known Display Interface b0c0
+00000562200i[VGA  ] VBE known Display Interface b0c4
+00000565125i[VBIOS] VBE Bios $Id: vbe.c,v 1.58 2006/08/19 09:39:43 vruppert Exp $
+00000888589i[BIOS ] ata0-0: PCHS=204/16/38 translation=none LCHS=204/16/38
+00001200000i[XGUI ] charmap update. Font Height is 16
+00004768774i[BIOS ] IDE time out
+00004967637i[BIOS ] Booting from 0000:7c00
+00015838500i[FDD  ] partial read() on floppy image returns 161/512
+00015883455i[FDD  ] read() on floppy image returns 0
+00015928410i[FDD  ] read() on floppy image returns 0
+00015973365i[FDD  ] read() on floppy image returns 0
+00016018320i[FDD  ] read() on floppy image returns 0
+00016063275i[FDD  ] read() on floppy image returns 0
+00016108230i[FDD  ] read() on floppy image returns 0
+00016153185i[FDD  ] read() on floppy image returns 0
+00016198140i[FDD  ] read() on floppy image returns 0
+00016243095i[FDD  ] read() on floppy image returns 0
+00016289295i[FDD  ] read() on floppy image returns 0
+00016334250i[FDD  ] read() on floppy image returns 0
+00016379205i[FDD  ] read() on floppy image returns 0
+00016424160i[FDD  ] read() on floppy image returns 0
+00016469115i[FDD  ] read() on floppy image returns 0
+00016514070i[FDD  ] read() on floppy image returns 0
+00016559025i[FDD  ] read() on floppy image returns 0
+00016603980i[FDD  ] read() on floppy image returns 0
+00016648935i[FDD  ] read() on floppy image returns 0
+00016695142i[FDD  ] read() on floppy image returns 0
+00016740097i[FDD  ] read() on floppy image returns 0
+00016785052i[FDD  ] read() on floppy image returns 0
+00016830007i[FDD  ] read() on floppy image returns 0
+00016874962i[FDD  ] read() on floppy image returns 0
+00016919917i[FDD  ] read() on floppy image returns 0
+00016964872i[FDD  ] read() on floppy image returns 0
+00017009827i[FDD  ] read() on floppy image returns 0
+00017054782i[FDD  ] read() on floppy image returns 0
+00017100970i[FDD  ] read() on floppy image returns 0
+00017145925i[FDD  ] read() on floppy image returns 0
+00017190880i[FDD  ] read() on floppy image returns 0
+00017235835i[FDD  ] read() on floppy image returns 0
+00017280790i[FDD  ] read() on floppy image returns 0
+00017325745i[FDD  ] read() on floppy image returns 0
+00017370700i[FDD  ] read() on floppy image returns 0
+00017415655i[FDD  ] read() on floppy image returns 0
+00017460610i[FDD  ] read() on floppy image returns 0
+00017505565i[FDD  ] read() on floppy image returns 0
+00017550520i[FDD  ] read() on floppy image returns 0
+00017595475i[FDD  ] read() on floppy image returns 0
+00017640430i[FDD  ] read() on floppy image returns 0
+00017685385i[FDD  ] read() on floppy image returns 0
+00017730340i[FDD  ] read() on floppy image returns 0
+00017775295i[FDD  ] read() on floppy image returns 0
+00017820250i[FDD  ] read() on floppy image returns 0
+00017865205i[FDD  ] read() on floppy image returns 0
+00017911401i[FDD  ] read() on floppy image returns 0
+00017956356i[FDD  ] read() on floppy image returns 0
+00018001311i[FDD  ] read() on floppy image returns 0
+00018046266i[FDD  ] read() on floppy image returns 0
+00018091221i[FDD  ] read() on floppy image returns 0
+00018136176i[FDD  ] read() on floppy image returns 0
+00018181131i[FDD  ] read() on floppy image returns 0
+00018226086i[FDD  ] read() on floppy image returns 0
+00018271041i[FDD  ] read() on floppy image returns 0
+00018315996i[FDD  ] read() on floppy image returns 0
+00018360951i[FDD  ] read() on floppy image returns 0
+00018405906i[FDD  ] read() on floppy image returns 0
+00018450861i[FDD  ] read() on floppy image returns 0
+00018495816i[FDD  ] read() on floppy image returns 0
+00018540771i[FDD  ] read() on floppy image returns 0
+00018585726i[FDD  ] read() on floppy image returns 0
+00018630681i[FDD  ] read() on floppy image returns 0
+00018675636i[FDD  ] read() on floppy image returns 0
+00018721831i[FDD  ] read() on floppy image returns 0
+00018766786i[FDD  ] read() on floppy image returns 0
+00018811741i[FDD  ] read() on floppy image returns 0
+00018856696i[FDD  ] read() on floppy image returns 0
+00018901651i[FDD  ] read() on floppy image returns 0
+00018946606i[FDD  ] read() on floppy image returns 0
+00018991561i[FDD  ] read() on floppy image returns 0
+00019036516i[FDD  ] read() on floppy image returns 0
+00019081471i[FDD  ] read() on floppy image returns 0
+00019126426i[FDD  ] read() on floppy image returns 0
+00019171381i[FDD  ] read() on floppy image returns 0
+00019216336i[FDD  ] read() on floppy image returns 0
+00019261291i[FDD  ] read() on floppy image returns 0
+00019306246i[FDD  ] read() on floppy image returns 0
+00019351201i[FDD  ] read() on floppy image returns 0
+00019396156i[FDD  ] read() on floppy image returns 0
+00019441111i[FDD  ] read() on floppy image returns 0
+00019486066i[FDD  ] read() on floppy image returns 0
+00019532281i[FDD  ] read() on floppy image returns 0
+00019577236i[FDD  ] read() on floppy image returns 0
+00019622191i[FDD  ] read() on floppy image returns 0
+00019667146i[FDD  ] read() on floppy image returns 0
+00019712101i[FDD  ] read() on floppy image returns 0
+00019757056i[FDD  ] read() on floppy image returns 0
+00019802011i[FDD  ] read() on floppy image returns 0
+00019846966i[FDD  ] read() on floppy image returns 0
+00019891921i[FDD  ] read() on floppy image returns 0
+00019936876i[FDD  ] read() on floppy image returns 0
+00019981831i[FDD  ] read() on floppy image returns 0
+00020026786i[FDD  ] read() on floppy image returns 0
+00020071741i[FDD  ] read() on floppy image returns 0
+00020116696i[FDD  ] read() on floppy image returns 0
+00020161651i[FDD  ] read() on floppy image returns 0
+00020206606i[FDD  ] read() on floppy image returns 0
+00020251561i[FDD  ] read() on floppy image returns 0
+00020296516i[FDD  ] read() on floppy image returns 0
+00020342711i[FDD  ] read() on floppy image returns 0
+00020387666i[FDD  ] read() on floppy image returns 0
+00020432621i[FDD  ] read() on floppy image returns 0
+00020477576i[FDD  ] read() on floppy image returns 0
+00020522531i[FDD  ] read() on floppy image returns 0
+00020567486i[FDD  ] read() on floppy image returns 0
+00020612441i[FDD  ] read() on floppy image returns 0
+00020657396i[FDD  ] read() on floppy image returns 0
+00020702351i[FDD  ] read() on floppy image returns 0
+00020747306i[FDD  ] read() on floppy image returns 0
+00020792261i[FDD  ] read() on floppy image returns 0
+00020837216i[FDD  ] read() on floppy image returns 0
+00020882171i[FDD  ] read() on floppy image returns 0
+00020927126i[FDD  ] read() on floppy image returns 0
+00020972081i[FDD  ] read() on floppy image returns 0
+00021017036i[FDD  ] read() on floppy image returns 0
+00021061991i[FDD  ] read() on floppy image returns 0
+00021106946i[FDD  ] read() on floppy image returns 0
+00021153142i[FDD  ] read() on floppy image returns 0
+00021198097i[FDD  ] read() on floppy image returns 0
+00021243052i[FDD  ] read() on floppy image returns 0
+00021288007i[FDD  ] read() on floppy image returns 0
+00021332962i[FDD  ] read() on floppy image returns 0
+00021377917i[FDD  ] read() on floppy image returns 0
+00021422872i[FDD  ] read() on floppy image returns 0
+00021467827i[FDD  ] read() on floppy image returns 0
+00021512782i[FDD  ] read() on floppy image returns 0
+00021557737i[FDD  ] read() on floppy image returns 0
+00021602692i[FDD  ] read() on floppy image returns 0
+00021647647i[FDD  ] read() on floppy image returns 0
+00021692602i[FDD  ] read() on floppy image returns 0
+00021737557i[FDD  ] read() on floppy image returns 0
+00021782512i[FDD  ] read() on floppy image returns 0
+00021827467i[FDD  ] read() on floppy image returns 0
+00021872422i[FDD  ] read() on floppy image returns 0
+00021917377i[FDD  ] read() on floppy image returns 0
+00021963595i[FDD  ] read() on floppy image returns 0
+00022008550i[FDD  ] read() on floppy image returns 0
+00022053505i[FDD  ] read() on floppy image returns 0
+00022098460i[FDD  ] read() on floppy image returns 0
+00022143415i[FDD  ] read() on floppy image returns 0
+00022188370i[FDD  ] read() on floppy image returns 0
+00022233325i[FDD  ] read() on floppy image returns 0
+00022278280i[FDD  ] read() on floppy image returns 0
+00022323235i[FDD  ] read() on floppy image returns 0
+00022368190i[FDD  ] read() on floppy image returns 0
+00022413145i[FDD  ] read() on floppy image returns 0
+00022463615i[BIOS ] int13_harddisk: function 15, unmapped device for ELDL=81
+00022744769i[GDBST] found breakpoint at 6694
+00022744769i[GDBST] stopped with ac1
+00022744769i[GDBST] reg 8 set to 6694
+00022744769i[GDBST] reg 41 set to ffffffff
+00022744769i[GDBST] Removing breakpoint at 669d
+00022744769i[GDBST] Removing breakpoint at 6694
+00022744769i[GDBST] stepping
+00022744770i[GDBST] stopped with ac2
+00022744770i[GDBST] setting breakpoint at 669d
+00022744770i[GDBST] setting breakpoint at 6694
+00022744775i[GDBST] found breakpoint at 669d
+00022744775i[GDBST] stopped with ac1
+00022744775i[GDBST] reg 8 set to 669d
+00022744775i[GDBST] reg 41 set to ffffffff
+00022744775i[GDBST] Removing breakpoint at 669d
+00022744775i[GDBST] Removing breakpoint at 6694
+00022744775i[GDBST] addr 6a9f len 1
+00022744775i[GDBST] addr 6a9f len 1
+00022744775i[GDBST] addr 6a9f len 1
+00022744775i[GDBST] addr 6a9f len 1
+00022744775i[GDBST] addr 6a9f len a
+00022744775i[GDBST] addr 6a9f len 1
+00022744775i[GDBST] addr 6a9f len 1
+00022744775i[GDBST] addr 6aa0 len 1
+00022744775i[GDBST] addr 6aa1 len 1
+00022744775i[GDBST] stepping
+00022744776i[GDBST] stopped with ac2
+00022744776i[GDBST] setting breakpoint at 669d
+00022744776i[GDBST] setting breakpoint at 6694
+00022744776i[GDBST] setting breakpoint at 6a9f
+00024774262i[GDBST] found breakpoint at 6a9f
+00024774262i[GDBST] stopped with ac1
+00024774262i[GDBST] reg 8 set to 6a9f
+00024774262i[GDBST] reg 41 set to ffffffff
+00024774262i[GDBST] Removing breakpoint at 669d
+00024774262i[GDBST] Removing breakpoint at 6694
+00024774262i[GDBST] Removing breakpoint at 6a9f
+00024774262i[GDBST] stepping
+00024774263i[GDBST] stopped with ac2
+00024774263i[GDBST] setting breakpoint at 669d
+00024774263i[GDBST] setting breakpoint at 6694
+00024774263i[GDBST] setting breakpoint at 6a9f
+00024785323i[GDBST] found breakpoint at 6a9f
+00024785323i[GDBST] stopped with ac1
+00024785323i[GDBST] reg 8 set to 6a9f
+00024785323i[GDBST] reg 41 set to ffffffff
+00024785323i[GDBST] Removing breakpoint at 669d
+00024785323i[GDBST] Removing breakpoint at 6694
+00024785323i[GDBST] Removing breakpoint at 6a9f
+00024785323i[GDBST] stepping
+00024785324i[GDBST] stopped with ac2
+00024785324i[GDBST] setting breakpoint at 669d
+00024785324i[GDBST] setting breakpoint at 6694
+00024785324i[GDBST] setting breakpoint at 6a9f
+00024788584i[GDBST] found breakpoint at 6a9f
+00024788584i[GDBST] stopped with ac1
+00024788584i[GDBST] reg 8 set to 6a9f
+00024788584i[GDBST] reg 41 set to ffffffff
+00024788584i[GDBST] Removing breakpoint at 669d
+00024788584i[GDBST] Removing breakpoint at 6694
+00024788584i[GDBST] Removing breakpoint at 6a9f
+00024788584i[GDBST] stepping
+00024788585i[GDBST] stopped with ac2
+00024788585i[GDBST] setting breakpoint at 669d
+00024788585i[GDBST] setting breakpoint at 6694
+00024788585i[GDBST] setting breakpoint at 6a9f
+00024791989i[GDBST] found breakpoint at 6a9f
+00024791989i[GDBST] stopped with ac1
+00024791989i[GDBST] reg 8 set to 6a9f
+00024791989i[GDBST] reg 41 set to ffffffff
+00024791989i[GDBST] Removing breakpoint at 669d
+00024791989i[GDBST] Removing breakpoint at 6694
+00024791989i[GDBST] Removing breakpoint at 6a9f
+00024791989i[GDBST] stepping
+00024791990i[GDBST] stopped with ac2
+00024791990i[GDBST] setting breakpoint at 669d
+00024791990i[GDBST] setting breakpoint at 6694
+00024791990i[GDBST] setting breakpoint at 6a9f
+00024802438i[GDBST] found breakpoint at 6a9f
+00024802438i[GDBST] stopped with ac1
+00024802438i[GDBST] reg 8 set to 6a9f
+00024802438i[GDBST] reg 41 set to ffffffff
+00024802438i[GDBST] Removing breakpoint at 669d
+00024802438i[GDBST] Removing breakpoint at 6694
+00024802438i[GDBST] Removing breakpoint at 6a9f
+00024802438i[GDBST] stepping
+00024802439i[GDBST] stopped with ac2
+00024802439i[GDBST] setting breakpoint at 669d
+00024802439i[GDBST] setting breakpoint at 6694
+00024802439i[GDBST] setting breakpoint at 6a9f
+00024809287i[GDBST] found breakpoint at 6a9f
+00024809287i[GDBST] stopped with ac1
+00024809287i[GDBST] reg 8 set to 6a9f
+00024809287i[GDBST] reg 41 set to ffffffff
+00024809287i[GDBST] Removing breakpoint at 669d
+00024809287i[GDBST] Removing breakpoint at 6694
+00024809287i[GDBST] Removing breakpoint at 6a9f
+00024809287i[GDBST] stepping
+00024809288i[GDBST] stopped with ac2
+00024809288i[GDBST] setting breakpoint at 669d
+00024809288i[GDBST] setting breakpoint at 6694
+00024809288i[GDBST] setting breakpoint at 6a9f
+00024830847i[GDBST] found breakpoint at 6a9f
+00024830847i[GDBST] stopped with ac1
+00024830847i[GDBST] reg 8 set to 6a9f
+00024830847i[GDBST] reg 41 set to ffffffff
+00024830847i[GDBST] Removing breakpoint at 669d
+00024830847i[GDBST] Removing breakpoint at 6694
+00024830847i[GDBST] Removing breakpoint at 6a9f
+00024830847i[GDBST] stepping
+00024830848i[GDBST] stopped with ac2
+00024830848i[GDBST] setting breakpoint at 669d
+00024830848i[GDBST] setting breakpoint at 6694
+00024830848i[GDBST] setting breakpoint at 6a9f
+00024840581i[GDBST] stopped with ac0
+00024842916i[GDBST] stopped with ac0
+00024869863i[GDBST] stopped with ac0
+00024875530i[GDBST] found breakpoint at 6a9f
+00024875530i[GDBST] stopped with ac1
+00024875530i[GDBST] reg 8 set to 6a9f
+00024875530i[GDBST] reg 41 set to ffffffff
+00024875530i[GDBST] Removing breakpoint at 669d
+00024875530i[GDBST] Removing breakpoint at 6694
+00024875530i[GDBST] Removing breakpoint at 6a9f
+00024875530i[GDBST] stepping
+00024875531i[GDBST] stopped with ac2
+00024875531i[GDBST] setting breakpoint at 669d
+00024875531i[GDBST] setting breakpoint at 6694
+00024875531i[GDBST] setting breakpoint at 6a9f
+00024882341i[GDBST] stopped with ac0
+00024904685i[GDBST] stopped with ac0
+00024913073i[GDBST] stopped with ac0
+00024922200i[GDBST] stopped with ac0
+00024930180i[GDBST] stopped with ac0
+00024931349i[GDBST] stopped with ac0
+00024939437i[GDBST] stopped with ac0
+00024947545i[GDBST] stopped with ac0
+00024955664i[GDBST] stopped with ac0
+00024956907i[GDBST] stopped with ac0
+00024965373i[GDBST] stopped with ac0
+00024967163i[GDBST] stopped with ac0
+00024968991i[GDBST] stopped with ac0
+00024976668i[GDBST] stopped with ac0
+00024985054i[GDBST] stopped with ac0
+00024993393i[GDBST] stopped with ac0
+00024994606i[GDBST] stopped with ac0
+00025002604i[GDBST] stopped with ac0
+00025010655i[GDBST] stopped with ac0
+00025018649i[GDBST] stopped with ac0
+00025060999i[GDBST] stopped with ac0
+00025069489i[GDBST] stopped with ac0
+00025093748i[GDBST] stopped with ac0
+00025101894i[GDBST] stopped with ac0
+00025121684i[GDBST] stopped with ac0
+00025139487i[GDBST] stopped with ac0
+00025148515i[GDBST] stopped with ac0
+00025156525i[GDBST] stopped with ac0
+00025166188i[GDBST] stopped with ac0
+00025172138i[GDBST] stopped with ac0
+00025180235i[GDBST] stopped with ac0
+00025202928i[GDBST] stopped with ac0
+00025209117i[GDBST] stopped with ac0
+00025226348i[GDBST] stopped with ac0
+00025234997i[GDBST] stopped with ac0
+00025249110i[GDBST] stopped with ac0
+00025257349i[GDBST] stopped with ac0
+00025265427i[GDBST] stopped with ac0
+00025282573i[GDBST] stopped with ac0
+00025290978i[GDBST] stopped with ac0
+00025301715i[GDBST] stopped with ac0
+00025311516i[GDBST] stopped with ac0
+00025319981i[GDBST] stopped with ac0
+00025328034i[GDBST] stopped with ac0
+00025336060i[GDBST] stopped with ac0
+00025344431i[GDBST] stopped with ac0
+00025354585i[GDBST] stopped with ac0
+00025367094i[GDBST] stopped with ac0
+00025378206i[GDBST] stopped with ac0
+00025386440i[GDBST] stopped with ac0
+00025395887i[GDBST] stopped with ac0
+00025404861i[GDBST] stopped with ac0
+00025419940i[GDBST] stopped with ac0
+00025428057i[GDBST] stopped with ac0
+00025442470i[GDBST] stopped with ac0
+00025482509i[GDBST] stopped with ac0
+00025484706i[GDBST] stopped with ac0
+00025486956i[GDBST] stopped with ac0
+00025489150i[GDBST] stopped with ac0
+00025492185i[GDBST] stopped with ac0
+00025494398i[GDBST] stopped with ac0
+00025498306i[GDBST] stopped with ac0
+00025501387i[GDBST] stopped with ac0
+00025519610i[GDBST] stopped with ac0
+00025530138i[GDBST] stopped with ac0
+00025532685i[GDBST] stopped with ac0
+00025535276i[GDBST] stopped with ac0
+00025540600i[GDBST] stopped with ac0
+00025550024i[GDBST] stopped with ac0
+00025555546i[GDBST] stopped with ac0
+00025574434i[GDBST] stopped with ac0
+00025582957i[GDBST] stopped with ac0
+00025647132i[GDBST] found breakpoint at 6a9f
+00025647132i[GDBST] stopped with ac1
+00025647132i[GDBST] reg 8 set to 6a9f
+00025647132i[GDBST] reg 41 set to ffffffff
+00025647132i[GDBST] Removing breakpoint at 669d
+00025647132i[GDBST] Removing breakpoint at 6694
+00025647132i[GDBST] Removing breakpoint at 6a9f
+00025647132i[GDBST] stepping
+00025647133i[GDBST] stopped with ac2
+00025647133i[GDBST] setting breakpoint at 669d
+00025647133i[GDBST] setting breakpoint at 6694
+00025647133i[GDBST] setting breakpoint at 6a9f
+00025660017i[GDBST] stopped with ac0
+00025660132i[GDBST] stopped with ac0
+00025661072i[GDBST] stopped with ac0
+00025661212i[GDBST] stopped with ac0
+00025661283i[GDBST] stopped with ac0
+00025694573i[GDBST] stopped with ac0
+00025703107i[GDBST] stopped with ac0
+00025896829i[GDBST] found breakpoint at 6a9f
+00025896829i[GDBST] stopped with ac1
+00025896829i[GDBST] reg 8 set to 6a9f
+00025896829i[GDBST] reg 41 set to ffffffff
+00025896829i[GDBST] Removing breakpoint at 669d
+00025896829i[GDBST] Removing breakpoint at 6694
+00025896829i[GDBST] Removing breakpoint at 6a9f
+00025896829i[GDBST] stepping
+00025896830i[GDBST] stopped with ac2
+00025896830i[GDBST] setting breakpoint at 669d
+00025896830i[GDBST] setting breakpoint at 6694
+00025896830i[GDBST] setting breakpoint at 6a9f
+00025904129i[GDBST] found breakpoint at 6a9f
+00025904129i[GDBST] stopped with ac1
+00025904129i[GDBST] reg 8 set to 6a9f
+00025904129i[GDBST] reg 41 set to ffffffff
+00025904129i[GDBST] Removing breakpoint at 669d
+00025904129i[GDBST] Removing breakpoint at 6694
+00025904129i[GDBST] Removing breakpoint at 6a9f
+00025904129i[GDBST] stepping
+00025904130i[GDBST] stopped with ac2
+00025904130i[GDBST] setting breakpoint at 669d
+00025904130i[GDBST] setting breakpoint at 6694
+00025904130i[GDBST] setting breakpoint at 6a9f
+00025926500i[GDBST] stopped with ac0
+00025932206i[GDBST] found breakpoint at 6a9f
+00025932206i[GDBST] stopped with ac1
+00025932206i[GDBST] reg 8 set to 6a9f
+00025932206i[GDBST] reg 41 set to ffffffff
+00025932206i[GDBST] Removing breakpoint at 669d
+00025932206i[GDBST] Removing breakpoint at 6694
+00025932206i[GDBST] Removing breakpoint at 6a9f
+00025932206i[GDBST] stepping
+00025932207i[GDBST] stopped with ac2
+00025932207i[GDBST] setting breakpoint at 669d
+00025932207i[GDBST] setting breakpoint at 6694
+00025932207i[GDBST] setting breakpoint at 6a9f
+00025939046i[GDBST] stopped with ac0
+00025957899i[GDBST] stopped with ac0
+00025962021i[GDBST] stopped with ac0
+00025965739i[GDBST] stopped with ac0
+00025969448i[GDBST] stopped with ac0
+00025970622i[GDBST] stopped with ac0
+00025974446i[GDBST] stopped with ac0
+00025978212i[GDBST] stopped with ac0
+00025982008i[GDBST] stopped with ac0
+00025983256i[GDBST] stopped with ac0
+00025987493i[GDBST] stopped with ac0
+00025989288i[GDBST] stopped with ac0
+00025993229i[GDBST] stopped with ac0
+00025996635i[GDBST] stopped with ac0
+00026000690i[GDBST] stopped with ac0
+00026004758i[GDBST] stopped with ac0
+00026005976i[GDBST] stopped with ac0
+00026009703i[GDBST] stopped with ac0
+00026013483i[GDBST] stopped with ac0
+00026017206i[GDBST] stopped with ac0
+00026055216i[GDBST] stopped with ac0
+00026059323i[GDBST] stopped with ac0
+00026079437i[GDBST] stopped with ac0
+00026083496i[GDBST] stopped with ac0
+00026098518i[GDBST] stopped with ac0
+00026111042i[GDBST] stopped with ac0
+00026115739i[GDBST] stopped with ac0
+00026119478i[GDBST] stopped with ac0
+00026124870i[GDBST] stopped with ac0
+00026130839i[GDBST] stopped with ac0
+00026134665i[GDBST] stopped with ac0
+00026153144i[GDBST] stopped with ac0
+00026159338i[GDBST] stopped with ac0
+00026172291i[GDBST] stopped with ac0
+00026176669i[GDBST] stopped with ac0
+00026187007i[GDBST] stopped with ac0
+00026190975i[GDBST] stopped with ac0
+00026194722i[GDBST] stopped with ac0
+00026207625i[GDBST] stopped with ac0
+00026211759i[GDBST] stopped with ac0
+00026223185i[GDBST] stopped with ac0
+00026243018i[GDBST] stopped with ac0
+00026246799i[GDBST] stopped with ac0
+00026250553i[GDBST] stopped with ac0
+00026254592i[GDBST] stopped with ac0
+00026258857i[GDBST] stopped with ac0
+00026268176i[GDBST] stopped with ac0
+00026273440i[GDBST] stopped with ac0
+00026277521i[GDBST] stopped with ac0
+00026281303i[GDBST] stopped with ac0
+00026283185i[GDBST] stopped with ac0
+00026285131i[GDBST] stopped with ac0
+00026290129i[GDBST] stopped with ac0
+00026294037i[GDBST] stopped with ac0
+00026321253i[GDBST] stopped with ac0
+00026341969i[GDBST] stopped with ac0
+00026409823i[GDBST] stopped with ac0
+00026417869i[GDBST] stopped with ac0
+00026485075i[GDBST] stopped with ac0
+00026493308i[GDBST] stopped with ac0
+00026539744i[GDBST] stopped with ac0
+00026597303i[GDBST] stopped with ac0
+00026599512i[GDBST] stopped with ac0
+00026601772i[GDBST] stopped with ac0
+00026603978i[GDBST] stopped with ac0
+00026606311i[GDBST] stopped with ac0
+00026612890i[GDBST] found breakpoint at 6a9f
+00026612890i[GDBST] stopped with ac1
+00026612890i[GDBST] reg 8 set to 6a9f
+00026612890i[GDBST] reg 41 set to ffffffff
+00026612890i[GDBST] Removing breakpoint at 669d
+00026612890i[GDBST] Removing breakpoint at 6694
+00026612890i[GDBST] Removing breakpoint at 6a9f
+00026612890i[GDBST] stepping
+00026612891i[GDBST] stopped with ac2
+00026612891i[GDBST] setting breakpoint at 669d
+00026612891i[GDBST] setting breakpoint at 6694
+00026612891i[GDBST] setting breakpoint at 6a9f
+00026619755i[GDBST] stopped with ac0
+00026619870i[GDBST] stopped with ac0
+00026623066i[GDBST] stopped with ac0
+00026623137i[GDBST] stopped with ac0
+00026623318i[GDBST] stopped with ac0
+00026661794i[GDBST] stopped with ac0
+00026670287i[GDBST] stopped with ac0
+00026707503i[GDBST] stopped with ac0
+00026743684i[GDBST] stopped with ac0
+00026773951i[GDBST] stopped with ac0
+00026804303i[GDBST] stopped with ac0
+00026834864i[GDBST] stopped with ac0
+00026842937i[GDBST] found breakpoint at 6a9f
+00026842937i[GDBST] stopped with ac1
+00026842937i[GDBST] reg 8 set to 6a9f
+00026842937i[GDBST] reg 41 set to ffffffff
+00026842937i[GDBST] Removing breakpoint at 669d
+00026842937i[GDBST] Removing breakpoint at 6694
+00026842937i[GDBST] Removing breakpoint at 6a9f
+00026842937i[GDBST] stepping
+00026842938i[GDBST] stopped with ac2
+00026842938i[GDBST] setting breakpoint at 669d
+00026842938i[GDBST] setting breakpoint at 6694
+00026842938i[GDBST] setting breakpoint at 6a9f
+00026850023i[GDBST] stopped with ac0
+00026850152i[GDBST] stopped with ac0
+00026852385i[GDBST] stopped with ac0
+00026861181i[GDBST] stopped with ac0
+00026870815i[GDBST] stopped with ac0
+00028020498i[GDBST] found breakpoint at 6a9f
+00028020498i[GDBST] stopped with ac1
+00028020498i[GDBST] reg 8 set to 6a9f
+00028020498i[GDBST] reg 41 set to ffffffff
+00028020498i[GDBST] Removing breakpoint at 669d
+00028020498i[GDBST] Removing breakpoint at 6694
+00028020498i[GDBST] Removing breakpoint at 6a9f
+00028020498i[GDBST] stepping
+00028020499i[GDBST] stopped with ac2
+00028020499i[GDBST] setting breakpoint at 669d
+00028020499i[GDBST] setting breakpoint at 6694
+00028020499i[GDBST] setting breakpoint at 6a9f
+00028030873i[GDBST] stopped with ac0
+00028031002i[GDBST] stopped with ac0
+00028033239i[GDBST] stopped with ac0
+00028033679i[GDBST] stopped with ac0
+00028035001i[GDBST] stopped with ac0
+00029220458i[GDBST] found breakpoint at 6a9f
+00029220458i[GDBST] stopped with ac1
+00029220458i[GDBST] reg 8 set to 6a9f
+00029220458i[GDBST] reg 41 set to ffffffff
+00029220458i[GDBST] Removing breakpoint at 669d
+00029220458i[GDBST] Removing breakpoint at 6694
+00029220458i[GDBST] Removing breakpoint at 6a9f
+00029220458i[GDBST] stepping
+00029220459i[GDBST] stopped with ac2
+00029220459i[GDBST] setting breakpoint at 669d
+00029220459i[GDBST] setting breakpoint at 6694
+00029220459i[GDBST] setting breakpoint at 6a9f
+00029230572i[GDBST] stopped with ac0
+00029230701i[GDBST] stopped with ac0
+00029232939i[GDBST] stopped with ac0
+00029233379i[GDBST] stopped with ac0
+00029234701i[GDBST] stopped with ac0
+00030420464i[GDBST] found breakpoint at 6a9f
+00030420464i[GDBST] stopped with ac1
+00030420464i[GDBST] reg 8 set to 6a9f
+00030420464i[GDBST] reg 41 set to ffffffff
+00030420464i[GDBST] Removing breakpoint at 669d
+00030420464i[GDBST] Removing breakpoint at 6694
+00030420464i[GDBST] Removing breakpoint at 6a9f
+00030420464i[GDBST] stepping
+00030420465i[GDBST] stopped with ac2
+00030420465i[GDBST] setting breakpoint at 669d
+00030420465i[GDBST] setting breakpoint at 6694
+00030420465i[GDBST] setting breakpoint at 6a9f
+00030430578i[GDBST] stopped with ac0
+00030430707i[GDBST] stopped with ac0
+00030432946i[GDBST] stopped with ac0
+00030433386i[GDBST] stopped with ac0
+00030434708i[GDBST] stopped with ac0
+00031620457i[GDBST] found breakpoint at 6a9f
+00031620457i[GDBST] stopped with ac1
+00031620457i[GDBST] reg 8 set to 6a9f
+00031620457i[GDBST] reg 41 set to ffffffff
+00031620457i[GDBST] Removing breakpoint at 669d
+00031620457i[GDBST] Removing breakpoint at 6694
+00031620457i[GDBST] Removing breakpoint at 6a9f
+00031620457i[GDBST] stepping
+00031620458i[GDBST] stopped with ac2
+00031620458i[GDBST] setting breakpoint at 669d
+00031620458i[GDBST] setting breakpoint at 6694
+00031620458i[GDBST] setting breakpoint at 6a9f
+00031630571i[GDBST] stopped with ac0
+00031630700i[GDBST] stopped with ac0
+00031632940i[GDBST] stopped with ac0
+00031633380i[GDBST] stopped with ac0
+00031634702i[GDBST] stopped with ac0
+00032820477i[GDBST] found breakpoint at 6a9f
+00032820477i[GDBST] stopped with ac1
+00032820477i[GDBST] reg 8 set to 6a9f
+00032820477i[GDBST] reg 41 set to ffffffff
+00032820477i[GDBST] Removing breakpoint at 669d
+00032820477i[GDBST] Removing breakpoint at 6694
+00032820477i[GDBST] Removing breakpoint at 6a9f
+00032820477p[GDBST] >>PANIC<< Debugger asked us to quit
+00032820477i[CPU  ] CPU is in protected mode (active)
+00032820477i[CPU  ] CS.d_b = 32 bit
+00032820477i[CPU  ] SS.d_b = 32 bit
+00032820477i[CPU  ] | EAX=00fc7000  EBX=0004b1cc  ECX=00000064  EDX=0000001d
+00032820477i[CPU  ] | ESP=00fc7fa8  EBP=00000003  ESI=00000001  EDI=00000000
+00032820477i[CPU  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af PF cf
+00032820477i[CPU  ] | SEG selector     base    limit G D
+00032820477i[CPU  ] | SEG sltr(index|ti|rpl)     base    limit G D
+00032820477i[CPU  ] |  CS:0008( 0001| 0|  0) 00000000 00000fff 1 1
+00032820477i[CPU  ] |  DS:0010( 0002| 0|  0) 00000000 00000fff 1 1
+00032820477i[CPU  ] |  SS:0010( 0002| 0|  0) 00000000 00000fff 1 1
+00032820477i[CPU  ] |  ES:0010( 0002| 0|  0) 00000000 00000fff 1 1
+00032820477i[CPU  ] |  FS:0017( 0002| 1|  3) 14000000 00003fff 1 1
+00032820477i[CPU  ] |  GS:0017( 0002| 1|  3) 14000000 00003fff 1 1
+00032820477i[CPU  ] | EIP=00006a9f (00006a9f)
+00032820477i[CPU  ] | CR0=0x8000001b CR1=0 CR2=0x14001008
+00032820477i[CPU  ] | CR3=0x00000000 CR4=0x00000000
+00032820477i[CPU  ] >> push esi : 56
+00032820477i[CMOS ] Last time is 1436434444 (Thu Jul  9 02:34:04 2015)
+00032820477i[XGUI ] Exit
+00032820477i[     ] restoring default signal behavior
+00032820477i[CTRL ] quit_sim called with exit code 1

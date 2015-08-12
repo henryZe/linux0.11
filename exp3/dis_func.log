@@ -1,0 +1,674 @@
+pid:1	N	48	copy_process	current cid:0
+pid:1	J	48	copy_process	current cid:0
+pid:0	J	49	schedule	current cid:0
+pid:1	R	49	schedule	current cid:0	state:0
+pid:2	N	49	copy_process	current cid:1
+pid:2	J	49	copy_process	current cid:1
+pid:1	W	50	sys_waitpid	current cid:1
+pid:2	R	50	schedule	current cid:1	state:1
+pid:3	N	65	copy_process	current cid:2
+pid:3	J	65	copy_process	current cid:2
+pid:2	J	65	schedule	current cid:2
+pid:3	R	65	schedule	current cid:2	state:0
+pid:3	W	69	sys_pause	current cid:3
+pid:2	R	69	schedule	current cid:3	state:1
+pid:1	J	75	schedule	current cid:2
+pid:2	E	75	schedule	current cid:2
+pid:1	R	75	schedule	current cid:2	state:3
+pid:4	N	75	copy_process	current cid:1
+pid:4	J	75	copy_process	current cid:1
+pid:1	W	75	sys_waitpid	current cid:1
+pid:4	R	76	schedule	current cid:1	state:1
+pid:5	N	92	copy_process	current cid:4
+pid:5	J	92	copy_process	current cid:4
+pid:4	W	92	sys_waitpid	current cid:4
+pid:5	R	93	schedule	current cid:4	state:1
+pid:6	N	95	copy_process	current cid:5
+pid:6	J	95	copy_process	current cid:5
+pid:7	N	96	copy_process	current cid:5
+pid:7	J	96	copy_process	current cid:5
+pid:8	N	96	copy_process	current cid:5
+pid:8	J	96	copy_process	current cid:5
+pid:9	N	97	copy_process	current cid:5
+pid:9	J	97	copy_process	current cid:5
+pid:10	N	98	copy_process	current cid:5
+pid:10	J	98	copy_process	current cid:5
+pid:5	W	98	sys_waitpid	current cid:5
+pid:10	R	98	schedule	current cid:5	state:1
+pid:10	J	113	schedule	current cid:10
+pid:9	R	113	schedule	current cid:10	state:0
+pid:9	J	128	schedule	current cid:9
+pid:8	R	128	schedule	current cid:9	state:0
+pid:8	J	143	schedule	current cid:8
+pid:7	R	143	schedule	current cid:8	state:0
+pid:7	J	158	schedule	current cid:7
+pid:6	R	158	schedule	current cid:7	state:0
+pid:6	J	173	schedule	current cid:6
+pid:10	R	173	schedule	current cid:6	state:0
+pid:10	J	188	schedule	current cid:10
+pid:9	R	188	schedule	current cid:10	state:0
+pid:9	J	203	schedule	current cid:9
+pid:8	R	203	schedule	current cid:9	state:0
+pid:8	J	218	schedule	current cid:8
+pid:7	R	218	schedule	current cid:8	state:0
+pid:7	J	233	schedule	current cid:7
+pid:6	R	233	schedule	current cid:7	state:0
+pid:6	J	248	schedule	current cid:6
+pid:10	R	248	schedule	current cid:6	state:0
+pid:10	J	263	schedule	current cid:10
+pid:9	R	263	schedule	current cid:10	state:0
+pid:9	J	278	schedule	current cid:9
+pid:8	R	278	schedule	current cid:9	state:0
+pid:8	J	293	schedule	current cid:8
+pid:7	R	293	schedule	current cid:8	state:0
+pid:7	J	308	schedule	current cid:7
+pid:6	R	308	schedule	current cid:7	state:0
+pid:6	J	323	schedule	current cid:6
+pid:10	R	323	schedule	current cid:6	state:0
+pid:10	J	338	schedule	current cid:10
+pid:9	R	338	schedule	current cid:10	state:0
+pid:9	J	353	schedule	current cid:9
+pid:8	R	353	schedule	current cid:9	state:0
+pid:8	J	368	schedule	current cid:8
+pid:7	R	368	schedule	current cid:8	state:0
+pid:7	J	383	schedule	current cid:7
+pid:6	R	383	schedule	current cid:7	state:0
+pid:6	J	398	schedule	current cid:6
+pid:10	R	398	schedule	current cid:6	state:0
+pid:10	J	413	schedule	current cid:10
+pid:9	R	413	schedule	current cid:10	state:0
+pid:9	J	428	schedule	current cid:9
+pid:8	R	428	schedule	current cid:9	state:0
+pid:8	J	443	schedule	current cid:8
+pid:7	R	443	schedule	current cid:8	state:0
+pid:7	J	458	schedule	current cid:7
+pid:6	R	458	schedule	current cid:7	state:0
+pid:6	J	473	schedule	current cid:6
+pid:10	R	473	schedule	current cid:6	state:0
+pid:10	J	488	schedule	current cid:10
+pid:9	R	488	schedule	current cid:10	state:0
+pid:9	J	503	schedule	current cid:9
+pid:8	R	503	schedule	current cid:9	state:0
+pid:8	J	518	schedule	current cid:8
+pid:7	R	518	schedule	current cid:8	state:0
+pid:7	J	533	schedule	current cid:7
+pid:6	R	533	schedule	current cid:7	state:0
+pid:6	J	548	schedule	current cid:6
+pid:10	R	548	schedule	current cid:6	state:0
+pid:10	J	563	schedule	current cid:10
+pid:9	R	563	schedule	current cid:10	state:0
+pid:9	J	578	schedule	current cid:9
+pid:8	R	578	schedule	current cid:9	state:0
+pid:8	J	593	schedule	current cid:8
+pid:7	R	593	schedule	current cid:8	state:0
+pid:7	J	608	schedule	current cid:7
+pid:6	R	608	schedule	current cid:7	state:0
+pid:6	J	623	schedule	current cid:6
+pid:10	R	623	schedule	current cid:6	state:0
+pid:10	J	638	schedule	current cid:10
+pid:9	R	638	schedule	current cid:10	state:0
+pid:9	J	653	schedule	current cid:9
+pid:8	R	653	schedule	current cid:9	state:0
+pid:8	J	668	schedule	current cid:8
+pid:7	R	668	schedule	current cid:8	state:0
+pid:7	J	683	schedule	current cid:7
+pid:6	R	683	schedule	current cid:7	state:0
+pid:6	J	698	schedule	current cid:6
+pid:10	R	698	schedule	current cid:6	state:0
+pid:10	J	713	schedule	current cid:10
+pid:9	R	713	schedule	current cid:10	state:0
+pid:9	J	728	schedule	current cid:9
+pid:8	R	728	schedule	current cid:9	state:0
+pid:8	J	743	schedule	current cid:8
+pid:7	R	743	schedule	current cid:8	state:0
+pid:7	J	758	schedule	current cid:7
+pid:6	R	758	schedule	current cid:7	state:0
+pid:6	J	773	schedule	current cid:6
+pid:10	R	773	schedule	current cid:6	state:0
+pid:10	J	788	schedule	current cid:10
+pid:9	R	788	schedule	current cid:10	state:0
+pid:9	J	803	schedule	current cid:9
+pid:8	R	803	schedule	current cid:9	state:0
+pid:8	J	818	schedule	current cid:8
+pid:7	R	818	schedule	current cid:8	state:0
+pid:7	J	833	schedule	current cid:7
+pid:6	R	833	schedule	current cid:7	state:0
+pid:6	J	848	schedule	current cid:6
+pid:10	R	848	schedule	current cid:6	state:0
+pid:10	J	863	schedule	current cid:10
+pid:9	R	863	schedule	current cid:10	state:0
+pid:9	J	878	schedule	current cid:9
+pid:8	R	878	schedule	current cid:9	state:0
+pid:8	J	893	schedule	current cid:8
+pid:7	R	893	schedule	current cid:8	state:0
+pid:7	J	908	schedule	current cid:7
+pid:6	R	908	schedule	current cid:7	state:0
+pid:6	J	923	schedule	current cid:6
+pid:10	R	923	schedule	current cid:6	state:0
+pid:10	J	938	schedule	current cid:10
+pid:9	R	938	schedule	current cid:10	state:0
+pid:9	J	953	schedule	current cid:9
+pid:8	R	953	schedule	current cid:9	state:0
+pid:8	J	968	schedule	current cid:8
+pid:7	R	968	schedule	current cid:8	state:0
+pid:7	J	983	schedule	current cid:7
+pid:6	R	983	schedule	current cid:7	state:0
+pid:6	J	998	schedule	current cid:6
+pid:10	R	998	schedule	current cid:6	state:0
+pid:10	J	1013	schedule	current cid:10
+pid:9	R	1013	schedule	current cid:10	state:0
+pid:9	J	1028	schedule	current cid:9
+pid:8	R	1028	schedule	current cid:9	state:0
+pid:8	J	1043	schedule	current cid:8
+pid:7	R	1043	schedule	current cid:8	state:0
+pid:7	J	1058	schedule	current cid:7
+pid:6	R	1058	schedule	current cid:7	state:0
+pid:6	J	1073	schedule	current cid:6
+pid:10	R	1073	schedule	current cid:6	state:0
+pid:10	J	1088	schedule	current cid:10
+pid:9	R	1088	schedule	current cid:10	state:0
+pid:9	J	1103	schedule	current cid:9
+pid:8	R	1103	schedule	current cid:9	state:0
+pid:8	J	1118	schedule	current cid:8
+pid:7	R	1118	schedule	current cid:8	state:0
+pid:7	J	1133	schedule	current cid:7
+pid:6	R	1133	schedule	current cid:7	state:0
+pid:6	J	1148	schedule	current cid:6
+pid:10	R	1148	schedule	current cid:6	state:0
+pid:10	J	1163	schedule	current cid:10
+pid:9	R	1163	schedule	current cid:10	state:0
+pid:9	J	1178	schedule	current cid:9
+pid:8	R	1178	schedule	current cid:9	state:0
+pid:8	J	1193	schedule	current cid:8
+pid:7	R	1193	schedule	current cid:8	state:0
+pid:7	J	1208	schedule	current cid:7
+pid:6	R	1208	schedule	current cid:7	state:0
+pid:6	J	1223	schedule	current cid:6
+pid:10	R	1223	schedule	current cid:6	state:0
+pid:10	J	1238	schedule	current cid:10
+pid:9	R	1238	schedule	current cid:10	state:0
+pid:9	J	1253	schedule	current cid:9
+pid:8	R	1253	schedule	current cid:9	state:0
+pid:8	J	1268	schedule	current cid:8
+pid:7	R	1268	schedule	current cid:8	state:0
+pid:7	J	1283	schedule	current cid:7
+pid:6	R	1283	schedule	current cid:7	state:0
+pid:6	J	1298	schedule	current cid:6
+pid:10	R	1298	schedule	current cid:6	state:0
+pid:10	J	1313	schedule	current cid:10
+pid:9	R	1313	schedule	current cid:10	state:0
+pid:9	J	1328	schedule	current cid:9
+pid:8	R	1328	schedule	current cid:9	state:0
+pid:8	J	1343	schedule	current cid:8
+pid:7	R	1343	schedule	current cid:8	state:0
+pid:7	J	1358	schedule	current cid:7
+pid:6	R	1358	schedule	current cid:7	state:0
+pid:6	J	1373	schedule	current cid:6
+pid:10	R	1373	schedule	current cid:6	state:0
+pid:10	J	1388	schedule	current cid:10
+pid:9	R	1388	schedule	current cid:10	state:0
+pid:9	J	1403	schedule	current cid:9
+pid:8	R	1403	schedule	current cid:9	state:0
+pid:8	J	1418	schedule	current cid:8
+pid:7	R	1418	schedule	current cid:8	state:0
+pid:7	J	1433	schedule	current cid:7
+pid:6	R	1433	schedule	current cid:7	state:0
+pid:6	J	1448	schedule	current cid:6
+pid:10	R	1448	schedule	current cid:6	state:0
+pid:10	J	1463	schedule	current cid:10
+pid:9	R	1463	schedule	current cid:10	state:0
+pid:9	J	1478	schedule	current cid:9
+pid:8	R	1478	schedule	current cid:9	state:0
+pid:8	J	1493	schedule	current cid:8
+pid:7	R	1493	schedule	current cid:8	state:0
+pid:7	J	1508	schedule	current cid:7
+pid:6	R	1508	schedule	current cid:7	state:0
+pid:6	J	1523	schedule	current cid:6
+pid:10	R	1523	schedule	current cid:6	state:0
+pid:10	J	1538	schedule	current cid:10
+pid:9	R	1538	schedule	current cid:10	state:0
+pid:9	J	1553	schedule	current cid:9
+pid:8	R	1553	schedule	current cid:9	state:0
+pid:8	J	1568	schedule	current cid:8
+pid:7	R	1568	schedule	current cid:8	state:0
+pid:7	J	1583	schedule	current cid:7
+pid:6	R	1583	schedule	current cid:7	state:0
+pid:6	J	1598	schedule	current cid:6
+pid:10	R	1598	schedule	current cid:6	state:0
+pid:10	J	1613	schedule	current cid:10
+pid:9	R	1613	schedule	current cid:10	state:0
+pid:9	J	1628	schedule	current cid:9
+pid:8	R	1628	schedule	current cid:9	state:0
+pid:8	J	1643	schedule	current cid:8
+pid:7	R	1643	schedule	current cid:8	state:0
+pid:7	J	1658	schedule	current cid:7
+pid:6	R	1658	schedule	current cid:7	state:0
+pid:6	J	1673	schedule	current cid:6
+pid:10	R	1673	schedule	current cid:6	state:0
+pid:10	J	1688	schedule	current cid:10
+pid:9	R	1688	schedule	current cid:10	state:0
+pid:9	J	1703	schedule	current cid:9
+pid:8	R	1703	schedule	current cid:9	state:0
+pid:8	J	1718	schedule	current cid:8
+pid:7	R	1718	schedule	current cid:8	state:0
+pid:7	J	1733	schedule	current cid:7
+pid:6	R	1733	schedule	current cid:7	state:0
+pid:6	J	1748	schedule	current cid:6
+pid:10	R	1748	schedule	current cid:6	state:0
+pid:10	J	1763	schedule	current cid:10
+pid:9	R	1763	schedule	current cid:10	state:0
+pid:9	J	1778	schedule	current cid:9
+pid:8	R	1778	schedule	current cid:9	state:0
+pid:8	J	1793	schedule	current cid:8
+pid:7	R	1793	schedule	current cid:8	state:0
+pid:7	J	1808	schedule	current cid:7
+pid:6	R	1808	schedule	current cid:7	state:0
+pid:6	J	1823	schedule	current cid:6
+pid:10	R	1823	schedule	current cid:6	state:0
+pid:10	J	1838	schedule	current cid:10
+pid:9	R	1838	schedule	current cid:10	state:0
+pid:9	J	1853	schedule	current cid:9
+pid:8	R	1853	schedule	current cid:9	state:0
+pid:8	J	1868	schedule	current cid:8
+pid:7	R	1868	schedule	current cid:8	state:0
+pid:7	J	1883	schedule	current cid:7
+pid:6	R	1883	schedule	current cid:7	state:0
+pid:6	J	1898	schedule	current cid:6
+pid:10	R	1898	schedule	current cid:6	state:0
+pid:10	J	1913	schedule	current cid:10
+pid:9	R	1913	schedule	current cid:10	state:0
+pid:9	J	1928	schedule	current cid:9
+pid:8	R	1928	schedule	current cid:9	state:0
+pid:8	J	1943	schedule	current cid:8
+pid:7	R	1943	schedule	current cid:8	state:0
+pid:7	J	1958	schedule	current cid:7
+pid:6	R	1958	schedule	current cid:7	state:0
+pid:6	J	1973	schedule	current cid:6
+pid:10	R	1973	schedule	current cid:6	state:0
+pid:10	J	1988	schedule	current cid:10
+pid:9	R	1988	schedule	current cid:10	state:0
+pid:9	J	2003	schedule	current cid:9
+pid:8	R	2003	schedule	current cid:9	state:0
+pid:8	J	2018	schedule	current cid:8
+pid:7	R	2018	schedule	current cid:8	state:0
+pid:7	J	2033	schedule	current cid:7
+pid:6	R	2033	schedule	current cid:7	state:0
+pid:6	J	2048	schedule	current cid:6
+pid:10	R	2048	schedule	current cid:6	state:0
+pid:10	W	2059	sys_pause	current cid:10
+pid:9	R	2059	schedule	current cid:10	state:1
+pid:9	W	2069	sys_pause	current cid:9
+pid:8	R	2069	schedule	current cid:9	state:1
+pid:8	W	2079	sys_pause	current cid:8
+pid:7	R	2079	schedule	current cid:8	state:1
+pid:7	W	2089	sys_pause	current cid:7
+pid:6	R	2089	schedule	current cid:7	state:1
+pid:6	W	2099	sys_pause	current cid:6
+pid:0	R	2099	schedule	current cid:6	state:1
+pid:0	W	2099	sys_pause	current cid:0
+pid:10	J	2160	schedule	current cid:0
+pid:10	R	2160	schedule	current cid:0	state:1
+pid:10	W	2160	sys_pause	current cid:10
+pid:0	R	2160	schedule	current cid:10	state:1
+pid:9	J	2170	schedule	current cid:0
+pid:9	R	2170	schedule	current cid:0	state:1
+pid:9	W	2170	sys_pause	current cid:9
+pid:0	R	2170	schedule	current cid:9	state:1
+pid:8	J	2180	schedule	current cid:0
+pid:8	R	2180	schedule	current cid:0	state:1
+pid:8	W	2180	sys_pause	current cid:8
+pid:0	R	2180	schedule	current cid:8	state:1
+pid:7	J	2190	schedule	current cid:0
+pid:7	R	2190	schedule	current cid:0	state:1
+pid:7	W	2190	sys_pause	current cid:7
+pid:0	R	2190	schedule	current cid:7	state:1
+pid:6	J	2200	schedule	current cid:0
+pid:6	R	2200	schedule	current cid:0	state:1
+pid:6	W	2200	sys_pause	current cid:6
+pid:0	R	2200	schedule	current cid:6	state:1
+pid:10	J	2261	schedule	current cid:0
+pid:10	R	2261	schedule	current cid:0	state:1
+pid:9	J	2280	schedule	current cid:10
+pid:10	J	2280	schedule	current cid:10
+pid:9	R	2280	schedule	current cid:10	state:0
+pid:8	J	2297	schedule	current cid:9
+pid:7	J	2297	schedule	current cid:9
+pid:9	J	2297	schedule	current cid:9
+pid:8	R	2297	schedule	current cid:9	state:0
+pid:6	J	2314	schedule	current cid:8
+pid:8	J	2314	schedule	current cid:8
+pid:7	R	2314	schedule	current cid:8	state:0
+pid:7	J	2331	schedule	current cid:7
+pid:6	R	2331	schedule	current cid:7	state:0
+pid:6	J	2348	schedule	current cid:6
+pid:10	R	2348	schedule	current cid:6	state:0
+pid:10	J	2363	schedule	current cid:10
+pid:9	R	2363	schedule	current cid:10	state:0
+pid:9	J	2378	schedule	current cid:9
+pid:8	R	2378	schedule	current cid:9	state:0
+pid:8	J	2393	schedule	current cid:8
+pid:7	R	2393	schedule	current cid:8	state:0
+pid:7	J	2408	schedule	current cid:7
+pid:6	R	2408	schedule	current cid:7	state:0
+pid:6	J	2423	schedule	current cid:6
+pid:10	R	2423	schedule	current cid:6	state:0
+pid:10	J	2438	schedule	current cid:10
+pid:9	R	2438	schedule	current cid:10	state:0
+pid:9	J	2453	schedule	current cid:9
+pid:8	R	2453	schedule	current cid:9	state:0
+pid:8	J	2468	schedule	current cid:8
+pid:7	R	2468	schedule	current cid:8	state:0
+pid:7	J	2483	schedule	current cid:7
+pid:6	R	2483	schedule	current cid:7	state:0
+pid:6	J	2498	schedule	current cid:6
+pid:10	R	2498	schedule	current cid:6	state:0
+pid:10	J	2513	schedule	current cid:10
+pid:9	R	2513	schedule	current cid:10	state:0
+pid:9	J	2528	schedule	current cid:9
+pid:8	R	2528	schedule	current cid:9	state:0
+pid:8	J	2543	schedule	current cid:8
+pid:7	R	2543	schedule	current cid:8	state:0
+pid:7	J	2558	schedule	current cid:7
+pid:6	R	2558	schedule	current cid:7	state:0
+pid:6	J	2573	schedule	current cid:6
+pid:10	R	2573	schedule	current cid:6	state:0
+pid:10	J	2588	schedule	current cid:10
+pid:9	R	2588	schedule	current cid:10	state:0
+pid:9	J	2603	schedule	current cid:9
+pid:8	R	2603	schedule	current cid:9	state:0
+pid:8	J	2618	schedule	current cid:8
+pid:7	R	2618	schedule	current cid:8	state:0
+pid:7	J	2633	schedule	current cid:7
+pid:6	R	2633	schedule	current cid:7	state:0
+pid:6	J	2648	schedule	current cid:6
+pid:10	R	2648	schedule	current cid:6	state:0
+pid:10	J	2663	schedule	current cid:10
+pid:9	R	2663	schedule	current cid:10	state:0
+pid:9	J	2678	schedule	current cid:9
+pid:8	R	2678	schedule	current cid:9	state:0
+pid:8	J	2693	schedule	current cid:8
+pid:7	R	2693	schedule	current cid:8	state:0
+pid:7	J	2708	schedule	current cid:7
+pid:6	R	2708	schedule	current cid:7	state:0
+pid:6	J	2723	schedule	current cid:6
+pid:10	R	2723	schedule	current cid:6	state:0
+pid:10	J	2738	schedule	current cid:10
+pid:9	R	2738	schedule	current cid:10	state:0
+pid:9	J	2753	schedule	current cid:9
+pid:8	R	2753	schedule	current cid:9	state:0
+pid:8	J	2768	schedule	current cid:8
+pid:7	R	2768	schedule	current cid:8	state:0
+pid:7	J	2783	schedule	current cid:7
+pid:6	R	2783	schedule	current cid:7	state:0
+pid:6	J	2798	schedule	current cid:6
+pid:10	R	2798	schedule	current cid:6	state:0
+pid:10	J	2813	schedule	current cid:10
+pid:9	R	2813	schedule	current cid:10	state:0
+pid:9	J	2828	schedule	current cid:9
+pid:8	R	2828	schedule	current cid:9	state:0
+pid:8	J	2843	schedule	current cid:8
+pid:7	R	2843	schedule	current cid:8	state:0
+pid:7	J	2858	schedule	current cid:7
+pid:6	R	2858	schedule	current cid:7	state:0
+pid:6	J	2873	schedule	current cid:6
+pid:10	R	2873	schedule	current cid:6	state:0
+pid:10	J	2888	schedule	current cid:10
+pid:9	R	2888	schedule	current cid:10	state:0
+pid:9	J	2903	schedule	current cid:9
+pid:8	R	2903	schedule	current cid:9	state:0
+pid:8	J	2918	schedule	current cid:8
+pid:7	R	2918	schedule	current cid:8	state:0
+pid:7	J	2933	schedule	current cid:7
+pid:6	R	2933	schedule	current cid:7	state:0
+pid:6	J	2948	schedule	current cid:6
+pid:10	R	2948	schedule	current cid:6	state:0
+pid:10	J	2963	schedule	current cid:10
+pid:9	R	2963	schedule	current cid:10	state:0
+pid:9	J	2978	schedule	current cid:9
+pid:8	R	2978	schedule	current cid:9	state:0
+pid:8	J	2993	schedule	current cid:8
+pid:7	R	2993	schedule	current cid:8	state:0
+pid:7	J	3008	schedule	current cid:7
+pid:6	R	3008	schedule	current cid:7	state:0
+pid:6	J	3023	schedule	current cid:6
+pid:10	R	3023	schedule	current cid:6	state:0
+pid:10	J	3038	schedule	current cid:10
+pid:9	R	3038	schedule	current cid:10	state:0
+pid:9	J	3053	schedule	current cid:9
+pid:8	R	3053	schedule	current cid:9	state:0
+pid:3	J	3068	schedule	current cid:8
+pid:8	J	3068	schedule	current cid:8
+pid:3	R	3068	schedule	current cid:8	state:0
+pid:3	W	3068	sys_pause	current cid:3
+pid:7	R	3068	schedule	current cid:3	state:1
+pid:7	J	3083	schedule	current cid:7
+pid:6	R	3083	schedule	current cid:7	state:0
+pid:6	J	3098	schedule	current cid:6
+pid:10	R	3098	schedule	current cid:6	state:0
+pid:10	J	3113	schedule	current cid:10
+pid:9	R	3113	schedule	current cid:10	state:0
+pid:9	J	3128	schedule	current cid:9
+pid:8	R	3128	schedule	current cid:9	state:0
+pid:8	J	3143	schedule	current cid:8
+pid:7	R	3143	schedule	current cid:8	state:0
+pid:7	J	3158	schedule	current cid:7
+pid:6	R	3158	schedule	current cid:7	state:0
+pid:6	J	3173	schedule	current cid:6
+pid:10	R	3173	schedule	current cid:6	state:0
+pid:10	J	3188	schedule	current cid:10
+pid:9	R	3188	schedule	current cid:10	state:0
+pid:9	J	3203	schedule	current cid:9
+pid:8	R	3203	schedule	current cid:9	state:0
+pid:8	J	3218	schedule	current cid:8
+pid:7	R	3218	schedule	current cid:8	state:0
+pid:7	J	3233	schedule	current cid:7
+pid:6	R	3233	schedule	current cid:7	state:0
+pid:6	J	3248	schedule	current cid:6
+pid:10	R	3248	schedule	current cid:6	state:0
+pid:10	J	3263	schedule	current cid:10
+pid:9	R	3263	schedule	current cid:10	state:0
+pid:9	J	3278	schedule	current cid:9
+pid:8	R	3278	schedule	current cid:9	state:0
+pid:8	J	3293	schedule	current cid:8
+pid:7	R	3293	schedule	current cid:8	state:0
+pid:7	J	3308	schedule	current cid:7
+pid:6	R	3308	schedule	current cid:7	state:0
+pid:6	J	3323	schedule	current cid:6
+pid:10	R	3323	schedule	current cid:6	state:0
+pid:10	J	3338	schedule	current cid:10
+pid:9	R	3338	schedule	current cid:10	state:0
+pid:9	J	3353	schedule	current cid:9
+pid:8	R	3353	schedule	current cid:9	state:0
+pid:8	J	3368	schedule	current cid:8
+pid:7	R	3368	schedule	current cid:8	state:0
+pid:7	J	3383	schedule	current cid:7
+pid:6	R	3383	schedule	current cid:7	state:0
+pid:6	J	3398	schedule	current cid:6
+pid:10	R	3398	schedule	current cid:6	state:0
+pid:10	J	3413	schedule	current cid:10
+pid:9	R	3413	schedule	current cid:10	state:0
+pid:9	J	3428	schedule	current cid:9
+pid:8	R	3428	schedule	current cid:9	state:0
+pid:8	J	3443	schedule	current cid:8
+pid:7	R	3443	schedule	current cid:8	state:0
+pid:7	J	3458	schedule	current cid:7
+pid:6	R	3458	schedule	current cid:7	state:0
+pid:6	J	3473	schedule	current cid:6
+pid:10	R	3473	schedule	current cid:6	state:0
+pid:10	J	3488	schedule	current cid:10
+pid:9	R	3488	schedule	current cid:10	state:0
+pid:9	J	3503	schedule	current cid:9
+pid:8	R	3503	schedule	current cid:9	state:0
+pid:8	J	3518	schedule	current cid:8
+pid:7	R	3518	schedule	current cid:8	state:0
+pid:7	J	3533	schedule	current cid:7
+pid:6	R	3533	schedule	current cid:7	state:0
+pid:6	J	3548	schedule	current cid:6
+pid:10	R	3548	schedule	current cid:6	state:0
+pid:10	J	3563	schedule	current cid:10
+pid:9	R	3563	schedule	current cid:10	state:0
+pid:9	J	3578	schedule	current cid:9
+pid:8	R	3578	schedule	current cid:9	state:0
+pid:8	J	3593	schedule	current cid:8
+pid:7	R	3593	schedule	current cid:8	state:0
+pid:7	J	3608	schedule	current cid:7
+pid:6	R	3608	schedule	current cid:7	state:0
+pid:6	J	3623	schedule	current cid:6
+pid:10	R	3623	schedule	current cid:6	state:0
+pid:10	J	3638	schedule	current cid:10
+pid:9	R	3638	schedule	current cid:10	state:0
+pid:9	J	3653	schedule	current cid:9
+pid:8	R	3653	schedule	current cid:9	state:0
+pid:8	J	3668	schedule	current cid:8
+pid:7	R	3668	schedule	current cid:8	state:0
+pid:7	J	3683	schedule	current cid:7
+pid:6	R	3683	schedule	current cid:7	state:0
+pid:6	J	3698	schedule	current cid:6
+pid:10	R	3698	schedule	current cid:6	state:0
+pid:10	J	3713	schedule	current cid:10
+pid:9	R	3713	schedule	current cid:10	state:0
+pid:9	J	3728	schedule	current cid:9
+pid:8	R	3728	schedule	current cid:9	state:0
+pid:8	J	3743	schedule	current cid:8
+pid:7	R	3743	schedule	current cid:8	state:0
+pid:7	J	3758	schedule	current cid:7
+pid:6	R	3758	schedule	current cid:7	state:0
+pid:6	J	3773	schedule	current cid:6
+pid:10	R	3773	schedule	current cid:6	state:0
+pid:10	J	3788	schedule	current cid:10
+pid:9	R	3788	schedule	current cid:10	state:0
+pid:9	J	3803	schedule	current cid:9
+pid:8	R	3803	schedule	current cid:9	state:0
+pid:8	J	3818	schedule	current cid:8
+pid:7	R	3818	schedule	current cid:8	state:0
+pid:7	J	3833	schedule	current cid:7
+pid:6	R	3833	schedule	current cid:7	state:0
+pid:6	J	3848	schedule	current cid:6
+pid:10	R	3848	schedule	current cid:6	state:0
+pid:10	J	3863	schedule	current cid:10
+pid:9	R	3863	schedule	current cid:10	state:0
+pid:9	J	3878	schedule	current cid:9
+pid:8	R	3878	schedule	current cid:9	state:0
+pid:8	J	3893	schedule	current cid:8
+pid:7	R	3893	schedule	current cid:8	state:0
+pid:7	J	3908	schedule	current cid:7
+pid:6	R	3908	schedule	current cid:7	state:0
+pid:6	J	3923	schedule	current cid:6
+pid:10	R	3923	schedule	current cid:6	state:0
+pid:10	J	3938	schedule	current cid:10
+pid:9	R	3938	schedule	current cid:10	state:0
+pid:9	J	3953	schedule	current cid:9
+pid:8	R	3953	schedule	current cid:9	state:0
+pid:8	J	3968	schedule	current cid:8
+pid:7	R	3968	schedule	current cid:8	state:0
+pid:7	J	3983	schedule	current cid:7
+pid:6	R	3983	schedule	current cid:7	state:0
+pid:6	J	3998	schedule	current cid:6
+pid:10	R	3998	schedule	current cid:6	state:0
+pid:10	J	4013	schedule	current cid:10
+pid:9	R	4013	schedule	current cid:10	state:0
+pid:9	J	4028	schedule	current cid:9
+pid:8	R	4028	schedule	current cid:9	state:0
+pid:8	J	4043	schedule	current cid:8
+pid:7	R	4043	schedule	current cid:8	state:0
+pid:7	J	4058	schedule	current cid:7
+pid:6	R	4058	schedule	current cid:7	state:0
+pid:6	J	4073	schedule	current cid:6
+pid:10	R	4073	schedule	current cid:6	state:0
+pid:10	J	4088	schedule	current cid:10
+pid:9	R	4088	schedule	current cid:10	state:0
+pid:9	J	4103	schedule	current cid:9
+pid:8	R	4103	schedule	current cid:9	state:0
+pid:8	J	4118	schedule	current cid:8
+pid:7	R	4118	schedule	current cid:8	state:0
+pid:7	J	4133	schedule	current cid:7
+pid:6	R	4133	schedule	current cid:7	state:0
+pid:6	J	4148	schedule	current cid:6
+pid:10	R	4148	schedule	current cid:6	state:0
+pid:10	J	4163	schedule	current cid:10
+pid:9	R	4163	schedule	current cid:10	state:0
+pid:9	J	4178	schedule	current cid:9
+pid:8	R	4178	schedule	current cid:9	state:0
+pid:8	J	4193	schedule	current cid:8
+pid:7	R	4193	schedule	current cid:8	state:0
+pid:7	J	4208	schedule	current cid:7
+pid:6	R	4208	schedule	current cid:7	state:0
+pid:6	J	4223	schedule	current cid:6
+pid:10	R	4223	schedule	current cid:6	state:0
+pid:10	W	4229	sys_pause	current cid:10
+pid:9	R	4229	schedule	current cid:10	state:1
+pid:9	W	4237	sys_pause	current cid:9
+pid:8	R	4237	schedule	current cid:9	state:1
+pid:8	W	4245	sys_pause	current cid:8
+pid:7	R	4245	schedule	current cid:8	state:1
+pid:7	W	4253	sys_pause	current cid:7
+pid:6	R	4253	schedule	current cid:7	state:1
+pid:6	W	4261	sys_pause	current cid:6
+pid:0	R	4261	schedule	current cid:6	state:1
+pid:10	J	4330	schedule	current cid:0
+pid:10	R	4330	schedule	current cid:0	state:1
+pid:10	W	4330	sys_pause	current cid:10
+pid:0	R	4330	schedule	current cid:10	state:1
+pid:9	J	4338	schedule	current cid:0
+pid:9	R	4338	schedule	current cid:0	state:1
+pid:9	W	4338	sys_pause	current cid:9
+pid:0	R	4338	schedule	current cid:9	state:1
+pid:8	J	4346	schedule	current cid:0
+pid:8	R	4346	schedule	current cid:0	state:1
+pid:8	W	4346	sys_pause	current cid:8
+pid:0	R	4346	schedule	current cid:8	state:1
+pid:7	J	4354	schedule	current cid:0
+pid:7	R	4354	schedule	current cid:0	state:1
+pid:7	W	4354	sys_pause	current cid:7
+pid:0	R	4354	schedule	current cid:7	state:1
+pid:6	J	4362	schedule	current cid:0
+pid:6	R	4362	schedule	current cid:0	state:1
+pid:6	W	4362	sys_pause	current cid:6
+pid:0	R	4362	schedule	current cid:6	state:1
+pid:10	J	4431	schedule	current cid:0
+pid:10	R	4431	schedule	current cid:0	state:1
+pid:5	J	4431	schedule	current cid:10
+pid:10	E	4431	schedule	current cid:10
+pid:5	R	4431	schedule	current cid:10	state:3
+pid:5	W	4432	sys_waitpid	current cid:5
+pid:0	R	4432	schedule	current cid:5	state:1
+pid:9	J	4439	schedule	current cid:0
+pid:9	R	4439	schedule	current cid:0	state:1
+pid:5	J	4439	schedule	current cid:9
+pid:9	E	4439	schedule	current cid:9
+pid:5	R	4439	schedule	current cid:9	state:3
+pid:5	W	4440	sys_waitpid	current cid:5
+pid:0	R	4440	schedule	current cid:5	state:1
+pid:8	J	4447	schedule	current cid:0
+pid:8	R	4447	schedule	current cid:0	state:1
+pid:5	J	4447	schedule	current cid:8
+pid:8	E	4447	schedule	current cid:8
+pid:5	R	4447	schedule	current cid:8	state:3
+pid:5	W	4447	sys_waitpid	current cid:5
+pid:0	R	4448	schedule	current cid:5	state:1
+pid:7	J	4455	schedule	current cid:0
+pid:7	R	4455	schedule	current cid:0	state:1
+pid:5	J	4455	schedule	current cid:7
+pid:7	E	4455	schedule	current cid:7
+pid:5	R	4455	schedule	current cid:7	state:3
+pid:5	W	4455	sys_waitpid	current cid:5
+pid:0	R	4456	schedule	current cid:5	state:1
+pid:6	J	4463	schedule	current cid:0
+pid:6	R	4463	schedule	current cid:0	state:1
+pid:5	J	4463	schedule	current cid:6
+pid:6	E	4463	schedule	current cid:6
+pid:5	R	4463	schedule	current cid:6	state:3
+pid:4	J	4464	schedule	current cid:5
+pid:5	E	4464	schedule	current cid:5
+pid:4	R	4464	schedule	current cid:5	state:3
+pid:11	N	4467	copy_process	current cid:4
+pid:11	J	4468	copy_process	current cid:4
+pid:4	W	4468	sleep_on	current cid:4
+pid:11	R	4468	schedule	current cid:4	state:2
+pid:4	J	4470	wake_up		current cid:11
+pid:11	E	4471	schedule	current cid:11
+pid:4	R	4471	schedule	current cid:11	state:3
+pid:12	N	4479	copy_process	current cid:4
+pid:12	J	4479	copy_process	current cid:4
+pid:4	W	4479	sys_waitpid	current cid:4
+pid:12	R	4479	schedule	current cid:4	state:1

@@ -1,0 +1,28 @@
+(cd kernel; make)
+make[1]: Entering directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel'
+make[1]: `kernel.o' is up to date.
+make[1]: Leaving directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel'
+(cd mm; make)
+make[1]: Entering directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/mm'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/mm'
+(cd fs; make)
+make[1]: Entering directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/fs'
+make[1]: `fs.o' is up to date.
+make[1]: Leaving directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/fs'
+(cd kernel/blk_drv; make)
+make[1]: Entering directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel/blk_drv'
+make[1]: `blk_drv.a' is up to date.
+make[1]: Leaving directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel/blk_drv'
+(cd kernel/chr_drv; make)
+make[1]: Entering directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel/chr_drv'
+make[1]: `chr_drv.a' is up to date.
+make[1]: Leaving directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel/chr_drv'
+(cd kernel/math; make)
+make[1]: Entering directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel/math'
+make[1]: `math.a' is up to date.
+make[1]: Leaving directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/kernel/math'
+(cd lib; make)
+make[1]: Entering directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/lib'
+make[1]: `lib.a' is up to date.
+make[1]: Leaving directory `/home/henry/Desktop/os/exp3/oslab/linux-0.11/lib'
