@@ -34,12 +34,12 @@
 00000000000i[     ]   SB16 support: no
 00000000000i[     ]   USB support: no
 00000000000i[     ]   VGA extension support: vbe 
-00000000000i[MEM0 ] allocated memory at 0xb5e5b008. after alignment, vector=0xb5e5c000
+00000000000i[MEM0 ] allocated memory at 0xb5e45008. after alignment, vector=0xb5e46000
 00000000000i[MEM0 ] 16.00MB
 00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('./bochs/BIOS-bochs-latest')
 00000000000i[MEM0 ] rom at 0xc0000/39424 ('./bochs/vgabios.bin')
 00000000000i[CMOS ] Using local time for initial clock
-00000000000i[CMOS ] Setting initial clock to: Mon Aug 31 01:28:53 2015 (time0=1441009733)
+00000000000i[CMOS ] Setting initial clock to: Mon Aug 31 01:32:12 2015 (time0=1441009932)
 00000000000i[DMA  ] channel 4 used by cascade
 00000000000i[DMA  ] channel 2 used by Floppy Drive
 00000000000i[FDD  ] tried to open './linux-0.11/Image' read/write: No such file or directory
@@ -87,39 +87,39 @@
 00000000000i[     ] reset of 'speaker' plugin device by virtual method
 00000000000i[XGUI ] [x] Mouse off
 00000003445i[BIOS ] $Revision: 1.194 $ $Date: 2007/12/23 19:46:27 $
-00000317668i[KBD  ] reset-disable command received
-00000336412i[BIOS ] Starting rombios32
-00000337108i[BIOS ] ram_size=0x00f00000
-00000337622i[BIOS ] Found 1 cpu(s)
-00000562120i[VBIOS] VGABios $Id: vgabios.c,v 1.66 2006/07/10 07:47:51 vruppert Exp $
-00000562191i[VGA  ] VBE known Display Interface b0c0
-00000562223i[VGA  ] VBE known Display Interface b0c4
-00000565148i[VBIOS] VBE Bios $Id: vbe.c,v 1.58 2006/08/19 09:39:43 vruppert Exp $
-00000888850i[BIOS ] ata0-0: PCHS=204/16/38 translation=none LCHS=204/16/38
+00000436851i[KBD  ] reset-disable command received
+00000455595i[BIOS ] Starting rombios32
+00000456291i[BIOS ] ram_size=0x00f00000
+00000456805i[BIOS ] Found 1 cpu(s)
+00000681303i[VBIOS] VGABios $Id: vgabios.c,v 1.66 2006/07/10 07:47:51 vruppert Exp $
+00000681374i[VGA  ] VBE known Display Interface b0c0
+00000681406i[VGA  ] VBE known Display Interface b0c4
+00000684331i[VBIOS] VBE Bios $Id: vbe.c,v 1.58 2006/08/19 09:39:43 vruppert Exp $
+00001007772i[BIOS ] ata0-0: PCHS=204/16/38 translation=none LCHS=204/16/38
 00001200000i[XGUI ] charmap update. Font Height is 16
-00004769035i[BIOS ] IDE time out
-00004920637i[FDD  ] attempt to read/write sector 1 with media not present
-00012968370i[FDD  ] controller reset in software
-00013031307p[BIOS ] >>PANIC<< No bootable device.
-00013031307i[CPU  ] CPU is in real mode (active)
-00013031307i[CPU  ] CS.d_b = 16 bit
-00013031307i[CPU  ] SS.d_b = 16 bit
-00013031307i[CPU  ] | EAX=0000040a  EBX=0000cd04  ECX=00000004  EDX=00000402
-00013031307i[CPU  ] | ESP=0000ffaa  EBP=0000ffae  ESI=ffff0000  EDI=0008fdba
-00013031307i[CPU  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf ZF af PF cf
-00013031307i[CPU  ] | SEG selector     base    limit G D
-00013031307i[CPU  ] | SEG sltr(index|ti|rpl)     base    limit G D
-00013031307i[CPU  ] |  CS:f000( 0004| 0|  0) 000f0000 0000ffff 0 0
-00013031307i[CPU  ] |  DS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00013031307i[CPU  ] |  SS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00013031307i[CPU  ] |  ES:07c0( 0005| 0|  0) 00007c00 0000ffff 0 0
-00013031307i[CPU  ] |  FS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00013031307i[CPU  ] |  GS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00013031307i[CPU  ] | EIP=00000560 (0000055f)
-00013031307i[CPU  ] | CR0=0x60000010 CR1=0 CR2=0x00000000
-00013031307i[CPU  ] | CR3=0x00000000 CR4=0x00000000
-00013031307i[CPU  ] >> out dx, al : EE
-00013031307i[CMOS ] Last time is 1441009736 (Mon Aug 31 01:28:56 2015)
-00013031307i[XGUI ] Exit
-00013031307i[     ] restoring default signal behavior
-00013031307i[CTRL ] quit_sim called with exit code 1
+00004887980i[BIOS ] IDE time out
+00005039579i[FDD  ] attempt to read/write sector 1 with media not present
+00012968332i[FDD  ] controller reset in software
+00013031269p[BIOS ] >>PANIC<< No bootable device.
+00013031269i[CPU  ] CPU is in real mode (active)
+00013031269i[CPU  ] CS.d_b = 16 bit
+00013031269i[CPU  ] SS.d_b = 16 bit
+00013031269i[CPU  ] | EAX=0000040a  EBX=0000cd04  ECX=00000004  EDX=00000402
+00013031269i[CPU  ] | ESP=0000ffaa  EBP=0000ffae  ESI=ffff0000  EDI=0008fdba
+00013031269i[CPU  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf ZF af PF cf
+00013031269i[CPU  ] | SEG selector     base    limit G D
+00013031269i[CPU  ] | SEG sltr(index|ti|rpl)     base    limit G D
+00013031269i[CPU  ] |  CS:f000( 0004| 0|  0) 000f0000 0000ffff 0 0
+00013031269i[CPU  ] |  DS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
+00013031269i[CPU  ] |  SS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
+00013031269i[CPU  ] |  ES:07c0( 0005| 0|  0) 00007c00 0000ffff 0 0
+00013031269i[CPU  ] |  FS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
+00013031269i[CPU  ] |  GS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
+00013031269i[CPU  ] | EIP=00000560 (0000055f)
+00013031269i[CPU  ] | CR0=0x60000010 CR1=0 CR2=0x00000000
+00013031269i[CPU  ] | CR3=0x00000000 CR4=0x00000000
+00013031269i[CPU  ] >> out dx, al : EE
+00013031269i[CMOS ] Last time is 1441009935 (Mon Aug 31 01:32:15 2015)
+00013031269i[XGUI ] Exit
+00013031269i[     ] restoring default signal behavior
+00013031269i[CTRL ] quit_sim called with exit code 1
