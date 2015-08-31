@@ -38,7 +38,7 @@ int sys_shmget(key_t key, size_t size, int shmflg)
 	shmid_arr[key%SHM_NUM].shmid = key%SHM_NUM+1;
 	shmid_arr[key%SHM_NUM].size = size;
 	
-	printk("%d shmid_arr[%d].phy_addr = %x\n", current->pid, key%SHM_NUM, shmid_arr[key%SHM_NUM].phy_addr);
+//	printk("%d shmid_arr[%d].phy_addr = %x\n", current->pid, key%SHM_NUM, shmid_arr[key%SHM_NUM].phy_addr);
 			
 	return shmid_arr[key%SHM_NUM].shmid;
 }
@@ -50,32 +50,48 @@ void *sys_shmat(int shmid, void *shmaddr, int shmflg)
 	if(!shmid_arr[shmid-1].shmid)
 		return (void *)-EINVAL;
 	
-	unsigned long data_base, vir_addr;
+	unsigned long data_base, seg_addr;
 
 	data_base = get_base(current->ldt[2]);
 //	printk("start_code= %x code_limit= %x end_code= %x\n", current->start_code, get_limit(current->ldt[1]), current->end_code);	
 //	printk("data_base= %x data_limit= %x end_data= %x\n", data_base, get_limit(current->ldt[2]), current->end_data);	
 //	printk("start_stack= %x brk = %x\n", current->start_stack, current->brk);
 	
-	vir_addr = data_base + current->brk;	
+	seg_addr = data_base + current->brk;			//similar to virtual address
 	//printk("vir_addr= %x phy_addr= %x\n", vir_addr, shmid_arr[shmid-1].phy_addr);
-	if(!put_page(shmid_arr[shmid-1].phy_addr, vir_addr))	//建立线性地址和物理地址的映射
+	if(!put_page(shmid_arr[shmid-1].phy_addr, seg_addr))	//map physics addr to virtual addr
 		return (void *)-ENOMEM;
 	
 	current->brk += PAGE_SIZE;
 	//printk("new brk = %x\n", current->brk);
 	
-	return (void *)(vir_addr-data_base);			//every process has the independent memory zone
+	return (void *)(seg_addr-data_base);			//return the address in the special segment
+}
+
+int remove_page(unsigned long vir_addr)
+{
+	unsigned long * page_table;
+	
+	page_table = (unsigned long *)((vir_addr>>20)&0xffc);	//gain the directory's address
+	if((*page_table)&1){					//if the directory is exist, then gain the page's address
+		page_table = (unsigned long *)((*page_table)&0xfffff000);
+	}
+
+	page_table[(vir_addr>>12)&0x3ff] = 0;			//clean the phy_addr of this page
+	
+	return 0;
 }
 
 int sys_shmdt(void *shmaddr)
 {
-	unsigned long data_base, vir_addr;
+	unsigned long data_base, seg_addr, vir_addr;
 	
 	data_base = get_base(current->ldt[2]);	
-	vir_addr = data_base + current->brk - PAGE_SIZE;	
-	if(((unsigned long)shmaddr<=vir_addr) && ((unsigned long)shmaddr>data_base)){
-		free_page_tables((unsigned long)shmaddr, PAGE_SIZE);	
+	seg_addr = current->brk - PAGE_SIZE;
+	if((unsigned long)shmaddr<=seg_addr){
+		vir_addr = (unsigned long)shmaddr+data_base;
+//		free_page_tables(vir_addr&0xffc00000, PAGE_SIZE);	//include free_page, inadequacy
+		remove_page(vir_addr);
 		current->brk -= PAGE_SIZE;
 		
 		return 0;
@@ -92,7 +108,9 @@ int sys_shmctl(int shmid, int cmd)
 		return -EINVAL;
 	if(!shmid_arr[shmid-1].shmid)
 		return -ENOMEM;
-
+	if(!shmid_arr[shmid-1].phy_addr)
+		return -EINVAL;
+		
 	free_page(shmid_arr[shmid-1].phy_addr);
 	
 	shmid_arr[shmid-1].shmid = 0;
