@@ -34,17 +34,26 @@
 00000000000i[     ]   SB16 support: no
 00000000000i[     ]   USB support: no
 00000000000i[     ]   VGA extension support: vbe 
+<<<<<<< HEAD
 00000000000i[MEM0 ] allocated memory at 0xb5e45008. after alignment, vector=0xb5e46000
+=======
+00000000000i[MEM0 ] allocated memory at 0xf6041008. after alignment, vector=0xf6042000
+>>>>>>> 0ae4b4a26dbb1c97e90b9236b0ea29999d48e538
 00000000000i[MEM0 ] 16.00MB
 00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('./bochs/BIOS-bochs-latest')
 00000000000i[MEM0 ] rom at 0xc0000/39424 ('./bochs/vgabios.bin')
 00000000000i[CMOS ] Using local time for initial clock
+<<<<<<< HEAD
 00000000000i[CMOS ] Setting initial clock to: Mon Aug 31 01:32:12 2015 (time0=1441009932)
+=======
+00000000000i[CMOS ] Setting initial clock to: Fri Aug 28 14:23:32 2015 (time0=1440743012)
+>>>>>>> 0ae4b4a26dbb1c97e90b9236b0ea29999d48e538
 00000000000i[DMA  ] channel 4 used by cascade
 00000000000i[DMA  ] channel 2 used by Floppy Drive
 00000000000i[FDD  ] tried to open './linux-0.11/Image' read/write: No such file or directory
 00000000000i[FDD  ] tried to open './linux-0.11/Image' read only: No such file or directory
 00000000000i[MEM0 ] Register memory access handlers: 0x000a0000 - 0x000bffff
+<<<<<<< HEAD
 00000000000i[XGUI ] test_alloc_colors: 16 colors available out of 16 colors tried
 00000000000i[XGUI ] font 8 wide x 16 high, display depth = 24
 00000000000i[VGA  ] interval=300000
@@ -123,3 +132,6 @@
 00013031269i[XGUI ] Exit
 00013031269i[     ] restoring default signal behavior
 00013031269i[CTRL ] quit_sim called with exit code 1
+=======
+00000000000p[XGUI ] >>PANIC<< bochs: cannot connect to X server 
+>>>>>>> 0ae4b4a26dbb1c97e90b9236b0ea29999d48e538
