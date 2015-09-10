@@ -2,6 +2,7 @@
 #include <regex.h>
 #include <string.h>
 #include <stdint.h>
+#include <pthread.h>
 
 #define	ARGU		2	
 #define	MAX_THREAD	20	
@@ -23,17 +24,44 @@ struct task_status{
 };
 
 uint8_t mem[1<<20];
-static long time = 1;
+static long times = 1;
 
+
+void help()
+{
+	printf("help:\t1.time+number\n");
+	printf("\t2.thread+number\n");
+	printf("\t3.go\n");
+	printf("\t4.status\n");
+	printf("\t5.abort\n");
+	printf("\t6.exit\n");
+}
+
+void handler(void *stat)
+{	
+	struct task_status *t_stat = (struct task_status *)stat;
+
+	t_stat->run = 0;
+	printf("thread %ld is aborted.\n", t_stat->tid);
+	printf("thread count %d.\n", t_stat->count);
+}
 
 void *memtest(void *stat)
 {
 	int i, j, rdm_num;
 	struct task_status *t_stat = (struct task_status *)stat;
 
+	
+//	printf("hello!\n");
+
+	pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
+	pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+
+	pthread_cleanup_push(handler, stat);
+
 	t_stat->run = 1;
 	for(i=t_stat->s_calc; i<=t_stat->e_calc; i++){
-		for(j=0; j<time; j++){
+		for(j=0; j<times; j++){
 			mem[i] = TEST1;
 			if(mem[i] != TEST1){
 				t_stat->error_num++;
@@ -61,9 +89,14 @@ void *memtest(void *stat)
 			}
 		}
 		t_stat->count++;
+//		printf("counting...\n");
 	}
 
 	t_stat->run = 0;
+
+	pthread_cleanup_pop(0);
+
+	printf("goodbye!\n");
 	
 	pthread_exit(NULL);
 }
@@ -71,7 +104,7 @@ void *memtest(void *stat)
 int main()
 {
 	int err, i, j, len, calc_thread;
-	long thread = 1;
+	long exist_thread=1, thread=1;
 	regex_t reg;
 	regmatch_t pmatch[ARGU+1];
 	char errbuf[1024];
@@ -93,7 +126,8 @@ int main()
 		err = regexec(&reg, command, ARGU+1, pmatch, 0);
 		if(err == REG_NOMATCH){
  			printf("exec err:no match\n");
- 		 	goto help;
+ 		 	help();
+			continue;
  		}
 		else if(err){
 			regerror(err,&reg,errbuf,sizeof(errbuf));
@@ -114,20 +148,23 @@ int main()
 		if(!strcmp(match[0], "time")){
 			if(!strlen(match[1])){
 				printf("no num enter\n");
- 		 		goto help;
+ 		 		help();
+				continue;
 			}
-			time = atol(match[1]);
-			printf("time num:%ld\n", time);	
+			times = atol(match[1]);
+			printf("time num:%ld\n", times);	
 		}
 		else if(!strcmp(match[0], "thread")){
 			if(!strlen(match[1])){
 				printf("no num enter\n");
- 		 		goto help;
+ 		 		help();
+				continue;
 			}
 			thread = atol(match[1]);
 			printf("thread num:%ld\n", thread);	
 		}
 		else if(!strcmp(match[0], "go")){
+			exist_thread = thread;
 			calc_thread = (1<<20)/thread;
 
 			for(i=0; i<thread; i++){
@@ -152,26 +189,27 @@ int main()
 			for(j=0; j<thread; j++){
 				if(t_stat[j].run){
 					printf("thread %d is running.(%d ~ %d, %d/%d, error:%d)\n", \
-						j+1, t_stat[j].s_calc, t_stat[j].e_calc, t_stat[j].count, t_stat[j].sum, t_stat[j].error_num);
+						j+1, t_stat[j].s_calc, t_stat[j].e_calc, t_stat[j].count, \
+						t_stat[j].sum, t_stat[j].error_num);
 				}else{
 					printf("thread %d is exited.(%d ~ %d, %d/%d, error:%d)\n", \
-						j+1, t_stat[j].s_calc, t_stat[j].e_calc, t_stat[j].count, t_stat[j].sum, t_stat[j].error_num);
+						j+1, t_stat[j].s_calc, t_stat[j].e_calc, t_stat[j].count, \
+						t_stat[j].sum, t_stat[j].error_num);
 				}
 			}	
 		}	
 		else if(!strcmp(match[0], "abort")){
-			printf("abort\n");
+			for(i=0; i<exist_thread; i++){
+				pthread_cancel(t_stat[i].tid);
+			}
+			exist_thread = 0;
 		}	
 		else if(!strcmp(match[0], "exit")){
 			return 0;	
 		}	
 		else{
-help:		printf("help:\t1.time+number\n");
-			printf("\t2.thread+number\n");
-			printf("\t3.go\n");
-			printf("\t4.status\n");
-			printf("\t5.abort\n");
-			printf("\t6.exit\n");
+			help();
+			continue;
 		}
 	}
 	
