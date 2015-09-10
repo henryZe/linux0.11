@@ -938,9 +938,7 @@ add_timer	kernel/sched.c	/^void add_timer(long jiffies, void (*fn)(void))$/;"	f
 after_page_tables	boot/head.s	/^after_page_tables:$/;"	l
 alarm	include/linux/sched.h	/^	long alarm;$/;"	m	struct:task_struct
 alt	kernel/chr_drv/keyboard.S	/^alt:	movb $0x10,%al$/;"	l
-alt	kernel/chr_drv/keyboard.s	/^alt:	movb $0x10,%al$/;"	l
 alt_map	kernel/chr_drv/keyboard.S	/^alt_map:$/;"	l
-alt_map	kernel/chr_drv/keyboard.s	/^alt_map:$/;"	l
 argv	init/main.c	/^static char * argv[] = { "-\/bin\/sh",NULL };$/;"	v	file:
 argv_rc	init/main.c	/^static char * argv_rc[] = { "\/bin\/sh", NULL };$/;"	v	file:
 attr	kernel/chr_drv/console.c	/^static unsigned char	attr=0x07;$/;"	v	file:
@@ -993,7 +991,6 @@ bucket_dir	lib/malloc.c	/^struct _bucket_dir bucket_dir[] = {$/;"	v	typeref:stru
 bucket_size	lib/malloc.c	/^	unsigned short		bucket_size;$/;"	m	struct:bucket_desc	file:
 buf	include/linux/tty.h	/^	char buf[TTY_BUF_SIZE];$/;"	m	struct:tty_queue
 buf	kernel/chr_drv/keyboard.S	/^buf = 16$/;"	d
-buf	kernel/chr_drv/keyboard.s	/^buf = 16$/;"	d
 buf	kernel/chr_drv/rs_io.s	/^buf = 16$/;"	d
 buf	kernel/printk.c	/^static char buf[1024];$/;"	v	file:
 buffer	kernel/blk_drv/blk.h	/^	char * buffer;$/;"	m	struct:request
@@ -1016,7 +1013,6 @@ c_oflag	include/termios.h	/^	unsigned long c_oflag;		\/* output mode flags *\/$/
 c_oflag	include/termios.h	/^	unsigned short c_oflag;		\/* output mode flags *\/$/;"	m	struct:termio
 calc_mem	mm/memory.c	/^void calc_mem(void)$/;"	f
 caps	kernel/chr_drv/keyboard.S	/^caps:	testb $0x80,mode$/;"	l
-caps	kernel/chr_drv/keyboard.s	/^caps:	testb $0x80,mode$/;"	l
 chain	lib/malloc.c	/^	struct bucket_desc	*chain;$/;"	m	struct:_bucket_dir	typeref:struct:_bucket_dir::bucket_desc	file:
 change_ldt	fs/exec.c	/^static unsigned long change_ldt(unsigned long text_size,unsigned long * page)$/;"	f	file:
 change_speed	kernel/chr_drv/tty_ioctl.c	/^static void change_speed(struct tty_struct * tty)$/;"	f	file:
@@ -1063,22 +1059,17 @@ csi_m	kernel/chr_drv/console.c	/^void csi_m(void)$/;"	f
 cstime	include/linux/sched.h	/^	long utime,stime,cutime,cstime,start_time;$/;"	m	struct:task_struct
 ctl	kernel/blk_drv/hd.c	/^	int head,sect,cyl,wpcom,lzone,ctl;$/;"	m	struct:hd_i_struct	file:
 ctrl	kernel/chr_drv/keyboard.S	/^ctrl:	movb $0x04,%al$/;"	l
-ctrl	kernel/chr_drv/keyboard.s	/^ctrl:	movb $0x04,%al$/;"	l
 cur	kernel/chr_drv/keyboard.S	/^cur:	movb cur_table(%eax),%al$/;"	l
-cur	kernel/chr_drv/keyboard.s	/^cur:	movb cur_table(%eax),%al$/;"	l
 cur2	kernel/chr_drv/keyboard.S	/^cur2:	cmpb $0x01,e0		\/* e0 forces cursor movement *\/$/;"	l
-cur2	kernel/chr_drv/keyboard.s	/^cur2:	cmpb $0x01,e0		$/;"	l
 cur_rate	kernel/blk_drv/floppy.c	/^static int cur_rate = -1;$/;"	v	file:
 cur_spec1	kernel/blk_drv/floppy.c	/^static int cur_spec1 = -1;$/;"	v	file:
 cur_table	kernel/chr_drv/keyboard.S	/^cur_table:$/;"	l
-cur_table	kernel/chr_drv/keyboard.s	/^cur_table:$/;"	l
 current	kernel/sched.c	/^struct task_struct *current = &(init_task.task);$/;"	v	typeref:struct:task_struct
 current_DOR	kernel/sched.c	/^unsigned char current_DOR = 0x0C;$/;"	v
 current_drive	kernel/blk_drv/floppy.c	/^static unsigned char current_drive = 0;$/;"	v	file:
 current_request	kernel/blk_drv/blk.h	/^	struct request * current_request;$/;"	m	struct:blk_dev_struct	typeref:struct:blk_dev_struct::request
 current_track	kernel/blk_drv/floppy.c	/^static unsigned char current_track = 255;$/;"	v	file:
 cursor	kernel/chr_drv/keyboard.S	/^cursor:$/;"	l
-cursor	kernel/chr_drv/keyboard.s	/^cursor:$/;"	l
 cutime	include/linux/sched.h	/^	long utime,stime,cutime,cstime,start_time;$/;"	m	struct:task_struct
 cwd	include/linux/sched.h	/^	long	cwd;$/;"	m	struct:i387_struct
 cyl	include/linux/hdreg.h	/^	unsigned char cyl;		\/* ? *\/$/;"	m	struct:partition
@@ -1098,12 +1089,11 @@ dev_t	include/sys/types.h	/^typedef unsigned short dev_t;$/;"	t
 device_not_available	kernel/system_call.s	/^device_not_available:$/;"	l
 die	boot/bootsect.s	/^die:	jne die			! es must be at 64kB boundary$/;"	l
 die	kernel/chr_drv/keyboard.S	/^die:	jmp die$/;"	l
-die	kernel/chr_drv/keyboard.s	/^die:	jmp die$/;"	l
 die	kernel/traps.c	/^static void die(char * str,long esp_ptr,long nr)$/;"	f	file:
 die	tools/build.c	/^void die(char * str)$/;"	f
 dir_entry	include/linux/fs.h	/^struct dir_entry {$/;"	s
 dir_namei	fs/namei.c	/^static struct m_inode * dir_namei(const char * pathname,$/;"	f	file:
-div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon5
+div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon4
 divide_error	kernel/asm.s	/^divide_error:$/;"	l
 do_bounds	kernel/traps.c	/^void do_bounds(long esp, long error_code)$/;"	f
 do_coprocessor_error	kernel/traps.c	/^void do_coprocessor_error(long esp, long error_code)$/;"	f
@@ -1130,7 +1120,6 @@ do_rd_request	kernel/blk_drv/ramdisk.c	/^void do_rd_request(void)$/;"	f
 do_reserved	kernel/traps.c	/^void do_reserved(long esp, long error_code)$/;"	f
 do_segment_not_present	kernel/traps.c	/^void do_segment_not_present(long esp,long error_code)$/;"	f
 do_self	kernel/chr_drv/keyboard.S	/^do_self:$/;"	l
-do_self	kernel/chr_drv/keyboard.s	/^do_self:$/;"	l
 do_signal	kernel/signal.c	/^void do_signal(long signr,long eax, long ebx, long ecx, long edx,$/;"	f
 do_stack_segment	kernel/traps.c	/^void do_stack_segment(long esp,long error_code)$/;"	f
 do_timer	kernel/sched.c	/^void do_timer(long cpl)$/;"	f
@@ -1144,9 +1133,7 @@ ds	include/linux/sched.h	/^	long	ds;		\/* 16 high bits zero *\/$/;"	m	struct:tss
 dummy	init/main.c	/^struct drive_info { char dummy[32]; } drive_info;$/;"	m	struct:drive_info	file:
 dupfd	fs/fcntl.c	/^static int dupfd(unsigned int fd, unsigned int arg)$/;"	f	file:
 e0	kernel/chr_drv/keyboard.S	/^e0:	.byte 0$/;"	l
-e0	kernel/chr_drv/keyboard.s	/^e0:	.byte 0$/;"	l
 e0_e1	kernel/chr_drv/keyboard.S	/^e0_e1:	inb $0x61,%al$/;"	l
-e0_e1	kernel/chr_drv/keyboard.s	/^e0_e1:	inb $0x61,%al$/;"	l
 eax	include/linux/sched.h	/^	long	eax,ecx,edx,ebx;$/;"	m	struct:tss_struct
 ebp	include/linux/sched.h	/^	long	ebp;$/;"	m	struct:tss_struct
 ebx	include/linux/sched.h	/^	long	eax,ecx,edx,ebx;$/;"	m	struct:tss_struct
@@ -1162,7 +1149,6 @@ end_code	include/linux/sched.h	/^	unsigned long start_code,end_code,end_data,brk
 end_cyl	include/linux/hdreg.h	/^	unsigned char end_cyl;		\/* ? *\/$/;"	m	struct:partition
 end_data	include/linux/sched.h	/^	unsigned long start_code,end_code,end_data,brk,start_stack;$/;"	m	struct:task_struct
 end_func	kernel/chr_drv/keyboard.S	/^end_func:$/;"	l
-end_func	kernel/chr_drv/keyboard.s	/^end_func:$/;"	l
 end_head	include/linux/hdreg.h	/^	unsigned char end_head;		\/* ? *\/$/;"	m	struct:partition
 end_move	boot/setup.s	/^end_move:$/;"	l
 end_request	kernel/blk_drv/blk.h	/^static inline void end_request(int uptodate)$/;"	f
@@ -1243,9 +1229,7 @@ free_super	fs/super.c	/^static void free_super(struct super_block * sb)$/;"	f	fi
 freeptr	lib/malloc.c	/^	void			*freeptr;$/;"	m	struct:bucket_desc	file:
 fs	include/linux/sched.h	/^	long	fs;		\/* 16 high bits zero *\/$/;"	m	struct:tss_struct
 func	kernel/chr_drv/keyboard.S	/^func:$/;"	l
-func	kernel/chr_drv/keyboard.s	/^func:$/;"	l
 func_table	kernel/chr_drv/keyboard.S	/^func_table:$/;"	l
-func_table	kernel/chr_drv/keyboard.s	/^func_table:$/;"	l
 gap	kernel/blk_drv/floppy.c	/^	unsigned char gap,rate,spec1;$/;"	m	struct:floppy_struct	file:
 gdt	boot/head.s	/^gdt:	.quad 0x0000000000000000	\/* NULL descriptor *\/$/;"	l
 gdt	boot/setup.s	/^gdt:$/;"	l
@@ -1294,7 +1278,6 @@ head	kernel/blk_drv/floppy.c	/^	unsigned int size, sect, head, track, stretch;$/
 head	kernel/blk_drv/floppy.c	/^static unsigned char head = 0;$/;"	v	file:
 head	kernel/blk_drv/hd.c	/^	int head,sect,cyl,wpcom,lzone,ctl;$/;"	m	struct:hd_i_struct	file:
 head	kernel/chr_drv/keyboard.S	/^head = 4$/;"	d
-head	kernel/chr_drv/keyboard.s	/^head = 4$/;"	d
 head	kernel/chr_drv/rs_io.s	/^head = 4$/;"	d
 head	kernel/sys_sem.c	/^	struct task_struct *head;$/;"	m	struct:__anon1	typeref:struct:__anon1::task_struct	file:
 i387	include/linux/sched.h	/^	struct i387_struct i387;$/;"	m	struct:tss_struct	typeref:struct:tss_struct::i387_struct
@@ -1377,16 +1360,12 @@ jiffies	kernel/sched.c	/^	long jiffies;$/;"	m	struct:timer_list	file:
 jiffies	kernel/sched.c	/^long volatile jiffies=0;$/;"	v
 jmp_table	kernel/chr_drv/rs_io.s	/^jmp_table:$/;"	l
 kb_wait	kernel/chr_drv/keyboard.S	/^kb_wait:$/;"	l
-kb_wait	kernel/chr_drv/keyboard.s	/^kb_wait:$/;"	l
 kernel_mktime	kernel/mktime.c	/^long kernel_mktime(struct tm * tm)$/;"	f
 kernel_stack	include/linux/sched.h	/^	long *kernel_stack;$/;"	m	struct:task_struct
 key_map	kernel/chr_drv/keyboard.S	/^key_map:$/;"	l
-key_map	kernel/chr_drv/keyboard.s	/^key_map:$/;"	l
 key_t	include/shm.h	/^typedef int key_t;$/;"	t
 key_table	kernel/chr_drv/keyboard.S	/^key_table:$/;"	l
-key_table	kernel/chr_drv/keyboard.s	/^key_table:$/;"	l
 keyboard_interrupt	kernel/chr_drv/keyboard.S	/^keyboard_interrupt:$/;"	l
-keyboard_interrupt	kernel/chr_drv/keyboard.s	/^keyboard_interrupt:$/;"	l
 kill_motor	boot/bootsect.s	/^kill_motor:$/;"	l
 kill_session	kernel/exit.c	/^static void kill_session(void)$/;"	f	file:
 l_len	include/fcntl.h	/^	off_t l_len;$/;"	m	struct:flock
@@ -1396,12 +1375,11 @@ l_type	include/fcntl.h	/^	short l_type;$/;"	m	struct:flock
 l_whence	include/fcntl.h	/^	short l_whence;$/;"	m	struct:flock
 last_pid	kernel/fork.c	/^long last_pid=0;$/;"	v
 last_task_used_math	kernel/sched.c	/^struct task_struct *last_task_used_math = NULL;$/;"	v	typeref:struct:task_struct
-ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon6
+ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon5
 ldt	include/linux/sched.h	/^	long	ldt;		\/* 16 high bits zero *\/$/;"	m	struct:tss_struct
 ldt	include/linux/sched.h	/^	struct desc_struct ldt[3];$/;"	m	struct:task_struct	typeref:struct:task_struct::desc_struct
 leader	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
 leds	kernel/chr_drv/keyboard.S	/^leds:	.byte 2		\/* num-lock, caps, scroll-lock mode (nom-lock on) *\/$/;"	l
-leds	kernel/chr_drv/keyboard.s	/^leds:	.byte 2		$/;"	l
 lf	kernel/chr_drv/console.c	/^static void lf(void)$/;"	f	file:
 line_status	kernel/chr_drv/rs_io.s	/^line_status:$/;"	l
 ll_rw_block	kernel/blk_drv/ll_rw_blk.c	/^void ll_rw_block(int rw, struct buffer_head * bh)$/;"	f
@@ -1411,7 +1389,6 @@ lock_buffer	kernel/blk_drv/ll_rw_blk.c	/^static inline void lock_buffer(struct b
 lock_inode	fs/inode.c	/^static inline void lock_inode(struct m_inode * inode)$/;"	f	file:
 lock_super	fs/super.c	/^static void lock_super(struct super_block * sb)$/;"	f	file:
 lshift	kernel/chr_drv/keyboard.S	/^lshift:$/;"	l
-lshift	kernel/chr_drv/keyboard.s	/^lshift:$/;"	l
 ltr	include/linux/sched.h	161;"	d
 lzone	kernel/blk_drv/hd.c	/^	int head,sect,cyl,wpcom,lzone,ctl;$/;"	m	struct:hd_i_struct	file:
 m_inode	include/linux/fs.h	/^struct m_inode {$/;"	s
@@ -1435,9 +1412,7 @@ memmove	include/string.h	/^extern inline void * memmove(void * dest,const void *
 memory_end	init/main.c	/^static long memory_end = 0;$/;"	v	file:
 memset	include/string.h	/^static inline void * memset(void * s,char c,int count)$/;"	f
 minus	kernel/chr_drv/keyboard.S	/^minus:	cmpb $1,e0$/;"	l
-minus	kernel/chr_drv/keyboard.s	/^minus:	cmpb $1,e0$/;"	l
 mode	kernel/chr_drv/keyboard.S	/^mode:	.byte 0		\/* caps, alt, ctrl and shift mode *\/$/;"	l
-mode	kernel/chr_drv/keyboard.s	/^mode:	.byte 0		$/;"	l
 mode_t	include/sys/types.h	/^typedef unsigned short mode_t;$/;"	t
 modem_status	kernel/chr_drv/rs_io.s	/^modem_status:$/;"	l
 modtime	include/utime.h	/^	time_t modtime;$/;"	m	struct:utimbuf
@@ -1448,12 +1423,12 @@ mount_root	fs/super.c	/^void mount_root(void)$/;"	f
 move_to_user_mode	include/asm/system.h	1;"	d
 msg1	boot/bootsect.s	/^msg1:$/;"	l
 n_desc	include/a.out.h	/^  short n_desc;$/;"	m	struct:nlist
-n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon4
-n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon4	typeref:struct:nlist::__anon4::nlist
+n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon3
+n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon3	typeref:struct:nlist::__anon3::nlist
 n_other	include/a.out.h	/^  char n_other;$/;"	m	struct:nlist
-n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon4
+n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon3
 n_type	include/a.out.h	/^  unsigned char n_type;$/;"	m	struct:nlist
-n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon4
+n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon3
 n_value	include/a.out.h	/^  unsigned long n_value;$/;"	m	struct:nlist
 name	include/linux/fs.h	/^	char name[NAME_LEN];$/;"	m	struct:dir_entry
 name	kernel/sys_sem.c	/^	char name[SIZE_NAM];$/;"	m	struct:__anon1	file:
@@ -1471,7 +1446,6 @@ no_disk1	boot/setup.s	/^no_disk1:$/;"	l
 no_error_code	kernel/asm.s	/^no_error_code:$/;"	l
 nodename	include/sys/utsname.h	/^	char nodename[9];$/;"	m	struct:utsname
 none	kernel/chr_drv/keyboard.S	/^none:	ret$/;"	l
-none	kernel/chr_drv/keyboard.s	/^none:	ret$/;"	l
 nop	include/asm/system.h	18;"	d
 npar	kernel/chr_drv/console.c	/^static unsigned long	npar,par[NPAR];$/;"	v	file:
 nr_sectors	kernel/blk_drv/blk.h	/^	unsigned long nr_sectors;$/;"	m	struct:request
@@ -1479,9 +1453,7 @@ nr_sects	include/linux/hdreg.h	/^	unsigned int nr_sects;		\/* nr of sectors in p
 nr_sects	kernel/blk_drv/hd.c	/^	long nr_sects;$/;"	m	struct:hd_struct	file:
 nr_system_calls	kernel/system_call.s	/^nr_system_calls = 80$/;"	d
 num	kernel/chr_drv/keyboard.S	/^num:	xorb $2,leds$/;"	l
-num	kernel/chr_drv/keyboard.s	/^num:	xorb $2,leds$/;"	l
 num_table	kernel/chr_drv/keyboard.S	/^num_table:$/;"	l
-num_table	kernel/chr_drv/keyboard.s	/^num_table:$/;"	l
 number	kernel/vsprintf.c	/^static char * number(char * str, int num, int base, int size, int precision$/;"	f	file:
 off_t	include/sys/types.h	/^typedef long off_t;$/;"	t
 offsetof	include/stddef.h	17;"	d
@@ -1490,9 +1462,7 @@ ok2_read	boot/bootsect.s	/^ok2_read:$/;"	l
 ok3_read	boot/bootsect.s	/^ok3_read:$/;"	l
 ok4_read	boot/bootsect.s	/^ok4_read:$/;"	l
 ok_cur	kernel/chr_drv/keyboard.S	/^ok_cur:	shll $16,%eax$/;"	l
-ok_cur	kernel/chr_drv/keyboard.s	/^ok_cur:	shll $16,%eax$/;"	l
 ok_func	kernel/chr_drv/keyboard.S	/^ok_func:$/;"	l
-ok_func	kernel/chr_drv/keyboard.s	/^ok_func:$/;"	l
 ok_load_setup	boot/bootsect.s	/^ok_load_setup:$/;"	l
 oom	mm/memory.c	/^static inline volatile void oom(void)$/;"	f	file:
 open	lib/open.c	/^int open(const char * filename, int flag, ...)$/;"	f
@@ -1516,7 +1486,7 @@ pg3	boot/head.s	/^pg3:$/;"	l
 pg_dir	boot/head.s	/^pg_dir:$/;"	l
 pgrp	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
 pgrp	include/linux/tty.h	/^	int pgrp;$/;"	m	struct:tty_struct
-phy_addr	mm/shm.c	/^	unsigned long phy_addr;$/;"	m	struct:__anon3	file:
+phy_addr	mm/shm.c	/^	unsigned long phy_addr;$/;"	m	struct:__anon6	file:
 pid	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
 pid_t	include/sys/types.h	/^typedef int pid_t;$/;"	t
 pop	boot/bootsect.s	/^	pop dx$/;"	d
@@ -1530,7 +1500,6 @@ priority	include/linux/sched.h	/^	long priority;$/;"	m	struct:task_struct
 priority	kernel/system_call.s	/^priority = 8$/;"	d
 proc_list	include/linux/tty.h	/^	struct task_struct * proc_list;$/;"	m	struct:tty_queue	typeref:struct:tty_queue::task_struct
 proc_list	kernel/chr_drv/keyboard.S	/^proc_list = 12$/;"	d
-proc_list	kernel/chr_drv/keyboard.s	/^proc_list = 12$/;"	d
 proc_list	kernel/chr_drv/rs_io.s	/^proc_list = 12$/;"	d
 ptrdiff_t	include/stddef.h	/^typedef long ptrdiff_t;$/;"	t
 ptrdiff_t	include/sys/types.h	/^typedef long ptrdiff_t;$/;"	t
@@ -1540,12 +1509,11 @@ put_fs_long	include/asm/segment.h	/^static inline void put_fs_long(unsigned long
 put_fs_word	include/asm/segment.h	/^static inline void put_fs_word(short val,short * addr)$/;"	f
 put_page	mm/memory.c	/^unsigned long put_page(unsigned long page,unsigned long address)$/;"	f
 put_queue	kernel/chr_drv/keyboard.S	/^put_queue:$/;"	l
-put_queue	kernel/chr_drv/keyboard.s	/^put_queue:$/;"	l
 put_super	fs/super.c	/^void put_super(int dev)$/;"	f
 pwd	include/linux/sched.h	/^	struct m_inode * pwd;$/;"	m	struct:task_struct	typeref:struct:task_struct::m_inode
 ques	kernel/chr_drv/console.c	/^static unsigned long	ques=0;$/;"	v	file:
-quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon5
-quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon6
+quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon4
+quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon5
 quotient	kernel/chr_drv/tty_ioctl.c	/^static unsigned short quotient[] = {$/;"	v	file:
 r_address	include/a.out.h	/^  int r_address;$/;"	m	struct:relocation_info
 r_extern	include/a.out.h	/^  unsigned int r_extern:1;$/;"	m	struct:relocation_info
@@ -1567,7 +1535,6 @@ read_q	include/linux/tty.h	/^	struct tty_queue read_q;$/;"	m	struct:tty_struct	t
 read_super	fs/super.c	/^static struct super_block * read_super(int dev)$/;"	f	file:
 read_track	boot/bootsect.s	/^read_track:$/;"	l
 reboot	kernel/chr_drv/keyboard.S	/^reboot:$/;"	l
-reboot	kernel/chr_drv/keyboard.s	/^reboot:$/;"	l
 recal_interrupt	kernel/blk_drv/floppy.c	/^static void recal_interrupt(void)$/;"	f	file:
 recal_intr	kernel/blk_drv/hd.c	/^static void recal_intr(void)$/;"	f	file:
 recalibrate	kernel/blk_drv/floppy.c	/^static int recalibrate = 0;$/;"	v	file:
@@ -1577,9 +1544,10 @@ refcnt	lib/malloc.c	/^	unsigned short		refcnt;$/;"	m	struct:bucket_desc	file:
 release	include/sys/utsname.h	/^	char release[9];$/;"	m	struct:utsname
 release	kernel/exit.c	/^void release(struct task_struct * p)$/;"	f
 relocation_info	include/a.out.h	/^struct relocation_info$/;"	s
-rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon5
-rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon6
+rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon4
+rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon5
 remove_from_queues	fs/buffer.c	/^static inline void remove_from_queues(struct buffer_head * bh)$/;"	f	file:
+remove_page	mm/shm.c	/^int remove_page(unsigned long vir_addr)				\/\/on the basis of put_page$/;"	f
 rep_int	kernel/chr_drv/rs_io.s	/^rep_int:$/;"	l
 reply_buffer	kernel/blk_drv/floppy.c	/^static unsigned char reply_buffer[MAX_REPLIES];$/;"	v	file:
 request	kernel/blk_drv/blk.h	/^struct request {$/;"	s
@@ -1610,7 +1578,6 @@ rs_init	kernel/chr_drv/serial.c	/^void rs_init(void)$/;"	f
 rs_int	kernel/chr_drv/rs_io.s	/^rs_int:$/;"	l
 rs_write	kernel/chr_drv/serial.c	/^void rs_write(struct tty_struct * tty)$/;"	f
 rshift	kernel/chr_drv/keyboard.S	/^rshift:$/;"	l
-rshift	kernel/chr_drv/keyboard.s	/^rshift:$/;"	l
 rw_char	fs/char_dev.c	/^int rw_char(int rw,int dev, char * buf, int count, off_t * pos)$/;"	f
 rw_interrupt	kernel/blk_drv/floppy.c	/^static void rw_interrupt(void)$/;"	f	file:
 rw_kmem	fs/char_dev.c	/^static int rw_kmem(int rw,char * buf, int count, off_t * pos)$/;"	f	file:
@@ -1664,7 +1631,6 @@ schedule	kernel/sched.c	/^void schedule(void)$/;"	f
 scr_end	kernel/chr_drv/console.c	/^static unsigned long	scr_end;	\/* Used for EGA\/VGA fast scroll	*\/$/;"	v	file:
 scrdown	kernel/chr_drv/console.c	/^static void scrdown(void)$/;"	f	file:
 scroll	kernel/chr_drv/keyboard.S	/^scroll:$/;"	l
-scroll	kernel/chr_drv/keyboard.s	/^scroll:$/;"	l
 scrup	kernel/chr_drv/console.c	/^static void scrup(void)$/;"	f	file:
 secondary	include/linux/tty.h	/^	struct tty_queue secondary;$/;"	m	struct:tty_struct	typeref:struct:tty_struct::tty_queue
 sect	kernel/blk_drv/floppy.c	/^	unsigned int size, sect, head, track, stretch;$/;"	m	struct:floppy_struct	file:
@@ -1688,14 +1654,11 @@ set_bit	fs/bitmap.c	19;"	d	file:
 set_bit	fs/super.c	22;"	d	file:
 set_cursor	kernel/chr_drv/console.c	/^static inline void set_cursor(void)$/;"	f	file:
 set_e0	kernel/chr_drv/keyboard.S	/^set_e0:	movb $1,e0$/;"	l
-set_e0	kernel/chr_drv/keyboard.s	/^set_e0:	movb $1,e0$/;"	l
 set_e1	kernel/chr_drv/keyboard.S	/^set_e1:	movb $2,e0$/;"	l
-set_e1	kernel/chr_drv/keyboard.s	/^set_e1:	movb $2,e0$/;"	l
 set_fs	include/asm/segment.h	/^static inline void set_fs(unsigned long val)$/;"	f
 set_intr_gate	include/asm/system.h	33;"	d
 set_ldt_desc	include/asm/system.h	66;"	d
 set_leds	kernel/chr_drv/keyboard.S	/^set_leds:$/;"	l
-set_leds	kernel/chr_drv/keyboard.s	/^set_leds:$/;"	l
 set_limit	include/linux/sched.h	206;"	d
 set_origin	kernel/chr_drv/console.c	/^static inline void set_origin(void)$/;"	f	file:
 set_system_gate	include/asm/system.h	39;"	d
@@ -1711,10 +1674,9 @@ setup_rw_floppy	kernel/blk_drv/floppy.c	/^inline void setup_rw_floppy(void)$/;"	
 sgid	include/linux/sched.h	/^	unsigned short gid,egid,sgid;$/;"	m	struct:task_struct
 share_page	mm/memory.c	/^static int share_page(unsigned long address)$/;"	f	file:
 shift_map	kernel/chr_drv/keyboard.S	/^shift_map:$/;"	l
-shift_map	kernel/chr_drv/keyboard.s	/^shift_map:$/;"	l
-shm_struct	mm/shm.c	/^}shm_struct;$/;"	t	typeref:struct:__anon3	file:
+shm_struct	mm/shm.c	/^}shm_struct;$/;"	t	typeref:struct:__anon6	file:
 shmat	lib/lib_shm.c	/^void *shmat(int shmid, void *shmaddr, int shmflg)$/;"	f
-shmid	mm/shm.c	/^	int shmid;$/;"	m	struct:__anon3	file:
+shmid	mm/shm.c	/^	int shmid;$/;"	m	struct:__anon6	file:
 shmid_arr	mm/shm.c	/^static shm_struct shmid_arr[SHM_NUM];$/;"	v	file:
 show_stat	kernel/sched.c	/^void show_stat(void)$/;"	f
 show_task	kernel/sched.c	/^void show_task(int nr,struct task_struct * p)$/;"	f
@@ -1727,10 +1689,9 @@ signal	kernel/system_call.s	/^signal	= 16$/;"	d
 sigset_t	include/signal.h	/^typedef unsigned int sigset_t;		\/* 32 bits *\/$/;"	t
 size	kernel/blk_drv/floppy.c	/^	unsigned int size, sect, head, track, stretch;$/;"	m	struct:floppy_struct	file:
 size	kernel/chr_drv/keyboard.S	/^size	= 1024		\/* must be a power of two ! And MUST be the same$/;"	d
-size	kernel/chr_drv/keyboard.s	/^size	= 1024		$/;"	d
 size	kernel/chr_drv/rs_io.s	/^size	= 1024				\/* must be power of two !$/;"	d
 size	lib/malloc.c	/^	int			size;$/;"	m	struct:_bucket_dir	file:
-size	mm/shm.c	/^	unsigned int size;$/;"	m	struct:__anon3	file:
+size	mm/shm.c	/^	unsigned int size;$/;"	m	struct:__anon6	file:
 size_t	include/stddef.h	/^typedef unsigned long size_t;$/;"	t
 size_t	include/string.h	/^typedef unsigned int size_t;$/;"	t
 size_t	include/sys/types.h	/^typedef unsigned int size_t;$/;"	t
@@ -1891,7 +1852,6 @@ system_call	kernel/system_call.s	/^system_call:$/;"	l
 table_list	kernel/chr_drv/tty_io.c	/^struct tty_queue * table_list[]={$/;"	v	typeref:struct:tty_queue
 tail	include/linux/tty.h	/^	unsigned long tail;$/;"	m	struct:tty_queue
 tail	kernel/chr_drv/keyboard.S	/^tail = 8$/;"	d
-tail	kernel/chr_drv/keyboard.s	/^tail = 8$/;"	d
 tail	kernel/chr_drv/rs_io.s	/^tail = 8$/;"	d
 task	kernel/sched.c	/^	struct task_struct task;$/;"	m	union:task_union	typeref:struct:task_union::task_struct	file:
 task	kernel/sched.c	/^struct task_struct * task[NR_TASKS] = {&(init_task.task), };$/;"	v	typeref:struct:task_struct
@@ -1956,11 +1916,8 @@ umask	include/linux/sched.h	/^	unsigned short umask;$/;"	m	struct:task_struct
 umode_t	include/sys/types.h	/^typedef unsigned short umode_t;$/;"	t
 un_wp_page	mm/memory.c	/^void un_wp_page(unsigned long * table_entry)$/;"	f
 unalt	kernel/chr_drv/keyboard.S	/^unalt:	movb $0x10,%al$/;"	l
-unalt	kernel/chr_drv/keyboard.s	/^unalt:	movb $0x10,%al$/;"	l
 uncaps	kernel/chr_drv/keyboard.S	/^uncaps:	andb $0x7f,mode$/;"	l
-uncaps	kernel/chr_drv/keyboard.s	/^uncaps:	andb $0x7f,mode$/;"	l
 unctrl	kernel/chr_drv/keyboard.S	/^unctrl:	movb $0x04,%al$/;"	l
-unctrl	kernel/chr_drv/keyboard.s	/^unctrl:	movb $0x04,%al$/;"	l
 undef_root	boot/bootsect.s	/^undef_root:$/;"	l
 unexpected_floppy_interrupt	kernel/blk_drv/floppy.c	/^void unexpected_floppy_interrupt(void)$/;"	f
 unexpected_hd_interrupt	kernel/blk_drv/hd.c	/^void unexpected_hd_interrupt(void)$/;"	f
@@ -1968,9 +1925,7 @@ unlock_buffer	kernel/blk_drv/blk.h	/^static inline void unlock_buffer(struct buf
 unlock_buffer	kernel/blk_drv/ll_rw_blk.c	/^static inline void unlock_buffer(struct buffer_head * bh)$/;"	f	file:
 unlock_inode	fs/inode.c	/^static inline void unlock_inode(struct m_inode * inode)$/;"	f	file:
 unlshift	kernel/chr_drv/keyboard.S	/^unlshift:$/;"	l
-unlshift	kernel/chr_drv/keyboard.s	/^unlshift:$/;"	l
 unrshift	kernel/chr_drv/keyboard.S	/^unrshift:$/;"	l
-unrshift	kernel/chr_drv/keyboard.s	/^unrshift:$/;"	l
 usage	tools/build.c	/^void usage(void)$/;"	f
 used	kernel/sys_sem.c	/^	int used;$/;"	m	struct:__anon1	file:
 used_math	include/linux/sched.h	/^	unsigned short used_math;$/;"	m	struct:task_struct

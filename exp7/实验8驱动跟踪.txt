@@ -1,0 +1,194 @@
+linux/init/main.c
+	static int printf(const char *fmt, ...)
+	{
+		write(1,printbuf,i=vsprintf(printbuf, fmt, args));
+	}
+	
+linux/fs/read_write.c
+	int sys_write(unsigned int fd,char * buf,int count)
+	{
+		struct file * file;
+		struct m_inode * inode;
+		
+		//fd为当前进程打开文件的索引值
+		file=current->filp[fd];
+		//f_inode 文件描述内容
+		inode=file->f_inode;
+	}
+	
+	其中，fd=1由来是
+	void init(void)
+	{
+		//fd=0,1,2 都是对tty0进行操作
+		open(“dev/tty0”,O_RDWR,0);dup(0);dup(0);
+		execve("/bin/sh",argv,envp)
+	}
+	
+	linux/fs/open.c中
+	open->sys_open
+	//解析目录，找到inode，设备信息读进inode
+	int sys_open(const char* filename, int flag)
+	{ 
+		i=open_namei(filename,flag,&inode);
+		current->filp[fd]=f; 								//第一个空闲的fd
+		f->f_mode=inode->i_mode; 
+		f->f_inode=inode;
+		f->f_count=1; 
+		
+		return fd; 
+	}
+	
+	由此形成链
+	filp[fd]->f(file_table)->f_inode->inode(dev/tty0)
+	
+	回到刚才的sys_write
+	在linux/fs/read_write.c中
+	int sys_write(unsigned int fd, char *buf,int cnt)
+	{ 
+		inode = file->f_inode;								//获取设备信息inode
+		if(S_ISCHR(inode->i_mode))							//判断是否为字符设备char_dev
+			return rw_char(WRITE, inode->i_zone[0], buf, cnt);
+	}
+	
+	在linux/fs/char_dev.c中
+	int rw_char(int rw, int dev, char *buf, int cnt)
+	{ 
+		//声明函数指针
+		crw_ptr call_addr;
+	
+		//通过主设备号找到对应的设备操作函数，赋给函数指针
+		//dev 高8位主设备号，低8位次设备号
+		crw_ptr call_addr = crw_table[MAJOR(dev)];
+		//调用设备驱动函数 crw_table->rw_ttyx
+		call_addr(rw, dev, buf, cnt);
+		...
+	}
+	其中，
+	static crw_ptr crw_table[]={...,rw_ttyx,};
+	typedef (*crw_ptr)(int rw, unsigned minor, char *buf, int count)
+	
+	static int rw_ttyx(int rw, unsigned minor, char *buf, int count)
+	{ 
+		//根据rw调用tty_write，写入次设备号(低8位)
+		return ((rw==READ)? tty_read(minor,buf):tty_write(minor,buf));
+	}
+	
+	实现输出的核心函数tty_write
+	在linux/kernel/tty_io.c中
+	int tty_write(unsigned channel,char *buf,int nr)
+	{ 
+		struct tty_struct *tty;
+		
+		//channel 为minor
+		tty=channel+tty_table;
+		
+		//引入缓冲区技术；若已满，则阻塞等待；待设备中断唤醒
+		//write_q 输出队列
+		sleep_if_full(&tty->write_q);
+		...
+		
+		
+		char c, *b=buf;
+		//buf长度未完 且 write_q未满
+		while(nr>0&&!FULL(tty->write_q)) {
+			//fs:从用户缓存区读buf
+			c = get_fs_byte(b);
+			
+			if(c==‘\r’){
+				//说明tty是行缓存的设备
+				PUTCH(13,tty->write_q);
+				continue;
+			}
+			if(O_LCUC(tty)) 
+				c = toupper(c);
+			b++; 
+			nr--; 
+			//放入write_q队列
+			PUTCH(c,tty->write_q);
+		} //输出完事或写队列满
+		
+		//开始输出屏幕
+		tty->write(tty);
+		
+	}
+	
+	其中，由
+	在include/linux/tty.h中
+	struct tty_struct{ 
+		//写函数
+		void (*write)(struct tty_struct *tty); 
+		//读写队列
+		struct tty_queue read_q, write_q; 
+	}
+	根据tty=channel+tty_table;的初始化可得：
+	struct tty_struct tty_table[] = {
+		{
+			//write指针 指向con_write函数 (console write)
+			con_write,
+			{0,0,0,0,””},
+			{0,0,0,0,””}
+		},
+		{},
+		{},
+		...
+	};
+	
+在linux/kernel/chr_drv/console.c
+//_attr默认 黑底白字
+static unsigned char attr=0x07;
+void con_write(struct tty_struct *tty)
+{
+	int nr;
+	char c;
+
+	//获取write_q内容
+	GETCH(tty->write_q,c);
+	//字符显示 ASCII
+	if(c>31&&c<127){
+		//汇编外设控制实现 out
+		//将属性 _attr->ah, 内容 c->al (8bits)
+		
+		//将ax->pos, 因为显存较大，融入memory，故使用mov指令
+		//若外设寄存器不与memory融为一体，则使用out指令
+		__asm__(“movb _attr,%%ah\n\t”
+						“movw %%ax,%1\n\t”::
+						”a”(c), ”m”(*(short*)pos):
+						”ax”
+		);
+		//pos偏移2bytes
+		//屏幕上的一个字符在显存中除了字符本身还有字符的属性(如颜色等)
+		pos+=2;
+	}
+}
+	故，完成显示中最核心的秘密就是
+		mov c, pos
+		
+	其中，显存范围 0xA0000~0xC0000
+	pos指向显存: pos=0xA0000
+	//控制台初始化
+	con_init();
+	void con_init(void)
+	{ 
+		//光标指向起始位置
+		gotoxy(ORIG_X,ORIG_Y);
+	}
+	
+	static inline void gotoxy()
+	{
+		pos=origin+y*video_size_row+(x<<1);
+	}
+	
+	其中，0x90000和0x90001都是系统setup时设置的光标起始位置
+	#define ORIG_X (*(unsigned char*)0x90000) //初始光标列号
+	#define ORIG_Y (*(unsigned char*)0x90001) //初始光标行号
+	
+	
+	
+conclude printf process:
+	库函数	printf ->
+	系统调用(fs/read_write.c)	write ->	
+	字符设备接口(fs/char_dev.c)	rw_char -> crw_table[] -> rw_ttyx ->
+	tty设备写操作(kernel/chr_drv/tty_io.c)	tty_write(将用户层buf放入write_q队列) -> tty->write(tty) ->
+	显示器写(kernel/chr_drv/console.c)	con_write(通过 mov pos,c; 放入显存显示)
+	
+	
