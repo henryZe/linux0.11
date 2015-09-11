@@ -88,6 +88,7 @@ linux/fs/read_write.c
 		...
 		
 		
+		//b指向user层的buf
 		char c, *b=buf;
 		//buf长度未完 且 write_q未满
 		while(nr>0&&!FULL(tty->write_q)) {
