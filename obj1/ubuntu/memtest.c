@@ -51,17 +51,16 @@ void *memtest(void *stat)
 	int i, j, rdm_num;
 	struct task_status *t_stat = (struct task_status *)stat;
 
-	
-//	printf("hello!\n");
 
 	pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
-	pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+//	pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);	//there is a bug with cancel immediately function.
 
 	pthread_cleanup_push(handler, stat);
 
 	t_stat->run = 1;
 	for(i=t_stat->s_calc; i<=t_stat->e_calc; i++){
 		for(j=0; j<times; j++){
+			pthread_testcancel();				//set a cancel point	
 			mem[i] = TEST1;
 			if(mem[i] != TEST1){
 				t_stat->error_num++;
@@ -89,15 +88,10 @@ void *memtest(void *stat)
 			}
 		}
 		t_stat->count++;
-//		printf("counting...\n");
 	}
-
 	t_stat->run = 0;
 
 	pthread_cleanup_pop(0);
-
-	printf("goodbye!\n");
-	
 	pthread_exit(NULL);
 }
 
