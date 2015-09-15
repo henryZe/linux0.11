@@ -151,6 +151,7 @@ void con_write(struct tty_struct *tty)
 		
 		//将ax->pos, 因为显存较大，融入memory，故使用mov指令
 		//若外设寄存器不与memory融为一体，则使用out指令
+		//其中，存放到内存以后，再利用DMA(Direct Memory Access)技术将内存区移动到外部控制器内存的区块
 		__asm__(“movb _attr,%%ah\n\t”
 						“movw %%ax,%1\n\t”::
 						”a”(c), ”m”(*(short*)pos):
