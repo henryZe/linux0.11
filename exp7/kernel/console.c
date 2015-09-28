@@ -450,10 +450,9 @@ void con_write(struct tty_struct * tty)
 
 	nr = CHARS(tty->write_q);
 	while (nr--) {
+		GETCH(tty->write_q,c);
 		if(F12_mask)
 			c='*';
-		else
-			GETCH(tty->write_q,c);
 
 		switch(state) {
 			case 0:
