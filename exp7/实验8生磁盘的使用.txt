@@ -1,0 +1,144 @@
+生磁盘的使用
+
+磁盘的访问单位是 扇区
+扇区大小 512Byte	扇区大小由传输时间以及碎片浪费的折衷
+磁盘I/O过程 控制器 -> 寻道 -> 旋转 -> 传输
+磁盘最直接的使用方式：往寄存器写 柱面、磁头、扇区、缓存位置
+
+void do_hd_request(void)//完成请求
+{
+	//发送指令，参数 sec扇区, head磁头, cyl柱面
+	//nsect 待操作的扇区数
+	hd_out(dev,nsect,sec,head,cyl,WIN_WRITE,&write_intr);
+	port_write(HD_DATA,CURRENT->buffer,256);
+}
+
+static void hd_out(unsigned int drive,unsigned int nsect,unsigned int sect,                      
+			         unsigned int head,unsigned int cyl,unsigned int cmd,
+			         void (*intr_addr)(void))
+{ 
+	port = HD_DATA; //数据寄存器端口(0x1f0)
+	outb_p(nsect,++port); 
+	outb_p(sect,++port);
+	outb_p(cyl,++port); 
+	outb_port(cyl>>8,++port);
+	outb_p(0xA0|(drive<<4)|head, ++port);
+	outb(cmd, ++port); 
+}
+
+#define outb_p(value,port) \                                                                     
+__asm__ ("outb %%al,%%dx\n" \
+         "\tjmp 1f\n" \
+         "1:\tjmp 1f\n" \
+         "1:"::"a" (value),"d" (port))
+
+第一层抽象 通过盘块号读写磁盘
+磁盘驱动负责从block计算出cyl，head，sec(CHS)
+block = C * (Heads * Sectors) + H * Sectors + S
+
+磁盘访问时间=写入控制器时间+寻道时间(!!!机械运动)+旋转时间(!机械运动)+传输时间
+减少寻道时间和旋转时间，相邻几个扇区为一个盘块，block相邻的盘块可以快速读出
+
+根据公式：由 block->S,H,C
+block = C*(Heads*Sectors) + H*Sectors + S 
+S = block % Sectors
+H = (block-S)%Heads/Sectors
+C = (block-S-H*Sectors)/(Heads*Sectors)
+
+static void make_request(int major,int rw, struct buffer_head * bh)
+{ 
+	struct requset *req;
+	
+	req = request+NR_REQUEST;
+	//every block contains two sector
+	//every sector contains 512B
+	req->sector = bh->b_blocknr<<1;
+	add_request(major+blk_dev,req); 
+}
+
+void do_hd_request(void)
+{ 
+	unsigned int block=CURRENT->sector;
+	
+	//block -> sec, cyl, head
+	__asm__(“divl %4”:”=a”(block),”=d”(sec):”0”(block),
+						“1”(0),”r”(hd_info[dev].sect));
+	__asm__(“divl %4”:”=a”(cyl),”=d”(head):”0”(block),
+						“1”(0),”r”(hd_info[dev].head));
+	hd_out(dev,nsect,sec,head,cyl,WIN_WRITE,...);
+	... 
+}
+
+第二层抽象 多个进程通过队列使用磁盘
+请求队列机制
+策略目标是平均访问延迟小，寻道时间是主要矛盾
+
+FCFS(first come first served)
+优点：最直观、最公平
+缺点：磁头在长途奔袭
+
+SSTF(shortest-seek-time first)
+优点：寻道时间减少
+缺点：存在饥饿问题
+
+SCAN(SSTF+中途不回折)
+优点：每个请求都有处理机会
+缺点：中间的请求还是占便宜
+
+C-SCAN(SCAN+磁臂复位), 电梯算法
+优点：两端请求都能很快处理，且磁臂复位速度相对较快
+
+static void make_request()
+{ 
+	...
+	req->sector = bh->b_blocknr<<1;
+	add_request(major+blk_dev,req); 
+}
+
+static void add_request(struct blk_dev_struct *dev, struct request *req)
+{ 
+	struct requset *tmp = dev->current_request;
+	
+	req->next=NULL; 
+	cli(); //关中断(互斥), 进行请求链表操作
+	
+	for(;tmp->next;tmp=tmp->next)
+		// tmp < req < tmp->next || req < tmp->next(first one) < tmp(last one)
+		if((IN_ORDER(tmp,req)||!IN_ORDER(tmp,tmp->next)) && IN_ORDER(req,tmp->next)) 
+			break;
+	req->next=tmp->next; 
+	tmp->next=req; 
+	
+	sti();
+}
+
+#define IN_ORDER(s1, s2) \
+		((s1)->dev<(s2)->dev)||((s1)->dev == (s2)->dev\
+		&& (s1)->sector<(s2)->sector))
+
+
+生磁盘(raw disk)的使用整理
+(1) 进程根据 inode 得到 盘块号(block)，算出扇区号(sector)
+(2) 用扇区号 make_request(内存缓冲区申请&管理，for read)，用电梯算法 add_request
+(3) 进程阻塞 sleep_on
+(4) 触发磁盘中断处理
+		static void read_intr(void)
+		{ 
+			do_hd_request(); 
+		}
+(5) do_hd_request算出 cyl, head, sector
+(6) hd_out调用outp完成端口写
+(7) 通过DMA总线成功操作磁盘
+(8) 磁盘触发中断处理
+		static void read_intr(void)
+		{ 
+			//唤醒进程
+			end_request(1);
+		}
+		static inline void end_request(int uptodate)
+		{
+			wake_up(&wait_for_request);
+		}
+		
+		
+		

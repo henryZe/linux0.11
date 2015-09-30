@@ -1,0 +1,45 @@
+文件: 建立字符流到盘块集合的映射关系
+
+文件映射结构
+连续结构
+FCB: 文件名 起始块 块数
+优点: 顺序访问快, 开销小
+缺点: 文件长度增减难
+
+链式结构
+FCB: 文件名 起始块
+优点: 文件长度增减容易
+缺点: 顺序访问慢, 可靠性差
+
+索引结构 (UNIX inode=>index node)
+FCB: 文件名 索引块
+优点: 连续和链式分配的有效折衷
+			可以表示很大的文件(链式结构优点)
+			很小的文件高效访问(连续结构优点)
+			中等大小的文件访问速度也不慢
+
+
+
+在fs/read_write.c中,
+int sys_write(int fd, const char* buf, int count)
+{ 
+	struct file *file = current->filp[fd];
+	struct m_inode *inode = file->inode;
+
+	if(S_ISREG(inode->i_mode))
+		return file_write(inode, file, buf, count);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
