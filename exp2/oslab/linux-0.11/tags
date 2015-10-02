@@ -3,7 +3,7 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.7	//
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ABRT_ERR	include/linux/hdreg.h	47;"	d
 ACC_MODE	fs/namei.c	21;"	d	file:
 ALRMMASK	kernel/chr_drv/tty_io.c	17;"	d	file:
@@ -17,12 +17,12 @@ AR	mm/Makefile	/^AR	=ar$/;"	m
 ARCHIVES	Makefile	/^ARCHIVES=kernel\/kernel.o mm\/mm.o fs\/fs.o$/;"	m
 AS	Makefile	/^AS	=as$/;"	m
 AS	fs/Makefile	/^AS	=as$/;"	m
-AS	kernel/Makefile	/^AS	=as$/;"	m
+AS	kernel/Makefile	/^AS	=as --32$/;"	m
 AS	kernel/blk_drv/Makefile	/^AS	=as$/;"	m
-AS	kernel/chr_drv/Makefile	/^AS	=as$/;"	m
+AS	kernel/chr_drv/Makefile	/^AS	=as --32$/;"	m
 AS	kernel/math/Makefile	/^AS	=as$/;"	m
 AS	lib/Makefile	/^AS	=as$/;"	m
-AS	mm/Makefile	/^AS	=as$/;"	m
+AS	mm/Makefile	/^AS	=as --32$/;"	m
 AS86	Makefile	/^AS86	=as86 -0 -a$/;"	m
 B0	include/termios.h	133;"	d
 B110	include/termios.h	136;"	d
@@ -61,14 +61,14 @@ CC	kernel/chr_drv/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
 CC	kernel/math/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
 CC	lib/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
 CC	mm/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
-CFLAGS	Makefile	/^CFLAGS	= -g -Wall -O2 -fomit-frame-pointer $/;"	m
-CFLAGS	fs/Makefile	/^CFLAGS	= -g -Wall -fstrength-reduce -fomit-frame-pointer \\$/;"	m
-CFLAGS	kernel/Makefile	/^CFLAGS	= -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
-CFLAGS	kernel/blk_drv/Makefile	/^CFLAGS	= -g -Wall -O -fstrength-reduce -fomit-frame-pointer  \\$/;"	m
-CFLAGS	kernel/chr_drv/Makefile	/^CFLAGS	= -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
-CFLAGS	kernel/math/Makefile	/^CFLAGS	= -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
-CFLAGS	lib/Makefile	/^CFLAGS	= -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
-CFLAGS	mm/Makefile	/^CFLAGS	= -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
+CFLAGS	Makefile	/^CFLAGS	=-m32 -g -Wall -O2 -fomit-frame-pointer $/;"	m
+CFLAGS	fs/Makefile	/^CFLAGS	=-m32 -g -Wall -fstrength-reduce -fomit-frame-pointer \\$/;"	m
+CFLAGS	kernel/Makefile	/^CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
+CFLAGS	kernel/blk_drv/Makefile	/^CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer  \\$/;"	m
+CFLAGS	kernel/chr_drv/Makefile	/^CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
+CFLAGS	kernel/math/Makefile	/^CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
+CFLAGS	lib/Makefile	/^CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
+CFLAGS	mm/Makefile	/^CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
 CHARS	include/linux/tty.h	30;"	d
 CIBAUD	include/termios.h	162;"	d
 CLOCAL	include/termios.h	161;"	d
@@ -83,7 +83,7 @@ CPP	Makefile	/^CPP	=cpp -nostdinc -Iinclude$/;"	m
 CPP	fs/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
 CPP	kernel/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
 CPP	kernel/blk_drv/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/..\/include$/;"	m
-CPP	kernel/chr_drv/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/..\/include$/;"	m
+CPP	kernel/chr_drv/Makefile	/^CPP	=gcc-3.4 -m32 -g -E -nostdinc -I..\/..\/include$/;"	m
 CPP	kernel/math/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/..\/include$/;"	m
 CPP	lib/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
 CPP	mm/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
@@ -311,11 +311,12 @@ LD	lib/Makefile	/^LD	=ld$/;"	m
 LD	mm/Makefile	/^LD	=ld$/;"	m
 LD86	Makefile	/^LD86	=ld86 -0$/;"	m
 LDFLAGS	Makefile	/^LDFLAGS	=-m elf_i386 -Ttext 0 -e startup_32$/;"	m
-LDFLAGS	kernel/Makefile	/^LDFLAGS	= -x$/;"	m
-LDFLAGS	kernel/blk_drv/Makefile	/^LDFLAGS	= -x$/;"	m
-LDFLAGS	kernel/chr_drv/Makefile	/^LDFLAGS	= -x$/;"	m
-LDFLAGS	kernel/math/Makefile	/^LDFLAGS	= -x$/;"	m
-LDFLAGS	lib/Makefile	/^LDFLAGS	= -x$/;"	m
+LDFLAGS	kernel/Makefile	/^LDFLAGS	=-m elf_i386 -x$/;"	m
+LDFLAGS	kernel/blk_drv/Makefile	/^LDFLAGS	=-m elf_i386 -x$/;"	m
+LDFLAGS	kernel/chr_drv/Makefile	/^LDFLAGS	=-m elf_i386 -x$/;"	m
+LDFLAGS	kernel/math/Makefile	/^LDFLAGS	=-m elf_i386 -x$/;"	m
+LDFLAGS	lib/Makefile	/^LDFLAGS	=-m elf_i386 -x$/;"	m
+LDFLAGS	mm/Makefile	/^LDFLAGS =-m elf_i386$/;"	m
 LDT_CODE	include/linux/head.h	17;"	d
 LDT_DATA	include/linux/head.h	18;"	d
 LDT_NUL	include/linux/head.h	16;"	d
@@ -806,10 +807,12 @@ __LIBRARY__	lib/_exit.c	7;"	d	file:
 __LIBRARY__	lib/close.c	7;"	d	file:
 __LIBRARY__	lib/dup.c	7;"	d	file:
 __LIBRARY__	lib/execve.c	7;"	d	file:
+__LIBRARY__	lib/iam.c	7;"	d	file:
 __LIBRARY__	lib/open.c	7;"	d	file:
 __LIBRARY__	lib/setsid.c	7;"	d	file:
 __LIBRARY__	lib/string.c	13;"	d	file:
 __LIBRARY__	lib/wait.c	7;"	d	file:
+__LIBRARY__	lib/whoami.c	7;"	d	file:
 __LIBRARY__	lib/write.c	7;"	d	file:
 __NR_access	include/unistd.h	93;"	d
 __NR_acct	include/unistd.h	111;"	d
@@ -838,6 +841,7 @@ __NR_getpid	include/unistd.h	80;"	d
 __NR_getppid	include/unistd.h	124;"	d
 __NR_getuid	include/unistd.h	84;"	d
 __NR_gtty	include/unistd.h	92;"	d
+__NR_iam	include/unistd.h	132;"	d
 __NR_ioctl	include/unistd.h	114;"	d
 __NR_kill	include/unistd.h	97;"	d
 __NR_link	include/unistd.h	69;"	d
@@ -882,6 +886,7 @@ __NR_unlink	include/unistd.h	70;"	d
 __NR_ustat	include/unistd.h	122;"	d
 __NR_utime	include/unistd.h	90;"	d
 __NR_waitpid	include/unistd.h	67;"	d
+__NR_whoami	include/unistd.h	133;"	d
 __NR_write	include/unistd.h	64;"	d
 __va_rounded_size	include/stdarg.h	9;"	d
 _bmap	fs/inode.c	/^static int _bmap(struct m_inode * inode,int block,int create)$/;"	f	file:
@@ -898,12 +903,12 @@ _set_limit	include/linux/sched.h	203;"	d
 _set_seg_desc	include/asm/system.h	42;"	d
 _set_tssldt_desc	include/asm/system.h	52;"	d
 _start	boot/bootsect.s	/^_start:$/;"	l
-_syscall0	include/unistd.h	133;"	d
-_syscall1	include/unistd.h	146;"	d
-_syscall2	include/unistd.h	159;"	d
-_syscall3	include/unistd.h	172;"	d
+_syscall0	include/unistd.h	135;"	d
+_syscall1	include/unistd.h	148;"	d
+_syscall2	include/unistd.h	161;"	d
+_syscall3	include/unistd.h	174;"	d
 a	include/linux/head.h	/^	unsigned long a,b;$/;"	m	struct:desc_struct
-a	kernel/sched.c	/^	long * a;$/;"	m	struct:__anon4	file:
+a	kernel/sched.c	/^	long * a;$/;"	m	struct:__anon1	file:
 a_bss	include/a.out.h	/^  unsigned a_bss;		\/* length of uninitialized data area for file, in bytes *\/$/;"	m	struct:exec
 a_data	include/a.out.h	/^  unsigned a_data;		\/* length of data, in bytes *\/$/;"	m	struct:exec
 a_drsize	include/a.out.h	/^  unsigned a_drsize;		\/* length of relocation info for data, in bytes *\/$/;"	m	struct:exec
@@ -924,7 +929,7 @@ argv	init/main.c	/^static char * argv[] = { "-\/bin\/sh",NULL };$/;"	v	file:
 argv_rc	init/main.c	/^static char * argv_rc[] = { "\/bin\/sh", NULL };$/;"	v	file:
 attr	kernel/chr_drv/console.c	/^static unsigned char	attr=0x07;$/;"	v	file:
 b	include/linux/head.h	/^	unsigned long a,b;$/;"	m	struct:desc_struct
-b	kernel/sched.c	/^	short b;$/;"	m	struct:__anon4	file:
+b	kernel/sched.c	/^	short b;$/;"	m	struct:__anon1	file:
 b_blocknr	include/linux/fs.h	/^	unsigned long b_blocknr;	\/* block number *\/$/;"	m	struct:buffer_head
 b_count	include/linux/fs.h	/^	unsigned char b_count;		\/* users using this block *\/$/;"	m	struct:buffer_head
 b_data	include/linux/fs.h	/^	char * b_data;			\/* pointer to data block (1024 bytes) *\/$/;"	m	struct:buffer_head
@@ -1074,7 +1079,7 @@ die	kernel/traps.c	/^static void die(char * str,long esp_ptr,long nr)$/;"	f	file
 die	tools/build.c	/^void die(char * str)$/;"	f
 dir_entry	include/linux/fs.h	/^struct dir_entry {$/;"	s
 dir_namei	fs/namei.c	/^static struct m_inode * dir_namei(const char * pathname,$/;"	f	file:
-div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon2
+div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon3
 divide_error	kernel/asm.s	/^divide_error:$/;"	l
 do_bounds	kernel/traps.c	/^void do_bounds(long esp, long error_code)$/;"	f
 do_coprocessor_error	kernel/traps.c	/^void do_coprocessor_error(long esp, long error_code)$/;"	f
@@ -1350,7 +1355,7 @@ l_type	include/fcntl.h	/^	short l_type;$/;"	m	struct:flock
 l_whence	include/fcntl.h	/^	short l_whence;$/;"	m	struct:flock
 last_pid	kernel/fork.c	/^long last_pid=0;$/;"	v
 last_task_used_math	kernel/sched.c	/^struct task_struct *last_task_used_math = NULL;$/;"	v	typeref:struct:task_struct
-ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon3
+ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon4
 ldt	include/linux/sched.h	/^	long	ldt;		\/* 16 high bits zero *\/$/;"	m	struct:tss_struct
 ldt	include/linux/sched.h	/^	struct desc_struct ldt[3];$/;"	m	struct:task_struct	typeref:struct:task_struct::desc_struct
 leader	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
@@ -1398,14 +1403,15 @@ mount_root	fs/super.c	/^void mount_root(void)$/;"	f
 move_to_user_mode	include/asm/system.h	1;"	d
 msg1	boot/bootsect.s	/^msg1:$/;"	l
 n_desc	include/a.out.h	/^  short n_desc;$/;"	m	struct:nlist
-n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon1
-n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon1	typeref:struct:nlist::__anon1::nlist
+n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon2
+n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon2	typeref:struct:nlist::__anon2::nlist
 n_other	include/a.out.h	/^  char n_other;$/;"	m	struct:nlist
-n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon1
+n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon2
 n_type	include/a.out.h	/^  unsigned char n_type;$/;"	m	struct:nlist
-n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon1
+n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon2
 n_value	include/a.out.h	/^  unsigned long n_value;$/;"	m	struct:nlist
 name	include/linux/fs.h	/^	char name[NAME_LEN];$/;"	m	struct:dir_entry
+name_g	kernel/iam_whoami.c	/^static char name_g[24] = {0};$/;"	v	file:
 namei	fs/namei.c	/^struct m_inode * namei(const char * pathname)$/;"	f
 new_block	fs/bitmap.c	/^int new_block(int dev)$/;"	f
 new_inode	fs/bitmap.c	/^struct m_inode * new_inode(int dev)$/;"	f
@@ -1425,7 +1431,7 @@ npar	kernel/chr_drv/console.c	/^static unsigned long	npar,par[NPAR];$/;"	v	file:
 nr_sectors	kernel/blk_drv/blk.h	/^	unsigned long nr_sectors;$/;"	m	struct:request
 nr_sects	include/linux/hdreg.h	/^	unsigned int nr_sects;		\/* nr of sectors in partition *\/$/;"	m	struct:partition
 nr_sects	kernel/blk_drv/hd.c	/^	long nr_sects;$/;"	m	struct:hd_struct	file:
-nr_system_calls	kernel/system_call.s	/^nr_system_calls = 72$/;"	d
+nr_system_calls	kernel/system_call.s	/^nr_system_calls = 74$/;"	d
 num	kernel/chr_drv/keyboard.S	/^num:	xorb $2,leds$/;"	l
 num_table	kernel/chr_drv/keyboard.S	/^num_table:$/;"	l
 number	kernel/vsprintf.c	/^static char * number(char * str, int num, int base, int size, int precision$/;"	f	file:
@@ -1485,8 +1491,8 @@ put_queue	kernel/chr_drv/keyboard.S	/^put_queue:$/;"	l
 put_super	fs/super.c	/^void put_super(int dev)$/;"	f
 pwd	include/linux/sched.h	/^	struct m_inode * pwd;$/;"	m	struct:task_struct	typeref:struct:task_struct::m_inode
 ques	kernel/chr_drv/console.c	/^static unsigned long	ques=0;$/;"	v	file:
-quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon2
-quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon3
+quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon3
+quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon4
 quotient	kernel/chr_drv/tty_ioctl.c	/^static unsigned short quotient[] = {$/;"	v	file:
 r_address	include/a.out.h	/^  int r_address;$/;"	m	struct:relocation_info
 r_extern	include/a.out.h	/^  unsigned int r_extern:1;$/;"	m	struct:relocation_info
@@ -1517,8 +1523,8 @@ refcnt	lib/malloc.c	/^	unsigned short		refcnt;$/;"	m	struct:bucket_desc	file:
 release	include/sys/utsname.h	/^	char release[9];$/;"	m	struct:utsname
 release	kernel/exit.c	/^void release(struct task_struct * p)$/;"	f
 relocation_info	include/a.out.h	/^struct relocation_info$/;"	s
-rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon2
-rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon3
+rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon3
+rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon4
 remove_from_queues	fs/buffer.c	/^static inline void remove_from_queues(struct buffer_head * bh)$/;"	f	file:
 rep_int	kernel/chr_drv/rs_io.s	/^rep_int:$/;"	l
 reply_buffer	kernel/blk_drv/floppy.c	/^static unsigned char reply_buffer[MAX_REPLIES];$/;"	v	file:
@@ -1686,7 +1692,7 @@ st_space	include/linux/sched.h	/^	long	st_space[20];	\/* 8*10 bytes for each FP-
 st_uid	include/sys/stat.h	/^	uid_t	st_uid;$/;"	m	struct:stat
 stack	kernel/sched.c	/^	char stack[PAGE_SIZE];$/;"	m	union:task_union	file:
 stack_segment	kernel/asm.s	/^stack_segment:$/;"	l
-stack_start	kernel/sched.c	/^	} stack_start = { & user_stack [PAGE_SIZE>>2] , 0x10 };$/;"	v	typeref:struct:__anon4
+stack_start	kernel/sched.c	/^	} stack_start = { & user_stack [PAGE_SIZE>>2] , 0x10 };$/;"	v	typeref:struct:__anon1
 start	boot/setup.s	/^start:$/;"	l
 start_buffer	fs/buffer.c	/^struct buffer_head * start_buffer = (struct buffer_head *) &end;$/;"	v	typeref:struct:buffer_head
 start_code	include/linux/sched.h	/^	unsigned long start_code,end_code,end_data,brk,start_stack;$/;"	m	struct:task_struct
@@ -1756,6 +1762,7 @@ sys_getpid	kernel/sched.c	/^int sys_getpid(void)$/;"	f
 sys_getppid	kernel/sched.c	/^int sys_getppid(void)$/;"	f
 sys_getuid	kernel/sched.c	/^int sys_getuid(void)$/;"	f
 sys_gtty	kernel/sys.c	/^int sys_gtty()$/;"	f
+sys_iam	kernel/iam_whoami.c	/^int sys_iam(const char *name)$/;"	f
 sys_ind	include/linux/hdreg.h	/^	unsigned char sys_ind;		\/* ? *\/$/;"	m	struct:partition
 sys_ioctl	fs/ioctl.c	/^int sys_ioctl(unsigned int fd, unsigned int cmd, unsigned long arg)$/;"	f
 sys_kill	kernel/exit.c	/^int sys_kill(int pid,int sig)$/;"	f
@@ -1801,6 +1808,7 @@ sys_unlink	fs/namei.c	/^int sys_unlink(const char * name)$/;"	f
 sys_ustat	fs/open.c	/^int sys_ustat(int dev, struct ustat * ubuf)$/;"	f
 sys_utime	fs/open.c	/^int sys_utime(char * filename, struct utimbuf * times)$/;"	f
 sys_waitpid	kernel/exit.c	/^int sys_waitpid(pid_t pid,unsigned long * stat_addr, int options)$/;"	f
+sys_whoami	kernel/iam_whoami.c	/^int sys_whoami(char* name, unsigned int size)$/;"	f
 sys_write	fs/read_write.c	/^int sys_write(unsigned int fd,char * buf,int count)$/;"	f
 sysbeep	kernel/chr_drv/console.c	/^static void sysbeep(void)$/;"	f	file:
 sysbeepstop	kernel/chr_drv/console.c	/^void sysbeepstop(void)$/;"	f

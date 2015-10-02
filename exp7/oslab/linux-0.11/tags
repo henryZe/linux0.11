@@ -1096,7 +1096,7 @@ die	kernel/traps.c	/^static void die(char * str,long esp_ptr,long nr)$/;"	f	file
 die	tools/build.c	/^void die(char * str)$/;"	f
 dir_entry	include/linux/fs.h	/^struct dir_entry {$/;"	s
 dir_namei	fs/namei.c	/^static struct m_inode * dir_namei(const char * pathname,$/;"	f	file:
-div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon4
+div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon5
 divide_error	kernel/asm.s	/^divide_error:$/;"	l
 do_bounds	kernel/traps.c	/^void do_bounds(long esp, long error_code)$/;"	f
 do_coprocessor_error	kernel/traps.c	/^void do_coprocessor_error(long esp, long error_code)$/;"	f
@@ -1378,7 +1378,7 @@ l_type	include/fcntl.h	/^	short l_type;$/;"	m	struct:flock
 l_whence	include/fcntl.h	/^	short l_whence;$/;"	m	struct:flock
 last_pid	kernel/fork.c	/^long last_pid=0;$/;"	v
 last_task_used_math	kernel/sched.c	/^struct task_struct *last_task_used_math = NULL;$/;"	v	typeref:struct:task_struct
-ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon5
+ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon6
 ldt	include/linux/sched.h	/^	long	ldt;		\/* 16 high bits zero *\/$/;"	m	struct:tss_struct
 ldt	include/linux/sched.h	/^	struct desc_struct ldt[3];$/;"	m	struct:task_struct	typeref:struct:task_struct::desc_struct
 leader	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
@@ -1428,12 +1428,12 @@ msg1	boot/bootsect.s	/^msg1:$/;"	l
 my_func_F11	kernel/chr_drv/my_func.c	/^void my_func_F11(void)$/;"	f
 my_func_F12	kernel/chr_drv/my_func.c	/^void my_func_F12(void)$/;"	f
 n_desc	include/a.out.h	/^  short n_desc;$/;"	m	struct:nlist
-n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon3
-n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon3	typeref:struct:nlist::__anon3::nlist
+n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon4
+n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon4	typeref:struct:nlist::__anon4::nlist
 n_other	include/a.out.h	/^  char n_other;$/;"	m	struct:nlist
-n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon3
+n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon4
 n_type	include/a.out.h	/^  unsigned char n_type;$/;"	m	struct:nlist
-n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon3
+n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon4
 n_value	include/a.out.h	/^  unsigned long n_value;$/;"	m	struct:nlist
 name	include/linux/fs.h	/^	char name[NAME_LEN];$/;"	m	struct:dir_entry
 name	kernel/sys_sem.c	/^	char name[SIZE_NAM];$/;"	m	struct:__anon1	file:
@@ -1491,7 +1491,7 @@ pg3	boot/head.s	/^pg3:$/;"	l
 pg_dir	boot/head.s	/^pg_dir:$/;"	l
 pgrp	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
 pgrp	include/linux/tty.h	/^	int pgrp;$/;"	m	struct:tty_struct
-phy_addr	mm/shm.c	/^	unsigned long phy_addr;$/;"	m	struct:__anon6	file:
+phy_addr	mm/shm.c	/^	unsigned long phy_addr;$/;"	m	struct:__anon3	file:
 pid	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
 pid_t	include/sys/types.h	/^typedef int pid_t;$/;"	t
 pop	boot/bootsect.s	/^	pop dx$/;"	d
@@ -1517,8 +1517,8 @@ put_queue	kernel/chr_drv/keyboard.S	/^put_queue:$/;"	l
 put_super	fs/super.c	/^void put_super(int dev)$/;"	f
 pwd	include/linux/sched.h	/^	struct m_inode * pwd;$/;"	m	struct:task_struct	typeref:struct:task_struct::m_inode
 ques	kernel/chr_drv/console.c	/^static unsigned long	ques=0;$/;"	v	file:
-quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon4
-quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon5
+quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon5
+quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon6
 quotient	kernel/chr_drv/tty_ioctl.c	/^static unsigned short quotient[] = {$/;"	v	file:
 r_address	include/a.out.h	/^  int r_address;$/;"	m	struct:relocation_info
 r_extern	include/a.out.h	/^  unsigned int r_extern:1;$/;"	m	struct:relocation_info
@@ -1549,8 +1549,8 @@ refcnt	lib/malloc.c	/^	unsigned short		refcnt;$/;"	m	struct:bucket_desc	file:
 release	include/sys/utsname.h	/^	char release[9];$/;"	m	struct:utsname
 release	kernel/exit.c	/^void release(struct task_struct * p)$/;"	f
 relocation_info	include/a.out.h	/^struct relocation_info$/;"	s
-rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon4
-rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon5
+rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon5
+rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon6
 remove_from_queues	fs/buffer.c	/^static inline void remove_from_queues(struct buffer_head * bh)$/;"	f	file:
 remove_page	mm/shm.c	/^int remove_page(unsigned long vir_addr)				\/\/on the basis of put_page$/;"	f
 rep_int	kernel/chr_drv/rs_io.s	/^rep_int:$/;"	l
@@ -1679,9 +1679,9 @@ setup_rw_floppy	kernel/blk_drv/floppy.c	/^inline void setup_rw_floppy(void)$/;"	
 sgid	include/linux/sched.h	/^	unsigned short gid,egid,sgid;$/;"	m	struct:task_struct
 share_page	mm/memory.c	/^static int share_page(unsigned long address)$/;"	f	file:
 shift_map	kernel/chr_drv/keyboard.S	/^shift_map:$/;"	l
-shm_struct	mm/shm.c	/^}shm_struct;$/;"	t	typeref:struct:__anon6	file:
+shm_struct	mm/shm.c	/^}shm_struct;$/;"	t	typeref:struct:__anon3	file:
 shmat	lib/lib_shm.c	/^void *shmat(int shmid, void *shmaddr, int shmflg)$/;"	f
-shmid	mm/shm.c	/^	int shmid;$/;"	m	struct:__anon6	file:
+shmid	mm/shm.c	/^	int shmid;$/;"	m	struct:__anon3	file:
 shmid_arr	mm/shm.c	/^static shm_struct shmid_arr[SHM_NUM];$/;"	v	file:
 show_stat	kernel/sched.c	/^void show_stat(void)$/;"	f
 show_task	kernel/sched.c	/^void show_task(int nr,struct task_struct * p)$/;"	f
@@ -1696,7 +1696,7 @@ size	kernel/blk_drv/floppy.c	/^	unsigned int size, sect, head, track, stretch;$/
 size	kernel/chr_drv/keyboard.S	/^size	= 1024		\/* must be a power of two ! And MUST be the same$/;"	d
 size	kernel/chr_drv/rs_io.s	/^size	= 1024				\/* must be power of two !$/;"	d
 size	lib/malloc.c	/^	int			size;$/;"	m	struct:_bucket_dir	file:
-size	mm/shm.c	/^	unsigned int size;$/;"	m	struct:__anon6	file:
+size	mm/shm.c	/^	unsigned int size;$/;"	m	struct:__anon3	file:
 size_t	include/stddef.h	/^typedef unsigned long size_t;$/;"	t
 size_t	include/string.h	/^typedef unsigned int size_t;$/;"	t
 size_t	include/sys/types.h	/^typedef unsigned int size_t;$/;"	t
