@@ -13,7 +13,7 @@ typedef struct _pthread_attr_t_{
 	int detached;
 }pthread_attr_t;
 
-typedef int pthread_t;
+typedef unsigned long int pthread_t;
 
 int pthread_attr_init(pthread_attr_t *attr);
 int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate);

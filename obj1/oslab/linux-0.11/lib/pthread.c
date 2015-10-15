@@ -5,7 +5,6 @@
 #define PTHREAD_CANSIG_NOTYET   0
 #define PTHREAD_CANSIG_CATCHED  1
 
-
 int pthread_attr_init(pthread_attr_t *attr)
 {
 	//move to kernel in future
