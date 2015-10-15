@@ -1,0 +1,260 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DEFAULT_STACK_SIZE	pthread.c	/^static const size_t DEFAULT_STACK_SIZE = (512*1024);$/;"	v	file:
+KERNEL_WORKQ_ELEM_MAX	pthread.c	169;"	d	file:
+PTHREAD_CANCELED	pthread.h	190;"	d
+PTHREAD_CANCEL_ASYNCHRONOUS	pthread.h	187;"	d
+PTHREAD_CANCEL_DEFERRED	pthread.h	186;"	d
+PTHREAD_CANCEL_DISABLE	pthread.h	185;"	d
+PTHREAD_CANCEL_ENABLE	pthread.h	184;"	d
+PTHREAD_COND_INITIALIZER	pthread.h	233;"	d
+PTHREAD_CREATE_DETACHED	pthread.h	179;"	d
+PTHREAD_CREATE_JOINABLE	pthread.h	178;"	d
+PTHREAD_EXPLICIT_SCHED	pthread.h	182;"	d
+PTHREAD_INHERIT_SCHED	pthread.h	181;"	d
+PTHREAD_MUTEX_DEFAULT	pthread.h	213;"	d
+PTHREAD_MUTEX_ERRORCHECK	pthread.h	211;"	d
+PTHREAD_MUTEX_INITIALIZER	pthread.h	223;"	d
+PTHREAD_MUTEX_NORMAL	pthread.h	210;"	d
+PTHREAD_MUTEX_RECURSIVE	pthread.h	212;"	d
+PTHREAD_ONCE_INIT	pthread.h	239;"	d
+PTHREAD_PRIO_INHERIT	pthread.h	204;"	d
+PTHREAD_PRIO_NONE	pthread.h	203;"	d
+PTHREAD_PRIO_PROTECT	pthread.h	205;"	d
+PTHREAD_PROCESS_PRIVATE	pthread.h	198;"	d
+PTHREAD_PROCESS_SHARED	pthread.h	197;"	d
+PTHREAD_RWLOCK_INITIALIZER	pthread.h	218;"	d
+PTHREAD_SCOPE_PROCESS	pthread.h	194;"	d
+PTHREAD_SCOPE_SYSTEM	pthread.h	193;"	d
+PTHREAD_STACK_HINT	pthread.c	/^static const vm_address_t PTHREAD_STACK_HINT = 0xB0000000;$/;"	v	file:
+PTHREAD_STACK_HINT	pthread.c	/^static const vm_address_t PTHREAD_STACK_HINT = 0xF0000000;$/;"	v	file:
+PTHREAD_START_CUSTOM	pthread.c	213;"	d	file:
+PTHREAD_START_DETACHED	pthread.c	215;"	d	file:
+PTHREAD_START_IMPORTANCE_MASK	pthread.c	218;"	d	file:
+PTHREAD_START_POLICY_BITSHIFT	pthread.c	216;"	d	file:
+PTHREAD_START_POLICY_MASK	pthread.c	217;"	d	file:
+PTHREAD_START_SETSCHED	pthread.c	214;"	d	file:
+WQOPS_QUEUE_ADD	pthread.c	200;"	d	file:
+WQOPS_QUEUE_REMOVE	pthread.c	201;"	d	file:
+WQOPS_THREAD_RETURN	pthread.c	202;"	d	file:
+_MACH_PORT_T	pthread.h	115;"	d
+_PTHREAD_ATTR_T	pthread.h	63;"	d
+_PTHREAD_CONDATTR_T	pthread.h	73;"	d
+_PTHREAD_COND_T	pthread.h	68;"	d
+_PTHREAD_H	pthread.h	53;"	d
+_PTHREAD_KEY_T	pthread.h	78;"	d
+_PTHREAD_MUTEXATTR_T	pthread.h	88;"	d
+_PTHREAD_MUTEX_T	pthread.h	83;"	d
+_PTHREAD_ONCE_T	pthread.h	93;"	d
+_PTHREAD_RWLOCKATTR_T	pthread.h	103;"	d
+_PTHREAD_RWLOCK_T	pthread.h	98;"	d
+_PTHREAD_T	pthread.h	108;"	d
+_SIGSET_T	pthread.h	120;"	d
+__APPLE_API_PRIVATE	pthread.c	66;"	d	file:
+__is_threaded	pthread.c	/^int __is_threaded = 0;$/;"	v
+__oldstyle	pthread.c	/^static int __oldstyle = 0;$/;"	v	file:
+__posix_join_cleanup	pthread.c	/^__posix_join_cleanup(void *arg)$/;"	f
+__pthread_head	pthread.c	/^__private_extern__ struct __pthread_list __pthread_head = TAILQ_HEAD_INITIALIZER(__pthread_head);$/;"	v	typeref:struct:__pthread_list
+__pthread_once_cancel_handler	pthread.c	/^__pthread_once_cancel_handler(pthread_once_t *once_control)$/;"	f
+__pthread_workitem_pool_head	pthread.c	/^__private_extern__ struct __pthread_workitem_pool __pthread_workitem_pool_head = TAILQ_HEAD_INITIALIZER(__pthread_workitem_pool_head);$/;"	v	typeref:struct:__pthread_workitem_pool
+__pthread_workq0_head	pthread.c	/^struct _pthread_workqueue_head __pthread_workq0_head;$/;"	v	typeref:struct:_pthread_workqueue_head
+__pthread_workq1_head	pthread.c	/^struct _pthread_workqueue_head __pthread_workq1_head;$/;"	v	typeref:struct:_pthread_workqueue_head
+__pthread_workq2_head	pthread.c	/^struct _pthread_workqueue_head __pthread_workq2_head;$/;"	v	typeref:struct:_pthread_workqueue_head
+__pthread_workq3_head	pthread.c	/^struct _pthread_workqueue_head __pthread_workq3_head;$/;"	v	typeref:struct:_pthread_workqueue_head
+__pthread_workq4_head	pthread.c	/^struct _pthread_workqueue_head __pthread_workq4_head;$/;"	v	typeref:struct:_pthread_workqueue_head
+__pthread_workqueue_pool_head	pthread.c	/^__private_extern__ struct __pthread_workqueue_pool __pthread_workqueue_pool_head = TAILQ_HEAD_INITIALIZER(__pthread_workqueue_pool_head);$/;"	v	typeref:struct:__pthread_workqueue_pool
+__pthread_wq_head_tbl	pthread.c	/^pthread_workqueue_head_t __pthread_wq_head_tbl[WQ_NUM_PRIO_QS] = {&__pthread_workq0_head, &__pthread_workq1_head, &__pthread_workq2_head, &__pthread_workq3_head, &__pthread_workq4_head};$/;"	v
+__unix_conforming	pthread.c	/^int __unix_conforming = 0;$/;"	v
+__workqueue_list_lock	pthread.c	/^static OSSpinLock __workqueue_list_lock = OS_SPINLOCK_INIT;$/;"	v	file:
+_cthread_init_routine	pthread.c	/^int (*_cthread_init_routine)(void) = _do_nothing;$/;"	v
+_do_nothing	pthread.c	/^static int _do_nothing(void) { return 0; }$/;"	f	file:
+_new_pthread_create_suspended	pthread.c	/^_new_pthread_create_suspended(pthread_t *thread, $/;"	f	file:
+_pthread_allocate_stack	pthread.c	/^_pthread_allocate_stack(pthread_attr_t *attrs, void **stack)$/;"	f	file:
+_pthread_attr_default	pthread.c	/^static pthread_attr_t _pthread_attr_default = {0};$/;"	v	file:
+_pthread_become_available	pthread.c	/^void _pthread_become_available(pthread_t thread, mach_port_t kernel_thread) {$/;"	f	file:
+_pthread_body	pthread.c	/^_pthread_body(pthread_t self)$/;"	f	file:
+_pthread_count	pthread.c	/^static int _pthread_count = 1;$/;"	v	file:
+_pthread_create	pthread.c	/^_pthread_create(pthread_t t,$/;"	f
+_pthread_create_pthread_onstack	pthread.c	/^_pthread_create_pthread_onstack(pthread_attr_t *attrs, void **stack, pthread_t *thread)$/;"	f	file:
+_pthread_create_suspended	pthread.c	/^_pthread_create_suspended(pthread_t *thread, $/;"	f	file:
+_pthread_exit	pthread.c	/^_pthread_exit(pthread_t self, void *value_ptr)$/;"	f	file:
+_pthread_find_thread	pthread.c	/^_pthread_find_thread(pthread_t thread)$/;"	f
+_pthread_fork_child	pthread.c	/^__private_extern__ void _pthread_fork_child(pthread_t p) {$/;"	f
+_pthread_free_pthread_onstack	pthread.c	/^_pthread_free_pthread_onstack(pthread_t t, int freestruct, int termthread)$/;"	f	file:
+_pthread_is_threaded	pthread.c	/^_pthread_is_threaded(void)$/;"	f
+_pthread_join_cleanup	pthread.c	/^_pthread_join_cleanup(pthread_t thread, void ** value_ptr, int conforming)$/;"	f
+_pthread_list_lock	pthread.c	/^__private_extern__ pthread_lock_t _pthread_list_lock = LOCK_INITIALIZER;$/;"	v
+_pthread_lookup_thread	pthread.c	/^_pthread_lookup_thread(pthread_t thread, mach_port_t * portp, int only_joinable)$/;"	f
+_pthread_reap_msg_t	pthread.c	/^typedef struct _pthread_reap_msg_t {$/;"	s	file:
+_pthread_reap_thread	pthread.c	/^int _pthread_reap_thread(pthread_t th, mach_port_t kernel_thread, void **value_ptr, int conforming) {$/;"	f
+_pthread_reap_threads	pthread.c	/^void _pthread_reap_threads(void)$/;"	f	file:
+_pthread_reply_port	pthread.c	/^_pthread_reply_port(pthread_t t)$/;"	f
+_pthread_self	pthread.c	/^_pthread_self() {$/;"	f
+_pthread_set_self	pthread.c	/^_pthread_set_self(pthread_t p)$/;"	f
+_pthread_setcancelstate_exit	pthread.c	/^_pthread_setcancelstate_exit(pthread_t self, void * value_ptr, int conforming)$/;"	f	file:
+_pthread_setcancelstate_internal	pthread.c	/^_pthread_setcancelstate_internal(int state, int *oldstate, int conforming)$/;"	f
+_pthread_start	pthread.c	/^_pthread_start(pthread_t self, mach_port_t kport, void *(*fun)(void *), void * funarg, size_t stacksize, unsigned int pflags)$/;"	f
+_pthread_struct_init	pthread.c	/^_pthread_struct_init(pthread_t t, const pthread_attr_t *attrs, void * stack, size_t stacksize, int kernalloc, int nozero)$/;"	f
+_pthread_testcancel	pthread.c	/^_pthread_testcancel(pthread_t thread, int isconforming)$/;"	f
+_pthread_tsd_reinit	pthread.c	/^_pthread_tsd_reinit(pthread_t t)$/;"	f	file:
+_pthread_work_internal_init	pthread.c	/^_pthread_work_internal_init(void)$/;"	f	file:
+_pthread_workq_init	pthread.c	/^_pthread_workq_init(pthread_workqueue_t wq, const pthread_workqueue_attr_t * attr)$/;"	f	file:
+_pthread_workq_return	pthread.c	/^_pthread_workq_return(pthread_t self)$/;"	f	file:
+_pthread_wq_attr_default	pthread.c	/^static pthread_workqueue_attr_t _pthread_wq_attr_default = {0};$/;"	v	file:
+_pthread_wqthread	pthread.c	/^_pthread_wqthread(pthread_t self, mach_port_t kport, void * stackaddr, pthread_workitem_t item, int reuse)$/;"	f
+_spin_lock_retry	pthread.c	/^__private_extern__ void _spin_lock_retry(pthread_lock_t *lock)$/;"	f
+_spin_tries	pthread.c	/^int _spin_tries = 0;$/;"	v
+_thread	pthread.c	/^static struct _pthread _thread = {0};$/;"	v	typeref:struct:_pthread	file:
+alloc_workitem	pthread.c	/^alloc_workitem(void)$/;"	f	file:
+alloc_workqueue	pthread.c	/^alloc_workqueue(void)$/;"	f	file:
+cthread_set_self	pthread.c	/^cthread_set_self(void *cself)$/;"	f
+default_priority	pthread.c	/^static int default_priority;$/;"	v	file:
+free_workitem	pthread.c	/^free_workitem(pthread_workitem_t witem) $/;"	f	file:
+free_workqueue	pthread.c	/^free_workqueue(pthread_workqueue_t wq) $/;"	f	file:
+handle_removeitem	pthread.c	/^handle_removeitem(pthread_workqueue_t workq, pthread_workitem_t item)$/;"	f	file:
+header	pthread.c	/^	mach_msg_header_t header;$/;"	m	struct:_pthread_reap_msg_t	file:
+kernel_workq_count	pthread.c	/^static volatile int32_t kernel_workq_count = 0;$/;"	v	file:
+kernel_workq_setup	pthread.c	/^static int kernel_workq_setup = 0;$/;"	v	file:
+mach_port_t	pthread.h	/^typedef __darwin_mach_port_t		mach_port_t;$/;"	t
+max_priority	pthread.c	/^static int max_priority;$/;"	v	file:
+min_priority	pthread.c	/^static int min_priority;$/;"	v	file:
+new_sem_from_pool	pthread.c	/^__private_extern__ semaphore_t new_sem_from_pool(void) {$/;"	f
+pick_nextworkqueue_droplock	pthread.c	/^pick_nextworkqueue_droplock()$/;"	f	file:
+post_nextworkitem	pthread.c	/^post_nextworkitem(pthread_workqueue_t workq)$/;"	f	file:
+pthread_attr_destroy	pthread.c	/^pthread_attr_destroy(pthread_attr_t *attr)$/;"	f
+pthread_attr_getdetachstate	pthread.c	/^pthread_attr_getdetachstate(const pthread_attr_t *attr, $/;"	f
+pthread_attr_getguardsize	pthread.c	/^pthread_attr_getguardsize(const pthread_attr_t *attr,$/;"	f
+pthread_attr_getinheritsched	pthread.c	/^pthread_attr_getinheritsched(const pthread_attr_t *attr, $/;"	f
+pthread_attr_getschedparam	pthread.c	/^pthread_attr_getschedparam(const pthread_attr_t *attr, $/;"	f
+pthread_attr_getschedpolicy	pthread.c	/^pthread_attr_getschedpolicy(const pthread_attr_t *attr, $/;"	f
+pthread_attr_getscope	pthread.c	/^pthread_attr_getscope(const pthread_attr_t *attr,$/;"	f
+pthread_attr_getstack	pthread.c	/^pthread_attr_getstack(const pthread_attr_t *attr, void **stackaddr, size_t * stacksize)$/;"	f
+pthread_attr_getstackaddr	pthread.c	/^pthread_attr_getstackaddr(const pthread_attr_t *attr, void **stackaddr)$/;"	f
+pthread_attr_getstacksize	pthread.c	/^pthread_attr_getstacksize(const pthread_attr_t *attr, size_t *stacksize)$/;"	f
+pthread_attr_init	pthread.c	/^pthread_attr_init(pthread_attr_t *attr)$/;"	f
+pthread_attr_setdetachstate	pthread.c	/^pthread_attr_setdetachstate(pthread_attr_t *attr, $/;"	f
+pthread_attr_setguardsize	pthread.c	/^pthread_attr_setguardsize(pthread_attr_t *attr,$/;"	f
+pthread_attr_setinheritsched	pthread.c	/^pthread_attr_setinheritsched(pthread_attr_t *attr, $/;"	f
+pthread_attr_setschedparam	pthread.c	/^pthread_attr_setschedparam(pthread_attr_t *attr, $/;"	f
+pthread_attr_setschedpolicy	pthread.c	/^pthread_attr_setschedpolicy(pthread_attr_t *attr, $/;"	f
+pthread_attr_setscope	pthread.c	/^pthread_attr_setscope(pthread_attr_t *attr,$/;"	f
+pthread_attr_setstack	pthread.c	/^pthread_attr_setstack(pthread_attr_t *attr, void *stackaddr, size_t stacksize)$/;"	f
+pthread_attr_setstackaddr	pthread.c	/^pthread_attr_setstackaddr(pthread_attr_t *attr, void *stackaddr)$/;"	f
+pthread_attr_setstacksize	pthread.c	/^pthread_attr_setstacksize(pthread_attr_t *attr, size_t stacksize)$/;"	f
+pthread_attr_t	pthread.h	/^typedef __darwin_pthread_attr_t		pthread_attr_t;$/;"	t
+pthread_cancel	pthread.c	/^pthread_cancel(pthread_t thread)$/;"	f
+pthread_cancel	pthread.h	/^int       pthread_cancel(pthread_t ) __DARWIN_ALIAS(pthread_cancel);$/;"	v
+pthread_cleanup_pop	pthread.h	168;"	d
+pthread_cleanup_push	pthread.h	159;"	d
+pthread_concurrency	pthread.c	/^static int pthread_concurrency;$/;"	v	file:
+pthread_cond_init	pthread.h	/^                            const pthread_condattr_t * __restrict) LIBC_ALIAS(pthread_cond_init);$/;"	v
+pthread_cond_init	pthread.h	/^                            const pthread_condattr_t * __restrict) __DARWIN_ALIAS(pthread_cond_init);$/;"	v
+pthread_cond_t	pthread.h	/^typedef __darwin_pthread_cond_t		pthread_cond_t;$/;"	t
+pthread_cond_timedwait	pthread.h	/^				 const struct timespec * __restrict) LIBC_ALIAS_C(pthread_cond_timedwait);$/;"	v
+pthread_cond_timedwait	pthread.h	/^				 const struct timespec * __restrict) __DARWIN_ALIAS_C(pthread_cond_timedwait);$/;"	v
+pthread_cond_timedwait	pthread_cancelable.c	/^pthread_cond_timedwait(pthread_cond_t *cond, $/;"	f
+pthread_cond_wait	pthread.h	/^			    pthread_mutex_t * __restrict) LIBC_ALIAS_C(pthread_cond_wait);$/;"	v
+pthread_cond_wait	pthread.h	/^			    pthread_mutex_t * __restrict) __DARWIN_ALIAS_C(pthread_cond_wait);$/;"	v
+pthread_cond_wait	pthread_cancelable.c	/^pthread_cond_wait(pthread_cond_t *cond, $/;"	f
+pthread_condattr_t	pthread.h	/^typedef __darwin_pthread_condattr_t	pthread_condattr_t;$/;"	t
+pthread_create	pthread.c	/^pthread_create(pthread_t *thread,$/;"	f
+pthread_create_suspended_np	pthread.c	/^pthread_create_suspended_np(pthread_t *thread,$/;"	f
+pthread_detach	pthread.c	/^pthread_detach(pthread_t thread)$/;"	f
+pthread_equal	pthread.c	/^pthread_equal(pthread_t t1, $/;"	f
+pthread_exit	pthread.c	/^pthread_exit(void *value_ptr)$/;"	f
+pthread_from_mach_thread_np	pthread.c	/^pthread_t pthread_from_mach_thread_np(mach_port_t kernel_thread) $/;"	f
+pthread_get_stackaddr_np	pthread.c	/^pthread_get_stackaddr_np(pthread_t t)$/;"	f
+pthread_get_stacksize_np	pthread.c	/^pthread_get_stacksize_np(pthread_t t)$/;"	f
+pthread_getconcurrency	pthread.c	/^pthread_getconcurrency(void)$/;"	f
+pthread_getschedparam	pthread.c	/^pthread_getschedparam(pthread_t thread, $/;"	f
+pthread_init	pthread.c	/^pthread_init(void)$/;"	f
+pthread_is_threaded_np	pthread.c	/^pthread_is_threaded_np(void)$/;"	f
+pthread_join	pthread.h	/^int       pthread_join(pthread_t , void **) LIBC_ALIAS_C(pthread_join);$/;"	v
+pthread_join	pthread.h	/^int       pthread_join(pthread_t , void **) __DARWIN_ALIAS_C(pthread_join);$/;"	v
+pthread_join	pthread_cancelable.c	/^pthread_join(pthread_t thread, $/;"	f
+pthread_key_t	pthread.h	/^typedef __darwin_pthread_key_t		pthread_key_t;$/;"	t
+pthread_kill	pthread.c	/^pthread_kill ($/;"	f
+pthread_mach_thread_np	pthread.c	/^pthread_mach_thread_np(pthread_t t)$/;"	f
+pthread_main_np	pthread.c	/^pthread_main_np(void)$/;"	f
+pthread_mutex_t	pthread.h	/^typedef __darwin_pthread_mutex_t	pthread_mutex_t;$/;"	t
+pthread_mutexattr_destroy	pthread.h	/^int       pthread_mutexattr_destroy(pthread_mutexattr_t *) LIBC_ALIAS(pthread_mutexattr_destroy);$/;"	v
+pthread_mutexattr_destroy	pthread.h	/^int       pthread_mutexattr_destroy(pthread_mutexattr_t *) __DARWIN_ALIAS(pthread_mutexattr_destroy);$/;"	v
+pthread_mutexattr_t	pthread.h	/^typedef __darwin_pthread_mutexattr_t	pthread_mutexattr_t;$/;"	t
+pthread_once	pthread.c	/^pthread_once(pthread_once_t *once_control, $/;"	f
+pthread_once_t	pthread.h	/^typedef __darwin_pthread_once_t		pthread_once_t;$/;"	t
+pthread_reap_msg_t	pthread.c	/^} pthread_reap_msg_t;$/;"	t	typeref:struct:_pthread_reap_msg_t	file:
+pthread_rwlock_destroy	pthread.h	/^int       pthread_rwlock_destroy(pthread_rwlock_t * ) LIBC_ALIAS(pthread_rwlock_destroy);$/;"	v
+pthread_rwlock_destroy	pthread.h	/^int       pthread_rwlock_destroy(pthread_rwlock_t * ) __DARWIN_ALIAS(pthread_rwlock_destroy);$/;"	v
+pthread_rwlock_init	pthread.h	/^int       pthread_rwlock_init(pthread_rwlock_t * __restrict, const pthread_rwlockattr_t * __restrict) LIBC_ALIAS(pthread_rwlock_init);$/;"	v
+pthread_rwlock_init	pthread.h	/^int       pthread_rwlock_init(pthread_rwlock_t * __restrict, const pthread_rwlockattr_t * __restrict) __DARWIN_ALIAS(pthread_rwlock_init);$/;"	v
+pthread_rwlock_rdlock	pthread.h	/^int       pthread_rwlock_rdlock(pthread_rwlock_t *) LIBC_ALIAS(pthread_rwlock_rdlock);$/;"	v
+pthread_rwlock_rdlock	pthread.h	/^int       pthread_rwlock_rdlock(pthread_rwlock_t *) __DARWIN_ALIAS(pthread_rwlock_rdlock);$/;"	v
+pthread_rwlock_t	pthread.h	/^typedef __darwin_pthread_rwlock_t	pthread_rwlock_t;$/;"	t
+pthread_rwlock_tryrdlock	pthread.h	/^int       pthread_rwlock_tryrdlock(pthread_rwlock_t *) LIBC_ALIAS(pthread_rwlock_tryrdlock);$/;"	v
+pthread_rwlock_tryrdlock	pthread.h	/^int       pthread_rwlock_tryrdlock(pthread_rwlock_t *) __DARWIN_ALIAS(pthread_rwlock_tryrdlock);$/;"	v
+pthread_rwlock_trywrlock	pthread.h	/^int       pthread_rwlock_trywrlock(pthread_rwlock_t *) LIBC_ALIAS(pthread_rwlock_trywrlock);$/;"	v
+pthread_rwlock_trywrlock	pthread.h	/^int       pthread_rwlock_trywrlock(pthread_rwlock_t *) __DARWIN_ALIAS(pthread_rwlock_trywrlock);$/;"	v
+pthread_rwlock_unlock	pthread.h	/^int       pthread_rwlock_unlock(pthread_rwlock_t *) LIBC_ALIAS(pthread_rwlock_unlock);$/;"	v
+pthread_rwlock_unlock	pthread.h	/^int       pthread_rwlock_unlock(pthread_rwlock_t *) __DARWIN_ALIAS(pthread_rwlock_unlock);$/;"	v
+pthread_rwlock_wrlock	pthread.h	/^int       pthread_rwlock_wrlock(pthread_rwlock_t *) LIBC_ALIAS(pthread_rwlock_wrlock);$/;"	v
+pthread_rwlock_wrlock	pthread.h	/^int       pthread_rwlock_wrlock(pthread_rwlock_t *) __DARWIN_ALIAS(pthread_rwlock_wrlock);$/;"	v
+pthread_rwlockattr_t	pthread.h	/^typedef __darwin_pthread_rwlockattr_t	pthread_rwlockattr_t;$/;"	t
+pthread_setcancelstate	pthread.c	/^pthread_setcancelstate(int state, int *oldstate)$/;"	f
+pthread_setcancelstate	pthread.h	/^int       pthread_setcancelstate(int , int *) LIBC_ALIAS(pthread_setcancelstate);$/;"	v
+pthread_setcancelstate	pthread.h	/^int       pthread_setcancelstate(int , int *) __DARWIN_ALIAS(pthread_setcancelstate);$/;"	v
+pthread_setcanceltype	pthread.c	/^pthread_setcanceltype(int type, int *oldtype)$/;"	f
+pthread_setcanceltype	pthread.h	/^int       pthread_setcanceltype(int , int *) LIBC_ALIAS(pthread_setcanceltype);$/;"	v
+pthread_setcanceltype	pthread.h	/^int       pthread_setcanceltype(int , int *) __DARWIN_ALIAS(pthread_setcanceltype);$/;"	v
+pthread_setconcurrency	pthread.c	/^pthread_setconcurrency(int new_level)$/;"	f
+pthread_setschedparam	pthread.c	/^pthread_setschedparam(pthread_t thread, $/;"	f
+pthread_sigmask	pthread.c	/^pthread_sigmask(int how, const sigset_t * set, sigset_t * oset)$/;"	f
+pthread_sigmask	pthread.h	/^int       pthread_sigmask(int, const sigset_t *, sigset_t *) LIBC_ALIAS(pthread_sigmask);$/;"	v
+pthread_sigmask	pthread.h	/^int       pthread_sigmask(int, const sigset_t *, sigset_t *) __DARWIN_ALIAS(pthread_sigmask);$/;"	v
+pthread_t	pthread.h	/^typedef __darwin_pthread_t		pthread_t;$/;"	t
+pthread_testcancel	pthread.c	/^pthread_testcancel(void)$/;"	f
+pthread_testcancel	pthread.h	/^void      pthread_testcancel(void) __DARWIN_ALIAS(pthread_testcancel);$/;"	v
+pthread_workqueue_addbarrier_np	pthread.c	/^pthread_workqueue_addbarrier_np(pthread_workqueue_t workq, void (* callback_func)(pthread_workqueue_t, void *), void * callback_arg, __unused int waitforcallback, pthread_workitem_handle_t *itemhandlep)$/;"	f
+pthread_workqueue_additem_np	pthread.c	/^pthread_workqueue_additem_np(pthread_workqueue_t workq, void ( *workitem_func)(void *), void * workitem_arg, pthread_workitem_handle_t * itemhandlep)$/;"	f
+pthread_workqueue_attr_destroy_np	pthread.c	/^pthread_workqueue_attr_destroy_np(pthread_workqueue_attr_t * attr)$/;"	f
+pthread_workqueue_attr_getqueuepriority_np	pthread.c	/^pthread_workqueue_attr_getqueuepriority_np(const pthread_workqueue_attr_t * attr, int * qpriop)$/;"	f
+pthread_workqueue_attr_getstacksize_np	pthread.c	/^pthread_workqueue_attr_getstacksize_np(const pthread_workqueue_attr_t * attr, size_t * stacksizep)$/;"	f
+pthread_workqueue_attr_getthreadaffinity_np	pthread.c	/^pthread_workqueue_attr_getthreadaffinity_np(const pthread_workqueue_attr_t * attr, int * affinityp)$/;"	f
+pthread_workqueue_attr_getthreadimportance_np	pthread.c	/^pthread_workqueue_attr_getthreadimportance_np(const pthread_workqueue_attr_t * attr, int * importancep)$/;"	f
+pthread_workqueue_attr_getthreadtimeshare_np	pthread.c	/^pthread_workqueue_attr_getthreadtimeshare_np(const pthread_workqueue_attr_t * attr, int * istimesahrep)$/;"	f
+pthread_workqueue_attr_init_np	pthread.c	/^pthread_workqueue_attr_init_np(pthread_workqueue_attr_t * attrp)$/;"	f
+pthread_workqueue_attr_setqueuepriority_np	pthread.c	/^pthread_workqueue_attr_setqueuepriority_np(pthread_workqueue_attr_t * attr, int qprio)$/;"	f
+pthread_workqueue_attr_setstacksize_np	pthread.c	/^pthread_workqueue_attr_setstacksize_np(pthread_workqueue_attr_t * attr, size_t stacksize)$/;"	f
+pthread_workqueue_attr_settthreadaffinity_np	pthread.c	/^pthread_workqueue_attr_settthreadaffinity_np(pthread_workqueue_attr_t * attr, int affinity)$/;"	f
+pthread_workqueue_attr_settthreadimportance_np	pthread.c	/^pthread_workqueue_attr_settthreadimportance_np(pthread_workqueue_attr_t * attr, int importance)$/;"	f
+pthread_workqueue_attr_settthreadtimeshare_np	pthread.c	/^pthread_workqueue_attr_settthreadtimeshare_np(pthread_workqueue_attr_t * attr, int istimeshare)$/;"	f
+pthread_workqueue_create_np	pthread.c	/^pthread_workqueue_create_np(pthread_workqueue_t * workqp, const pthread_workqueue_attr_t * attr)$/;"	f
+pthread_workqueue_destroy_np	pthread.c	/^pthread_workqueue_destroy_np(pthread_workqueue_t workq, void (* callback_func)(pthread_workqueue_t, void *), void * callback_arg)$/;"	f
+pthread_workqueue_init_np	pthread.c	/^pthread_workqueue_init_np()$/;"	f
+pthread_workqueue_removeitem_np	pthread.c	/^pthread_workqueue_removeitem_np(pthread_workqueue_t workq, pthread_workitem_handle_t itemhandle)$/;"	f
+pthread_workqueue_resume_np	pthread.c	/^pthread_workqueue_resume_np(pthread_workqueue_t workq)$/;"	f
+pthread_workqueue_suspend_np	pthread.c	/^pthread_workqueue_suspend_np(pthread_workqueue_t workq)$/;"	f
+pthreadsize	pthread.c	/^__private_extern__ size_t pthreadsize = 0;$/;"	v
+restore_sem_to_pool	pthread.c	/^__private_extern__ void restore_sem_to_pool(semaphore_t sem) {$/;"	f
+sched_get_priority_max	pthread.c	/^sched_get_priority_max(int policy)$/;"	f
+sched_get_priority_min	pthread.c	/^sched_get_priority_min(int policy)$/;"	f
+sched_yield	pthread.c	/^int sched_yield(void)$/;"	f
+sem_pool	pthread.c	/^static semaphore_t *sem_pool = NULL;$/;"	v	file:
+sem_pool_count	pthread.c	/^static int sem_pool_count = 0;$/;"	v	file:
+sem_pool_current	pthread.c	/^static int sem_pool_current = 0;$/;"	v	file:
+sem_pool_lock	pthread.c	/^static pthread_lock_t sem_pool_lock = LOCK_INITIALIZER;$/;"	v	file:
+sem_pool_reset	pthread.c	/^static void sem_pool_reset(void) {$/;"	f	file:
+sigset_t	pthread.h	/^typedef __darwin_sigset_t		sigset_t;$/;"	t
+sigwait	pthread_cancelable.c	/^sigwait(const sigset_t * set, int * sig)$/;"	f
+thread	pthread.c	/^	pthread_t thread;$/;"	m	struct:_pthread_reap_msg_t	file:
+trailer	pthread.c	/^	mach_msg_trailer_t trailer;$/;"	m	struct:_pthread_reap_msg_t	file:
+ur_cthread_self	pthread.c	/^ur_cthread_self(void) {$/;"	f
+user_workq_count	pthread.c	/^static volatile unsigned int user_workq_count = 0; $/;"	v	file:
+valid_workq	pthread.c	/^valid_workq(pthread_workqueue_t workq)$/;"	f
+workqueue_exit	pthread.c	/^workqueue_exit(pthread_t self, pthread_workqueue_t workq, pthread_workitem_t item)$/;"	f	file:
+workqueue_list_lock	pthread.c	/^workqueue_list_lock()$/;"	f	file:
+workqueue_list_unlock	pthread.c	/^workqueue_list_unlock()$/;"	f	file:
+wqreadyprio	pthread.c	/^static int wqreadyprio = 0;	\/* current highest prio queue ready with items *\/$/;"	v	file:
