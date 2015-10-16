@@ -8,12 +8,25 @@
 #define PTHREAD_CANCEL_DISABLE  0
 #define PTHREAD_CANCEL_ENABLE   1
 
+#define pthread_cleanup_push(routine,arg)                     \                                                                                              
+	{ struct _pthread_cleanup_buffer _buffer;                 \
+      _pthread_cleanup_push (&_buffer, (routine), (arg));
+
+#define pthread_cleanup_pop(execute)                          \
+    _pthread_cleanup_pop (&_buffer, (execute)); }
+
 typedef struct _pthread_attr_t_{
-	int cancel_state;
 	int detached;
 }pthread_attr_t;
 
-typedef unsigned long int pthread_t;
+struct _pthread_cleanup_buffer {                                                                                                                             
+	void (*routine) __P ((void *));   /* Function to call.  */
+	void *arg;                /* Its argument.  */
+	int canceltype;           /* Saved cancellation type. */
+	struct _pthread_cleanup_buffer *prev; /* Chaining of cleanup functions.  */
+};
+
+typedef struct _pthread *pthread_t;
 
 int pthread_attr_init(pthread_attr_t *attr);
 int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate);
