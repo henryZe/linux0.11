@@ -1,0 +1,459 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASSERT	internals.h	181;"	d
+ASSERT	internals.h	184;"	d
+BADREQ	Examples/proxy.c	/^char *BADREQ =$/;"	v
+BUFFER_SIZE	Examples/ex2.c	9;"	d	file:
+BUFFER_SIZE	Examples/ex5.c	9;"	d	file:
+CANCELABLE_SYSCALL	wrapsyscall.c	37;"	d	file:
+CANCELABLE_SYSCALL_VA	wrapsyscall.c	50;"	d	file:
+CC	Examples/Makefile	/^CC=gcc$/;"	m
+CFLAGS	Examples/Makefile	/^CFLAGS=-g -O -Wall -I.. -D_REENTRANT$/;"	m
+CURRENT_STACK_FRAME	internals.h	155;"	d
+CURRENT_STACK_FRAME	sysdeps/alpha/pt-machine.h	60;"	d
+CURRENT_STACK_FRAME	sysdeps/i386/pt-machine.h	39;"	d
+CURRENT_STACK_FRAME	sysdeps/m68k/pt-machine.h	40;"	d
+CURRENT_STACK_FRAME	sysdeps/mips/pt-machine.h	57;"	d
+CURRENT_STACK_FRAME	sysdeps/sparc/pt-machine.h	42;"	d
+ConnectToProxy	Examples/proxy.c	/^int ConnectToProxy = 0;		\/* 1 here means this program will connect to another instance of it$/;"	v
+DEFAULTPORT	Examples/proxy.c	85;"	d	file:
+ENOTSUP	sysdeps/pthread/pthread.h	32;"	d
+ERR_CONNECT	Examples/proxy.c	357;"	d	file:
+ERR_CONNECT_TIMEOUT	Examples/proxy.c	358;"	d	file:
+ERR_GETHOSTBYNAME	Examples/proxy.c	356;"	d	file:
+ERR_SOCKET	Examples/proxy.c	355;"	d	file:
+HAS_COMPARE_AND_SWAP	sysdeps/alpha/pt-machine.h	82;"	d
+HAS_COMPARE_AND_SWAP	sysdeps/i386/i486/pt-machine.h	25;"	d
+HAS_COMPARE_AND_SWAP	sysdeps/m68k/pt-machine.h	46;"	d
+HAS_COMPARE_AND_SWAP	sysdeps/mips/pt-machine.h	63;"	d
+INITIAL_STACK_SIZE	internals.h	137;"	d
+INIT_THREAD_SELF	sysdeps/alpha/pt-machine.h	73;"	d
+LADR	Examples/proxy.c	82;"	d	file:
+LDATA	Examples/proxy.c	79;"	d	file:
+LIBPTHREAD	Examples/Makefile	/^LIBPTHREAD=..\/libpthread.a$/;"	m
+LISTENPORT	Examples/proxy.c	66;"	d	file:
+MANDIR	man/Makefile	/^MANDIR=\/usr\/man\/man3$/;"	m
+MANPAGES	man/Makefile	/^MANPAGES=$(SOURCES:.man=.3thr)$/;"	m
+MAX_PROXY_THREADS	Examples/proxy.c	91;"	d	file:
+MAX_PROXY_THREADS	Examples/proxy.c	93;"	d	file:
+METHOD_GET	Examples/proxy.c	472;"	d	file:
+METHOD_HEAD	Examples/proxy.c	474;"	d	file:
+METHOD_POST	Examples/proxy.c	473;"	d	file:
+MSG	internals.h	182;"	d
+MSG	internals.h	185;"	d
+NUM_THREADS	Examples/ex3.c	11;"	d	file:
+NextProxyAdr	Examples/proxy.c	/^char NextProxyAdr[128];		\/* the name of the host where the next instance of the program runs *\/$/;"	v
+NextProxyPort	Examples/proxy.c	/^int NextProxyPort;		\/* and its port *\/$/;"	v
+NoCache	Examples/proxy.c	/^int NoCache = 0;		\/* if not 0, prevents web browsers from retrieving pages in their own$/;"	v
+OVER	Examples/ex2.c	74;"	d	file:
+OVER	Examples/ex5.c	63;"	d	file:
+PAGE_SIZE	internals.h	125;"	d
+POSTERR	Examples/proxy.c	/^char *POSTERR =$/;"	v
+PREPRO	man/Makefile	/^PREPRO=perl troffprepro$/;"	m
+PROGS	Examples/Makefile	/^PROGS=ex1 ex2 ex3 ex4 ex5 proxy$/;"	m
+PTHREAD_CANCELED	sysdeps/pthread/pthread.h	143;"	d
+PTHREAD_CANCEL_ASYNCHRONOUS	sysdeps/pthread/pthread.h	/^enum { PTHREAD_CANCEL_DEFERRED, PTHREAD_CANCEL_ASYNCHRONOUS };$/;"	e	enum:__anon16
+PTHREAD_CANCEL_DEFERRED	sysdeps/pthread/pthread.h	/^enum { PTHREAD_CANCEL_DEFERRED, PTHREAD_CANCEL_ASYNCHRONOUS };$/;"	e	enum:__anon16
+PTHREAD_CANCEL_DISABLE	sysdeps/pthread/pthread.h	/^enum { PTHREAD_CANCEL_ENABLE, PTHREAD_CANCEL_DISABLE };$/;"	e	enum:__anon15
+PTHREAD_CANCEL_ENABLE	sysdeps/pthread/pthread.h	/^enum { PTHREAD_CANCEL_ENABLE, PTHREAD_CANCEL_DISABLE };$/;"	e	enum:__anon15
+PTHREAD_COND_INITIALIZER	sysdeps/pthread/pthread.h	72;"	d
+PTHREAD_CREATE_DETACHED	sysdeps/pthread/pthread.h	/^  PTHREAD_CREATE_DETACHED$/;"	e	enum:__anon8
+PTHREAD_CREATE_JOINABLE	sysdeps/pthread/pthread.h	/^  PTHREAD_CREATE_JOINABLE,$/;"	e	enum:__anon8
+PTHREAD_EXPLICIT_SCHED	sysdeps/pthread/pthread.h	/^  PTHREAD_EXPLICIT_SCHED$/;"	e	enum:__anon9
+PTHREAD_INHERIT_SCHED	sysdeps/pthread/pthread.h	/^  PTHREAD_INHERIT_SCHED,$/;"	e	enum:__anon9
+PTHREAD_KEYS_MAX	sysdeps/unix/sysv/linux/local_lim.h	26;"	d
+PTHREAD_MUTEX_FAST_NP	sysdeps/pthread/pthread.h	/^  PTHREAD_MUTEX_FAST_NP,$/;"	e	enum:__anon12
+PTHREAD_MUTEX_INITIALIZER	sysdeps/pthread/pthread.h	60;"	d
+PTHREAD_MUTEX_RECURSIVE_NP	sysdeps/pthread/pthread.h	/^  PTHREAD_MUTEX_RECURSIVE_NP$/;"	e	enum:__anon12
+PTHREAD_ONCE_INIT	sysdeps/pthread/pthread.h	128;"	d
+PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP	sysdeps/pthread/pthread.h	62;"	d
+PTHREAD_SCOPE_PROCESS	sysdeps/pthread/pthread.h	/^  PTHREAD_SCOPE_PROCESS$/;"	e	enum:__anon10
+PTHREAD_SCOPE_SYSTEM	sysdeps/pthread/pthread.h	/^  PTHREAD_SCOPE_SYSTEM,$/;"	e	enum:__anon10
+PTHREAD_SIG_CANCEL	internals.h	81;"	d
+PTHREAD_SIG_RESTART	internals.h	80;"	d
+PTHREAD_THREADS_MAX	sysdeps/unix/sysv/linux/local_lim.h	31;"	d
+RELEASE	sysdeps/alpha/pt-machine.h	48;"	d
+RELEASE	sysdeps/sparc/pt-machine.h	36;"	d
+REQ_CREATE	internals.h	/^    REQ_CREATE, REQ_FREE, REQ_PROCESS_EXIT, REQ_MAIN_THREAD_EXIT$/;"	e	enum:pthread_request::__anon1
+REQ_FREE	internals.h	/^    REQ_CREATE, REQ_FREE, REQ_PROCESS_EXIT, REQ_MAIN_THREAD_EXIT$/;"	e	enum:pthread_request::__anon1
+REQ_MAIN_THREAD_EXIT	internals.h	/^    REQ_CREATE, REQ_FREE, REQ_PROCESS_EXIT, REQ_MAIN_THREAD_EXIT$/;"	e	enum:pthread_request::__anon1
+REQ_PROCESS_EXIT	internals.h	/^    REQ_CREATE, REQ_FREE, REQ_PROCESS_EXIT, REQ_MAIN_THREAD_EXIT$/;"	e	enum:pthread_request::__anon1
+SEG_THREAD	manager.c	45;"	d	file:
+SEM_VALUE_MAX	semaphore.h	22;"	d
+SERVCOERR	Examples/proxy.c	/^char *SERVCOERR =$/;"	v
+SERVDNSERR	Examples/proxy.c	/^char *SERVDNSERR =$/;"	v
+SERVERR	Examples/proxy.c	/^char *SERVERR =$/;"	v
+SERVTIMEOUT	Examples/proxy.c	/^char *SERVTIMEOUT =$/;"	v
+SOURCES	man/Makefile	/^SOURCES=pthread_atfork.man pthread_attr_init.man pthread_cancel.man \\$/;"	m
+STACK_SIZE	internals.h	132;"	d
+THREAD_MANAGER_STACK_SIZE	internals.h	142;"	d
+THREAD_SEG	manager.c	43;"	d	file:
+THREAD_SELF	sysdeps/alpha/pt-machine.h	65;"	d
+THREAD_STACK_START_ADDRESS	internals.h	149;"	d
+THREAD_STACK_START_ADDRESS	sysdeps/alpha/pt-machine.h	55;"	d
+TIMEOUT_OUT	Examples/proxy.c	71;"	d	file:
+TIMEOUT_THREAD_EXIT	Examples/proxy.c	76;"	d	file:
+_IO_cleanup_region_end	sysdeps/pthread/stdio-lock.h	35;"	d
+_IO_cleanup_region_start	sysdeps/pthread/stdio-lock.h	33;"	d
+_IO_flockfile	lockfile.c	37;"	d	file:
+_IO_funlockfile	lockfile.c	52;"	d	file:
+_IO_lock_fini	sysdeps/pthread/stdio-lock.h	39;"	d
+_IO_lock_init	sysdeps/pthread/stdio-lock.h	37;"	d
+_IO_lock_initializer	sysdeps/pthread/stdio-lock.h	26;"	d
+_IO_lock_t	sysdeps/pthread/stdio-lock.h	/^typedef pthread_mutex_t _IO_lock_t;$/;"	t
+_LIBC_LOCK_H	sysdeps/pthread/libc-lock.h	21;"	d
+_POSIX_CHOWN_RESTRICTED	sysdeps/unix/sysv/linux/posix_opt.h	57;"	d
+_POSIX_FSYNC	sysdeps/unix/sysv/linux/posix_opt.h	36;"	d
+_POSIX_JOB_CONTROL	sysdeps/unix/sysv/linux/posix_opt.h	24;"	d
+_POSIX_MAPPED_FILES	sysdeps/unix/sysv/linux/posix_opt.h	39;"	d
+_POSIX_MEMLOCK	sysdeps/unix/sysv/linux/posix_opt.h	42;"	d
+_POSIX_MEMLOCK_RANGE	sysdeps/unix/sysv/linux/posix_opt.h	45;"	d
+_POSIX_MEMORY_PROTECTION	sysdeps/unix/sysv/linux/posix_opt.h	48;"	d
+_POSIX_NO_TRUNC	sysdeps/unix/sysv/linux/posix_opt.h	64;"	d
+_POSIX_OPT_H	sysdeps/unix/sysv/linux/posix_opt.h	21;"	d
+_POSIX_POLL	sysdeps/unix/sysv/linux/posix_opt.h	51;"	d
+_POSIX_PRIORITY_SCHEDULING	sysdeps/unix/sysv/linux/posix_opt.h	30;"	d
+_POSIX_REENTRANT_FUNCTIONS	sysdeps/unix/sysv/linux/posix_opt.h	73;"	d
+_POSIX_SAVED_IDS	sysdeps/unix/sysv/linux/posix_opt.h	27;"	d
+_POSIX_SELECT	sysdeps/unix/sysv/linux/posix_opt.h	54;"	d
+_POSIX_SYNCHRONIZED_IO	sysdeps/unix/sysv/linux/posix_opt.h	33;"	d
+_POSIX_THREADS	sysdeps/unix/sysv/linux/posix_opt.h	70;"	d
+_POSIX_THREAD_KEYS_MAX	sysdeps/unix/sysv/linux/local_lim.h	24;"	d
+_POSIX_THREAD_PRIORITY_SCHEDULING	sysdeps/unix/sysv/linux/posix_opt.h	77;"	d
+_POSIX_THREAD_SAFE_FUNCTIONS	sysdeps/unix/sysv/linux/posix_opt.h	74;"	d
+_POSIX_THREAD_THREADS_MAX	sysdeps/unix/sysv/linux/local_lim.h	29;"	d
+_POSIX_VDISABLE	sysdeps/unix/sysv/linux/posix_opt.h	61;"	d
+_PTHREAD_H	sysdeps/pthread/pthread.h	17;"	d
+_SEMAPHORE_H	semaphore.h	17;"	d
+_XOPEN_SHM	sysdeps/unix/sysv/linux/posix_opt.h	67;"	d
+__compare_and_swap	sysdeps/alpha/pt-machine.h	/^extern inline int __compare_and_swap(long * p, long oldval, long newval)$/;"	f
+__compare_and_swap	sysdeps/i386/i486/pt-machine.h	/^__compare_and_swap (long int *p, long int oldval, long int newval)$/;"	f
+__compare_and_swap	sysdeps/m68k/pt-machine.h	/^__compare_and_swap (long int *p, long int oldval, long int newval)$/;"	f
+__compare_and_swap	sysdeps/mips/pt-machine.h	/^extern inline int __compare_and_swap(long * p, long oldval, long newval)$/;"	f
+__errno_location	errno.c	/^int * __errno_location()$/;"	f
+__flockfile	lockfile.c	/^__flockfile (FILE *stream)$/;"	f
+__h_errno_location	errno.c	/^int * __h_errno_location()$/;"	f
+__libc_cleanup_region_end	sysdeps/pthread/libc-lock.h	105;"	d
+__libc_cleanup_region_start	sysdeps/pthread/libc-lock.h	98;"	d
+__libc_lock_define	sysdeps/pthread/libc-lock.h	37;"	d
+__libc_lock_define_initialized	sysdeps/pthread/libc-lock.h	41;"	d
+__libc_lock_define_initialized_recursive	sysdeps/pthread/libc-lock.h	46;"	d
+__libc_lock_fini	sysdeps/pthread/libc-lock.h	70;"	d
+__libc_lock_fini_recursive	sysdeps/pthread/libc-lock.h	74;"	d
+__libc_lock_init	sysdeps/pthread/libc-lock.h	51;"	d
+__libc_lock_init_recursive	sysdeps/pthread/libc-lock.h	55;"	d
+__libc_lock_lock	sysdeps/pthread/libc-lock.h	77;"	d
+__libc_lock_lock_recursive	sysdeps/pthread/libc-lock.h	81;"	d
+__libc_lock_t	sysdeps/pthread/libc-lock.h	/^typedef struct __libc_lock_opaque__ __libc_lock_t;$/;"	t	typeref:struct:__libc_lock_opaque__
+__libc_lock_t	sysdeps/pthread/libc-lock.h	25;"	d
+__libc_lock_trylock	sysdeps/pthread/libc-lock.h	84;"	d
+__libc_lock_trylock_recursive	sysdeps/pthread/libc-lock.h	88;"	d
+__libc_lock_unlock	sysdeps/pthread/libc-lock.h	91;"	d
+__libc_lock_unlock_recursive	sysdeps/pthread/libc-lock.h	95;"	d
+__libc_mutex_unlock	sysdeps/pthread/libc-lock.h	131;"	d
+__need_sigset_t	sysdeps/pthread/pthread.h	25;"	d
+__need_timespec	sysdeps/pthread/pthread.h	27;"	d
+__pthread_exit_code	pthread.c	/^int __pthread_exit_code = 0;$/;"	v
+__pthread_exit_requested	pthread.c	/^int __pthread_exit_requested = 0;$/;"	v
+__pthread_initial_thread	pthread.c	/^struct _pthread __pthread_initial_thread = {$/;"	v	typeref:struct:_pthread
+__pthread_initial_thread_bos	pthread.c	/^char *__pthread_initial_thread_bos = NULL;$/;"	v
+__pthread_initialize	pthread.c	/^void __pthread_initialize(void)$/;"	f
+__pthread_key_create	specific.c	/^int __pthread_key_create(pthread_key_t * key, destr_function destr)$/;"	f
+__pthread_kill_other_threads_np	pthread.c	/^void __pthread_kill_other_threads_np(void)$/;"	f
+__pthread_main_thread	pthread.c	/^pthread_t __pthread_main_thread = &__pthread_initial_thread;$/;"	v
+__pthread_manager	manager.c	/^int __pthread_manager(void *arg)$/;"	f
+__pthread_manager_reader	pthread.c	/^int __pthread_manager_reader;$/;"	v
+__pthread_manager_request	pthread.c	/^int __pthread_manager_request = -1;$/;"	v
+__pthread_manager_sighandler	manager.c	/^void __pthread_manager_sighandler(int sig)$/;"	f
+__pthread_manager_thread	pthread.c	/^struct _pthread __pthread_manager_thread = {$/;"	v	typeref:struct:_pthread
+__pthread_manager_thread_bos	pthread.c	/^char *__pthread_manager_thread_bos = NULL;$/;"	v
+__pthread_manager_thread_tos	pthread.c	/^char *__pthread_manager_thread_tos = NULL;$/;"	v
+__pthread_mutex_init	mutex.c	/^int __pthread_mutex_init(pthread_mutex_t * mutex,$/;"	f
+__pthread_perform_cleanup	cancel.c	/^void __pthread_perform_cleanup(void)$/;"	f
+__pthread_provide_wrappers	wrapsyscall.c	/^const int __pthread_provide_wrappers = 0;$/;"	v
+__pthread_require_wrappers	cancel.c	/^static const int * const __pthread_require_wrappers =$/;"	v	file:
+__pthread_require_wrappers	pthread.c	/^static const int *const __pthread_require_wrappers =$/;"	v	file:
+__pthread_reset_main_thread	pthread.c	/^void __pthread_reset_main_thread()$/;"	f
+__pthread_return_0	weaks.c	/^__pthread_return_0 (void)$/;"	f
+__pthread_return_1	weaks.c	/^__pthread_return_1 (void)$/;"	f
+__pthread_return_void	weaks.c	/^__pthread_return_void (void)$/;"	f
+__pthread_setspecific	specific.c	/^int __pthread_setspecific(pthread_key_t key, const void * pointer)$/;"	f
+__pthread_sighandler	pthread.c	/^void __pthread_sighandler(int sig)$/;"	f
+_pthread	internals.h	/^struct _pthread {$/;"	s
+_pthread_cleanup_buffer	sysdeps/pthread/pthread.h	/^struct _pthread_cleanup_buffer {$/;"	s
+_pthread_cleanup_pop	cancel.c	/^void _pthread_cleanup_pop(struct _pthread_cleanup_buffer * buffer,$/;"	f
+_pthread_cleanup_pop_restore	cancel.c	/^void _pthread_cleanup_pop_restore(struct _pthread_cleanup_buffer * buffer,$/;"	f
+_pthread_cleanup_push	cancel.c	/^void _pthread_cleanup_push(struct _pthread_cleanup_buffer * buffer,$/;"	f
+_pthread_cleanup_push_defer	cancel.c	/^void _pthread_cleanup_push_defer(struct _pthread_cleanup_buffer * buffer,$/;"	f
+_pthread_queue	sysdeps/pthread/pthread.h	/^struct _pthread_queue$/;"	s
+acquire	spinlock.h	/^static inline void acquire(int * spinlock)$/;"	f
+alloc_proxy_th	Examples/proxy.c	/^static struct th_proxy_struct *alloc_proxy_th(void)$/;"	f	file:
+arg	internals.h	/^      void * arg;               \/*   argument to start function *\/$/;"	m	struct:pthread_request::__anon2::__anon3
+arg	sysdeps/pthread/pthread.h	/^  void *arg;				\/* Its argument.  *\/$/;"	m	struct:_pthread_cleanup_buffer
+attr	internals.h	/^      const pthread_attr_t * attr; \/* thread attributes *\/$/;"	m	struct:pthread_request::__anon2::__anon3
+buffer	Examples/ex2.c	/^  int buffer[BUFFER_SIZE];      \/* the actual data *\/$/;"	m	struct:prodcons	file:
+buffer	Examples/ex2.c	/^struct prodcons buffer;$/;"	v	typeref:struct:prodcons
+buffer	Examples/ex5.c	/^  int buffer[BUFFER_SIZE];      \/* the actual data *\/$/;"	m	struct:prodcons	file:
+buffer	Examples/ex5.c	/^struct prodcons buffer;$/;"	v	typeref:struct:prodcons
+c_spinlock	sysdeps/pthread/pthread.h	/^  int c_spinlock;                  \/* Spin lock to protect the queue.  *\/$/;"	m	struct:__anon7
+c_waiting	sysdeps/pthread/pthread.h	/^  struct _pthread_queue c_waiting; \/* Threads waiting on this condition.  *\/$/;"	m	struct:__anon7	typeref:struct:__anon7::_pthread_queue
+canceltype	sysdeps/pthread/pthread.h	/^  int canceltype;			\/* Saved cancellation type. *\/$/;"	m	struct:_pthread_cleanup_buffer
+child	ptfork.c	/^  struct handler_list prepare, parent, child;$/;"	m	struct:handler_list_block	typeref:struct:handler_list_block::	file:
+client	Examples/proxy.c	/^void *client(struct th_proxy_struct *th_proxy)$/;"	f
+code	internals.h	/^      int code;                 \/*   exit status *\/$/;"	m	struct:pthread_request::__anon2::__anon5
+compare_and_swap	semaphore.c	/^static inline int compare_and_swap(sem_t *sem, long oldval, long newval)$/;"	f	file:
+compare_and_swap	semaphore.c	40;"	d	file:
+cond	Examples/proxy.c	/^	pthread_cond_t cond;$/;"	m	struct:th_proxy_struct	file:
+connectto	Examples/proxy.c	/^int connectto(char *hote, int port, int sockIn)$/;"	f
+consumer	Examples/ex2.c	/^void * consumer(void * data)$/;"	f
+consumer	Examples/ex5.c	/^void * consumer(void * data)$/;"	f
+create	internals.h	/^    } create;$/;"	m	union:pthread_request::__anon2	typeref:struct:pthread_request::__anon2::__anon3
+dequeue	queue.h	/^static inline pthread_t dequeue(pthread_queue * q)$/;"	f
+destr	specific.c	/^  destr_function destr;         \/* destruction routine *\/$/;"	m	struct:pthread_key_struct	file:
+destr_function	specific.c	/^typedef void (*destr_function)(void *);$/;"	t	file:
+detachstate	sysdeps/pthread/pthread.h	/^  int detachstate;$/;"	m	struct:__anon11
+displaysyntax	Examples/proxy.c	/^void displaysyntax(void)$/;"	f
+distribute	Makefile	/^distribute := internals.h queue.h restart.h spinlock.h$/;"	m
+dummy	sysdeps/pthread/pthread.h	/^  int dummy;$/;"	m	struct:__anon14
+enqueue	queue.h	/^static inline void enqueue(pthread_queue * q, pthread_t th)$/;"	f
+exit	internals.h	/^    } exit;$/;"	m	union:pthread_request::__anon2	typeref:struct:pthread_request::__anon2::__anon5
+extra-libs	Makefile	/^extra-libs := libpthread$/;"	m
+extra-libs-others	Makefile	/^extra-libs-others := $(extra-libs)$/;"	m
+fn	internals.h	/^      void * (*fn)(void *);     \/*   start function *\/$/;"	m	struct:pthread_request::__anon2::__anon3
+fork	ptfork.c	/^int fork(void)$/;"	f
+free	internals.h	/^    } free;$/;"	m	union:pthread_request::__anon2	typeref:struct:pthread_request::__anon2::__anon4
+free_q	Examples/proxy.c	/^struct th_proxy_struct *free_q;$/;"	v	typeref:struct:th_proxy_struct
+free_q_cond	Examples/proxy.c	/^pthread_cond_t free_q_cond;$/;"	v
+free_q_mu	Examples/proxy.c	/^pthread_mutex_t free_q_mu;$/;"	v
+get	Examples/ex2.c	/^int get(struct prodcons * b)$/;"	f
+get	Examples/ex5.c	/^int get(struct prodcons * b)$/;"	f
+gethostbyname_mu	Examples/proxy.c	/^pthread_mutex_t gethostbyname_mu;	\/* used for protect gethostbyname $/;"	v
+handler	ptfork.c	/^  void (*handler)(void);$/;"	m	struct:handler_list	file:
+handler_list	ptfork.c	/^struct handler_list {$/;"	s	file:
+handler_list_block	ptfork.c	/^struct handler_list_block {$/;"	s	file:
+head	sysdeps/pthread/pthread.h	/^  pthread_t head;		\/* First element, or NULL if queue empty.  *\/$/;"	m	struct:_pthread_queue
+headers	Makefile	/^headers := pthread.h semaphore.h semaphorebits.h$/;"	m
+in_use	specific.c	/^  int in_use;                   \/* already allocated? *\/$/;"	m	struct:pthread_key_struct	file:
+inheritsched	sysdeps/pthread/pthread.h	/^  int inheritsched;$/;"	m	struct:__anon11
+init	Examples/ex2.c	/^void init(struct prodcons * b)$/;"	f
+init	Examples/ex5.c	/^void init(struct prodcons * b)$/;"	f
+key_alarm	Examples/proxy.c	/^pthread_key_t key_alarm;$/;"	v
+libpthread-routines	Makefile	/^libpthread-routines := attr cancel condvar join manager mutex ptfork \\$/;"	m
+line	man/troffprepro	/^line:$/;"	l
+linuxthreads-version	Makefile	/^linuxthreads-version=0.5$/;"	m
+lock	Examples/ex2.c	/^  pthread_mutex_t lock;         \/* mutex ensuring exclusive access to buffer *\/$/;"	m	struct:prodcons	file:
+lock	Examples/ex3.c	/^pthread_mutex_t lock;$/;"	v
+m_count	sysdeps/pthread/pthread.h	/^  int m_count;			\/* 0 if free, > 0 if taken.  *\/$/;"	m	struct:__anon6
+m_kind	sysdeps/pthread/pthread.h	/^  int m_kind;			\/* Kind of mutex *\/$/;"	m	struct:__anon6
+m_owner	sysdeps/pthread/pthread.h	/^  pthread_t m_owner;		\/* Owner of mutex (for recursive mutexes) *\/$/;"	m	struct:__anon6
+m_spinlock	sysdeps/pthread/pthread.h	/^  int m_spinlock;		\/* Spin lock to guarantee mutual exclusion.  *\/$/;"	m	struct:__anon6
+m_waiting	sysdeps/pthread/pthread.h	/^  struct _pthread_queue m_waiting; \/* Threads waiting on this mutex.  *\/$/;"	m	struct:__anon6	typeref:struct:__anon6::_pthread_queue
+main	Examples/ex1.c	/^int main()$/;"	f
+main	Examples/ex2.c	/^int main()$/;"	f
+main	Examples/ex3.c	/^int main(argc, argv)$/;"	f
+main	Examples/ex4.c	/^int main(int argc, char ** argv)$/;"	f
+main	Examples/ex5.c	/^int main()$/;"	f
+main	Examples/proxy.c	/^void main(int argc, char **argv)$/;"	f
+main_thread_exiting	manager.c	/^static int main_thread_exiting = 0;$/;"	v	file:
+mask	internals.h	/^      sigset_t mask;            \/*   signal mask *\/$/;"	m	struct:pthread_request::__anon2::__anon3
+max_proxy_threads	Examples/proxy.c	/^int max_proxy_threads = MAX_PROXY_THREADS;$/;"	v
+mu	Examples/proxy.c	/^	pthread_mutex_t mu;$/;"	m	struct:th_proxy_struct	file:
+mutexkind	sysdeps/pthread/pthread.h	/^  int mutexkind;$/;"	m	struct:__anon13
+new_proxy_th	Examples/proxy.c	/^static struct th_proxy_struct *new_proxy_th(void)$/;"	f	file:
+next	ptfork.c	/^  struct handler_list * next;$/;"	m	struct:handler_list	typeref:struct:handler_list::handler_list	file:
+next_free	Examples/proxy.c	/^	struct th_proxy_struct *next_free;$/;"	m	struct:th_proxy_struct	typeref:struct:th_proxy_struct::th_proxy_struct	file:
+notempty	Examples/ex2.c	/^  pthread_cond_t notempty;      \/* signaled when buffer is not empty *\/$/;"	m	struct:prodcons	file:
+notfull	Examples/ex2.c	/^  pthread_cond_t notfull;       \/* signaled when buffer is not full *\/$/;"	m	struct:prodcons	file:
+num_stack_segments	manager.c	/^static int num_stack_segments = 0;$/;"	v	file:
+p_cancel_jmp	internals.h	/^  sigjmp_buf * p_cancel_jmp;    \/* where to siglongjmp on a cancel or NULL *\/$/;"	m	struct:_pthread
+p_canceled	internals.h	/^  char p_canceled;              \/* cancellation request pending *\/$/;"	m	struct:_pthread
+p_cancelstate	internals.h	/^  char p_cancelstate;           \/* cancellation state *\/$/;"	m	struct:_pthread
+p_canceltype	internals.h	/^  char p_canceltype;            \/* cancellation type (deferred\/async) *\/$/;"	m	struct:_pthread
+p_cleanup	internals.h	/^  struct _pthread_cleanup_buffer * p_cleanup; \/* cleanup functions *\/$/;"	m	struct:_pthread	typeref:struct:_pthread::_pthread_cleanup_buffer
+p_detached	internals.h	/^  char p_detached;              \/* true if detached *\/$/;"	m	struct:_pthread
+p_errno	internals.h	/^  int p_errno;                  \/* error returned by last system call *\/$/;"	m	struct:_pthread
+p_exited	internals.h	/^  char p_exited;                \/* true if the assoc. process terminated *\/$/;"	m	struct:_pthread
+p_h_errno	internals.h	/^  int p_h_errno;                \/* error returned by last netdb function *\/$/;"	m	struct:_pthread
+p_initial_fn	internals.h	/^  void *(*p_initial_fn)(void *); \/* function to call on thread start *\/$/;"	m	struct:_pthread
+p_initial_fn_arg	internals.h	/^  void *p_initial_fn_arg;	\/* argument to give that function *\/$/;"	m	struct:_pthread
+p_initial_mask	internals.h	/^  sigset_t p_initial_mask;	\/* signal mask on thread start *\/$/;"	m	struct:_pthread
+p_joining	internals.h	/^  pthread_t p_joining;          \/* thread joining on that thread or NULL *\/$/;"	m	struct:_pthread
+p_nextlive	internals.h	/^  pthread_t p_nextlive, p_prevlive; \/* Double chaining of active threads *\/$/;"	m	struct:_pthread
+p_nextwaiting	internals.h	/^  pthread_t p_nextwaiting;      \/* Next element in the queue holding the thr *\/$/;"	m	struct:_pthread
+p_pid	internals.h	/^  int p_pid;                    \/* PID of Unix process *\/$/;"	m	struct:_pthread
+p_prevlive	internals.h	/^  pthread_t p_nextlive, p_prevlive; \/* Double chaining of active threads *\/$/;"	m	struct:_pthread
+p_retcode	internals.h	/^  int p_retcode;                \/* placeholder for return code *\/$/;"	m	struct:_pthread
+p_retval	internals.h	/^  void * p_retval;              \/* placeholder for return value *\/$/;"	m	struct:_pthread
+p_signal	internals.h	/^  int p_signal;                 \/* last signal received *\/$/;"	m	struct:_pthread
+p_signal_jmp	internals.h	/^  sigjmp_buf * p_signal_jmp;    \/* where to siglongjmp on a signal or NULL *\/$/;"	m	struct:_pthread
+p_specific	internals.h	/^  void * p_specific[PTHREAD_KEYS_MAX]; \/* thread-specific data *\/$/;"	m	struct:_pthread
+p_spinlock	internals.h	/^  int p_spinlock;               \/* Spinlock for synchronized accesses *\/$/;"	m	struct:_pthread
+p_terminated	internals.h	/^  char p_terminated;            \/* true if terminated e.g. by pthread_exit *\/$/;"	m	struct:_pthread
+parent	ptfork.c	/^  struct handler_list prepare, parent, child;$/;"	m	struct:handler_list_block	typeref:struct:handler_list_block::	file:
+prepare	ptfork.c	/^  struct handler_list prepare, parent, child;$/;"	m	struct:handler_list_block	typeref:struct:handler_list_block::handler_list	file:
+prev	sysdeps/pthread/pthread.h	/^  struct _pthread_cleanup_buffer *prev;	\/* Chaining of cleanup functions.  *\/$/;"	m	struct:_pthread_cleanup_buffer	typeref:struct:_pthread_cleanup_buffer::_pthread_cleanup_buffer
+print_it	Examples/ex3.c	/^void print_it(void *arg)$/;"	f
+process	Examples/ex1.c	/^void * process(void * arg)$/;"	f
+process	Examples/ex4.c	/^void * process(void * arg)$/;"	f
+process_request	Examples/proxy.c	/^int process_request(int sockIn)$/;"	f
+prodcons	Examples/ex2.c	/^struct prodcons {$/;"	s	file:
+prodcons	Examples/ex5.c	/^struct prodcons {$/;"	s	file:
+producer	Examples/ex2.c	/^void * producer(void * data)$/;"	f
+producer	Examples/ex5.c	/^void * producer(void * data)$/;"	f
+pthread_atfork	ptfork.c	/^int pthread_atfork(void (*prepare)(void),$/;"	f
+pthread_atfork_child	ptfork.c	/^static struct handler_list * pthread_atfork_child = NULL;$/;"	v	typeref:struct:handler_list	file:
+pthread_atfork_lock	ptfork.c	/^static pthread_mutex_t pthread_atfork_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+pthread_atfork_parent	ptfork.c	/^static struct handler_list * pthread_atfork_parent = NULL;$/;"	v	typeref:struct:handler_list	file:
+pthread_atfork_prepare	ptfork.c	/^static struct handler_list * pthread_atfork_prepare = NULL;$/;"	v	typeref:struct:handler_list	file:
+pthread_attr_destroy	attr.c	/^int pthread_attr_destroy(pthread_attr_t *attr)$/;"	f
+pthread_attr_getdetachstate	attr.c	/^int pthread_attr_getdetachstate(const pthread_attr_t *attr, int *detachstate)$/;"	f
+pthread_attr_getinheritsched	attr.c	/^int pthread_attr_getinheritsched(const pthread_attr_t *attr, int *inherit)$/;"	f
+pthread_attr_getschedparam	attr.c	/^int pthread_attr_getschedparam(const pthread_attr_t *attr,$/;"	f
+pthread_attr_getschedpolicy	attr.c	/^int pthread_attr_getschedpolicy(const pthread_attr_t *attr, int *policy)$/;"	f
+pthread_attr_getscope	attr.c	/^int pthread_attr_getscope(const pthread_attr_t *attr, int *scope)$/;"	f
+pthread_attr_init	attr.c	/^int pthread_attr_init(pthread_attr_t *attr)$/;"	f
+pthread_attr_setdetachstate	attr.c	/^int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate)$/;"	f
+pthread_attr_setinheritsched	attr.c	/^int pthread_attr_setinheritsched(pthread_attr_t *attr, int inherit)$/;"	f
+pthread_attr_setschedparam	attr.c	/^int pthread_attr_setschedparam(pthread_attr_t *attr,$/;"	f
+pthread_attr_setschedpolicy	attr.c	/^int pthread_attr_setschedpolicy(pthread_attr_t *attr, int policy)$/;"	f
+pthread_attr_setscope	attr.c	/^int pthread_attr_setscope(pthread_attr_t *attr, int scope)$/;"	f
+pthread_attr_t	sysdeps/pthread/pthread.h	/^} pthread_attr_t;$/;"	t	typeref:struct:__anon11
+pthread_call_handlers	ptfork.c	/^static inline void pthread_call_handlers(struct handler_list * list)$/;"	f	file:
+pthread_cancel	cancel.c	/^int pthread_cancel(pthread_t thread)$/;"	f
+pthread_cleanup_pop	sysdeps/pthread/pthread.h	399;"	d
+pthread_cleanup_pop_restore_np	sysdeps/pthread/pthread.h	420;"	d
+pthread_cleanup_push	sysdeps/pthread/pthread.h	388;"	d
+pthread_cleanup_push_defer_np	sysdeps/pthread/pthread.h	408;"	d
+pthread_cond_broadcast	condvar.c	/^int pthread_cond_broadcast(pthread_cond_t *cond)$/;"	f
+pthread_cond_destroy	condvar.c	/^int pthread_cond_destroy(pthread_cond_t *cond)$/;"	f
+pthread_cond_init	condvar.c	/^int pthread_cond_init(pthread_cond_t *cond,$/;"	f
+pthread_cond_signal	condvar.c	/^int pthread_cond_signal(pthread_cond_t *cond)$/;"	f
+pthread_cond_t	sysdeps/pthread/pthread.h	/^} pthread_cond_t;$/;"	t	typeref:struct:__anon7
+pthread_cond_timedwait	condvar.c	/^int pthread_cond_timedwait(pthread_cond_t *cond, pthread_mutex_t *mutex,$/;"	f
+pthread_cond_timedwait_relative	condvar.c	/^pthread_cond_timedwait_relative(pthread_cond_t *cond,$/;"	f	file:
+pthread_cond_wait	condvar.c	/^int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex)$/;"	f
+pthread_condattr_destroy	condvar.c	/^int pthread_condattr_destroy(pthread_condattr_t *attr)$/;"	f
+pthread_condattr_init	condvar.c	/^int pthread_condattr_init(pthread_condattr_t *attr)$/;"	f
+pthread_condattr_t	sysdeps/pthread/pthread.h	/^} pthread_condattr_t;$/;"	t	typeref:struct:__anon14
+pthread_create	pthread.c	/^int pthread_create(pthread_t *thread, const pthread_attr_t *attr,$/;"	f
+pthread_detach	join.c	/^int pthread_detach(pthread_t th)$/;"	f
+pthread_equal	pthread.c	/^int pthread_equal(pthread_t thread1, pthread_t thread2)$/;"	f
+pthread_exit	join.c	/^void pthread_exit(void * retval)$/;"	f
+pthread_exit_process	pthread.c	/^static void pthread_exit_process(int retcode, void *arg)$/;"	f	file:
+pthread_exited	manager.c	/^static void pthread_exited(pid_t pid)$/;"	f	file:
+pthread_free	manager.c	/^static void pthread_free(pthread_t th)$/;"	f	file:
+pthread_getschedparam	pthread.c	/^int pthread_getschedparam(pthread_t target_thread, int *policy,$/;"	f
+pthread_grow_stack_segments	manager.c	/^static int pthread_grow_stack_segments(void)$/;"	f	file:
+pthread_handle_create	manager.c	/^static int pthread_handle_create(pthread_t *thread, const pthread_attr_t *attr,$/;"	f	file:
+pthread_handle_exit	manager.c	/^static void pthread_handle_exit(pthread_t issuing_thread, int exitcode)$/;"	f	file:
+pthread_handle_free	manager.c	/^static void pthread_handle_free(pthread_t th)$/;"	f	file:
+pthread_handle_sigcancel	pthread.c	/^static void pthread_handle_sigcancel(int sig)$/;"	f	file:
+pthread_initialize_manager	pthread.c	/^static int pthread_initialize_manager(void)$/;"	f	file:
+pthread_insert_list	ptfork.c	/^static void pthread_insert_list(struct handler_list ** list,$/;"	f	file:
+pthread_join	join.c	/^int pthread_join(pthread_t th, void ** thread_return)$/;"	f
+pthread_key_struct	specific.c	/^struct pthread_key_struct {$/;"	s	file:
+pthread_key_t	sysdeps/pthread/pthread.h	/^typedef unsigned int pthread_key_t;$/;"	t
+pthread_keys	specific.c	/^static struct pthread_key_struct pthread_keys[PTHREAD_KEYS_MAX] =$/;"	v	typeref:struct:pthread_key_struct	file:
+pthread_keys_mutex	specific.c	/^static pthread_mutex_t pthread_keys_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+pthread_kill	signals.c	/^int pthread_kill(pthread_t thread, int signo)$/;"	f
+pthread_kill_all_threads	manager.c	/^static void pthread_kill_all_threads(int sig, int main_thread_also)$/;"	f	file:
+pthread_mutex_t	sysdeps/pthread/pthread.h	/^} pthread_mutex_t;$/;"	t	typeref:struct:__anon6
+pthread_mutexattr_t	sysdeps/pthread/pthread.h	/^} pthread_mutexattr_t;$/;"	t	typeref:struct:__anon13
+pthread_once_t	sysdeps/pthread/pthread.h	/^typedef int pthread_once_t;$/;"	t
+pthread_queue	queue.h	/^typedef struct _pthread_queue pthread_queue;$/;"	t	typeref:struct:_pthread_queue
+pthread_reap_children	manager.c	/^static void pthread_reap_children(void)$/;"	f	file:
+pthread_request	internals.h	/^struct pthread_request {$/;"	s
+pthread_self	pthread.c	/^pthread_t pthread_self(void)$/;"	f
+pthread_setcancelstate	cancel.c	/^int pthread_setcancelstate(int state, int * oldstate)$/;"	f
+pthread_setcanceltype	cancel.c	/^int pthread_setcanceltype(int type, int * oldtype)$/;"	f
+pthread_setschedparam	pthread.c	/^int pthread_setschedparam(pthread_t target_thread, int policy,$/;"	f
+pthread_sigmask	signals.c	/^int pthread_sigmask(int how, const sigset_t * newmask, sigset_t * oldmask)$/;"	f
+pthread_start_thread	manager.c	/^static int pthread_start_thread(void *arg)$/;"	f	file:
+pthread_t	sysdeps/pthread/pthread.h	/^typedef struct _pthread *pthread_t;$/;"	t	typeref:struct:_pthread
+pthread_testcancel	cancel.c	/^void pthread_testcancel(void)$/;"	f
+put	Examples/ex2.c	/^void put(struct prodcons * b, int data)$/;"	f
+put	Examples/ex5.c	/^void put(struct prodcons * b, int data)$/;"	f
+queue_init	queue.h	/^static inline void queue_init(pthread_queue * q)$/;"	f
+readpos	Examples/ex2.c	/^  int readpos, writepos;        \/* positions for reading and writing *\/$/;"	m	struct:prodcons	file:
+readpos	Examples/ex5.c	/^  int readpos, writepos;        \/* positions for reading and writing *\/$/;"	m	struct:prodcons	file:
+release	spinlock.h	/^static inline void release(int * spinlock)$/;"	f
+remove_from_queue	condvar.c	/^static void remove_from_queue(pthread_queue * q, pthread_t th)$/;"	f	file:
+req_args	internals.h	/^  } req_args;$/;"	m	struct:pthread_request	typeref:union:pthread_request::__anon2
+req_kind	internals.h	/^  } req_kind;$/;"	m	struct:pthread_request	typeref:enum:pthread_request::__anon1
+req_thread	internals.h	/^  pthread_t req_thread;         \/* Thread doing the request *\/$/;"	m	struct:pthread_request
+request_alarm	Examples/proxy.c	/^void request_alarm(int i)$/;"	f
+restart	restart.h	/^static inline void restart(pthread_t th)$/;"	f
+routine	sysdeps/pthread/pthread.h	/^  void (*routine) __P ((void *));	\/* Function to call.  *\/$/;"	m	struct:_pthread_cleanup_buffer
+routines	Makefile	/^routines := weaks$/;"	m
+sayerror	Examples/proxy.c	/^void sayerror(char *msg, int sockIn, int sockOut)$/;"	f
+schedparam	sysdeps/pthread/pthread.h	/^  struct sched_param schedparam;$/;"	m	struct:__anon11	typeref:struct:__anon11::sched_param
+schedpolicy	sysdeps/pthread/pthread.h	/^  int schedpolicy;$/;"	m	struct:__anon11
+scope	sysdeps/pthread/pthread.h	/^  int scope;$/;"	m	struct:__anon11
+search	Examples/ex3.c	/^void *search(void *arg)$/;"	f
+sem_destroy	semaphore.c	/^int sem_destroy(sem_t * sem)$/;"	f
+sem_getvalue	semaphore.c	/^int sem_getvalue(sem_t * sem, int * sval)$/;"	f
+sem_init	semaphore.c	/^int sem_init(sem_t *sem, int pshared, unsigned int value)$/;"	f
+sem_post	semaphore.c	/^int sem_post(sem_t * sem)$/;"	f
+sem_read	Examples/ex5.c	/^  sem_t sem_read;               \/* number of elements available for reading *\/$/;"	m	struct:prodcons	file:
+sem_reserved	sysdeps/alpha/semaphorebits.h	/^  long int sem_reserved[3];$/;"	m	struct:__anon19
+sem_spinlock	sysdeps/pthread/no-cmpxchg/semaphorebits.h	/^  int sem_spinlock;$/;"	m	struct:__anon17
+sem_status	sysdeps/alpha/semaphorebits.h	/^  long int sem_status;$/;"	m	struct:__anon19
+sem_status	sysdeps/pthread/cmpxchg/semaphorebits.h	/^  long int sem_status;$/;"	m	struct:__anon18
+sem_status	sysdeps/pthread/no-cmpxchg/semaphorebits.h	/^  long int sem_status;$/;"	m	struct:__anon17
+sem_t	sysdeps/alpha/semaphorebits.h	/^} sem_t;$/;"	t	typeref:struct:__anon19
+sem_t	sysdeps/pthread/cmpxchg/semaphorebits.h	/^} sem_t;$/;"	t	typeref:struct:__anon18
+sem_t	sysdeps/pthread/no-cmpxchg/semaphorebits.h	/^} sem_t;$/;"	t	typeref:struct:__anon17
+sem_trywait	semaphore.c	/^int sem_trywait(sem_t * sem)$/;"	f
+sem_wait	semaphore.c	/^int sem_wait(sem_t * sem)$/;"	f
+sem_write	Examples/ex5.c	/^  sem_t sem_write;              \/* number of locations available for writing *\/$/;"	m	struct:prodcons	file:
+server	Examples/proxy.c	/^void server(int sockListen, struct sockaddr_in *inputSocket)$/;"	f
+sigwait	signals.c	/^int sigwait(const sigset_t * set, int * sig)$/;"	f
+sock_in	Examples/proxy.c	/^	int sock_in;$/;"	m	struct:th_proxy_struct	file:
+stack_segments	manager.c	/^static char * stack_segments = NULL;$/;"	v	file:
+str_accumulate	Examples/ex4.c	/^char * str_accumulate(char * s)$/;"	f
+str_alloc_destroy_accu	Examples/ex4.c	/^static void str_alloc_destroy_accu(void * accu)$/;"	f	file:
+str_alloc_key	Examples/ex4.c	/^static void str_alloc_key(void)$/;"	f	file:
+str_alloc_key_once	Examples/ex4.c	/^static pthread_once_t str_alloc_key_once = PTHREAD_ONCE_INIT;$/;"	v	file:
+str_key	Examples/ex4.c	/^static pthread_key_t str_key;$/;"	v	file:
+strong_alias	lockfile.c	/^strong_alias (__flockfile, _IO_flockfile)$/;"	f
+strong_alias	lockfile.c	/^strong_alias (__ftrylockfile, _IO_ftrylockfile)$/;"	f
+strong_alias	lockfile.c	/^strong_alias (__funlockfile, _IO_funlockfile)$/;"	f
+subdir	Makefile	/^subdir	:= linuxthreads$/;"	m
+subst	man/troffprepro	/^sub subst {$/;"	s
+suspend	restart.h	/^static inline void suspend(pthread_t self)$/;"	f
+suspend_with_cancellation	restart.h	/^static inline void suspend_with_cancellation(pthread_t self)$/;"	f
+tail	sysdeps/pthread/pthread.h	/^  pthread_t tail;		\/* Last element, or NULL if queue empty.  *\/$/;"	m	struct:_pthread_queue
+terminated_children	manager.c	/^static int terminated_children = 0;$/;"	v	file:
+testandset	sysdeps/alpha/pt-machine.h	/^extern inline long testandset(int *spinlock)$/;"	f
+testandset	sysdeps/i386/pt-machine.h	/^testandset (int *spinlock)$/;"	f
+testandset	sysdeps/m68k/pt-machine.h	/^testandset (int *spinlock)$/;"	f
+testandset	sysdeps/mips/pt-machine.h	/^extern inline long testandset(int *spinlock)$/;"	f
+testandset	sysdeps/sparc/pt-machine.h	/^static inline int testandset(int *spinlock)$/;"	f
+th	Examples/proxy.c	/^	pthread_t th;		\/* only for server *\/$/;"	m	struct:th_proxy_struct	file:
+th_proxy_struct	Examples/proxy.c	/^struct th_proxy_struct {$/;"	s	file:
+thread	internals.h	/^      pthread_t thread;         \/*   ID of thread to free *\/$/;"	m	struct:pthread_request::__anon2::__anon4
+thread_count	Examples/proxy.c	/^int thread_count = 0;	\/* protected with free_q_mu *\/$/;"	v
+thread_self	internals.h	/^static inline pthread_t thread_self (void)$/;"	f
+threads	Examples/ex3.c	/^pthread_t threads[NUM_THREADS];$/;"	v
+timeout_out	Examples/proxy.c	/^int timeout_out = TIMEOUT_OUT;$/;"	v
+tries	Examples/ex3.c	/^int tries;$/;"	v
+weak_alias	mutex.c	/^weak_alias (__pthread_mutex_destroy, pthread_mutex_destroy)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutex_init, pthread_mutex_init)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutex_lock, pthread_mutex_lock)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutex_trylock, pthread_mutex_trylock)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutex_unlock, pthread_mutex_unlock)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutexattr_destroy, pthread_mutexattr_destroy)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutexattr_getkind_np, pthread_mutexattr_getkind_np)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutexattr_init, pthread_mutexattr_init)$/;"	f
+weak_alias	mutex.c	/^weak_alias (__pthread_mutexattr_setkind_np, pthread_mutexattr_setkind_np)$/;"	f
+weak_alias	pthread.c	/^weak_alias (__pthread_kill_other_threads_np, pthread_kill_other_threads_np)$/;"	f
+weak_alias	specific.c	/^weak_alias (__pthread_getspecific, pthread_getspecific)$/;"	f
+weak_alias	specific.c	/^weak_alias (__pthread_key_create, pthread_key_create)$/;"	f
+weak_alias	specific.c	/^weak_alias (__pthread_setspecific, pthread_setspecific)$/;"	f
+weak_alias	weaks.c	/^weak_alias (__pthread_return_0, pthread_attr_init)$/;"	f
+writepos	Examples/ex2.c	/^  int readpos, writepos;        \/* positions for reading and writing *\/$/;"	m	struct:prodcons	file:
+writepos	Examples/ex5.c	/^  int readpos, writepos;        \/* positions for reading and writing *\/$/;"	m	struct:prodcons	file:
