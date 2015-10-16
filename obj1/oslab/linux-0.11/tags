@@ -481,8 +481,6 @@ PIPE_TAIL	include/linux/fs.h	59;"	d
 PLUS	kernel/vsprintf.c	29;"	d	file:
 PTHREAD_CANCEL_DISABLE	include/pthread.h	8;"	d
 PTHREAD_CANCEL_ENABLE	include/pthread.h	9;"	d
-PTHREAD_CANSIG_CATCHED	lib/pthread.c	6;"	d	file:
-PTHREAD_CANSIG_NOTYET	lib/pthread.c	5;"	d	file:
 PTHREAD_CREATE_DETACHED	include/pthread.h	5;"	d
 PTHREAD_CREATE_JOINABLE	include/pthread.h	4;"	d
 PUTCH	include/linux/tty.h	33;"	d
@@ -922,7 +920,9 @@ _exit	lib/_exit.c	/^volatile void _exit(int exit_code)$/;"	f
 _fs	kernel/traps.c	34;"	d	file:
 _get_base	include/linux/sched.h	/^static inline unsigned long _get_base(char * addr)$/;"	f
 _hashfn	fs/buffer.c	131;"	d	file:
-_pthread_attr_t_	include/pthread.h	/^typedef struct _pthread_attr_t_{$/;"	s
+_pthread	lib/pthread.c	/^struct _pthread {$/;"	s	file:
+_pthread_cleanup_pop	lib/pthread.c	/^void _pthread_cleanup_pop(struct _pthread_cleanup_buffer *buffer, int execute)$/;"	f
+_pthread_cleanup_push	lib/pthread.c	/^void _pthread_cleanup_push(struct _pthread_cleanup_buffer *buffer, void (*routine)(void *), void *arg)$/;"	f
 _set_base	include/linux/sched.h	178;"	d
 _set_gate	include/asm/system.h	22;"	d
 _set_limit	include/linux/sched.h	191;"	d
@@ -1024,7 +1024,6 @@ c_line	include/termios.h	/^	unsigned char c_line;		\/* line discipline *\/$/;"	m
 c_oflag	include/termios.h	/^	unsigned long c_oflag;		\/* output mode flags *\/$/;"	m	struct:termios
 c_oflag	include/termios.h	/^	unsigned short c_oflag;		\/* output mode flags *\/$/;"	m	struct:termio
 calc_mem	mm/memory.c	/^void calc_mem(void)$/;"	f
-cancel_state	include/pthread.h	/^	int cancel_state;$/;"	m	struct:_pthread_attr_t_
 caps	kernel/chr_drv/keyboard.S	/^caps:	testb $0x80,mode$/;"	l
 chain	lib/malloc.c	/^	struct bucket_desc	*chain;$/;"	m	struct:_bucket_dir	typeref:struct:_bucket_dir::bucket_desc	file:
 change_ldt	fs/exec.c	/^static unsigned long change_ldt(unsigned long text_size,unsigned long * page)$/;"	f	file:
@@ -1097,7 +1096,6 @@ delete_char	kernel/chr_drv/console.c	/^static void delete_char(void)$/;"	f	file:
 delete_line	kernel/chr_drv/console.c	/^static void delete_line(void)$/;"	f	file:
 desc_struct	include/linux/head.h	/^typedef struct desc_struct {$/;"	s
 desc_table	include/linux/head.h	/^} desc_table[256];$/;"	t	typeref:struct:desc_struct
-detached	include/pthread.h	/^	int detached;$/;"	m	struct:_pthread_attr_t_
 dev	kernel/blk_drv/blk.h	/^	int dev;		\/* -1 if no request *\/$/;"	m	struct:request
 dev_t	include/sys/types.h	/^typedef unsigned short dev_t;$/;"	t
 device_not_available	kernel/system_call.s	/^device_not_available:$/;"	l
@@ -1107,7 +1105,7 @@ die	kernel/traps.c	/^static void die(char * str,long esp_ptr,long nr)$/;"	f	file
 die	tools/build.c	/^void die(char * str)$/;"	f
 dir_entry	include/linux/fs.h	/^struct dir_entry {$/;"	s
 dir_namei	fs/namei.c	/^static struct m_inode * dir_namei(const char * pathname,$/;"	f	file:
-div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon5
+div_t	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	t	typeref:struct:__anon4
 divide_error	kernel/asm.s	/^divide_error:$/;"	l
 do_bounds	kernel/traps.c	/^void do_bounds(long esp, long error_code)$/;"	f
 do_coprocessor_error	kernel/traps.c	/^void do_coprocessor_error(long esp, long error_code)$/;"	f
@@ -1390,7 +1388,7 @@ l_type	include/fcntl.h	/^	short l_type;$/;"	m	struct:flock
 l_whence	include/fcntl.h	/^	short l_whence;$/;"	m	struct:flock
 last_pid	kernel/fork.c	/^long last_pid=0;$/;"	v
 last_task_used_math	kernel/sched.c	/^struct task_struct *last_task_used_math = NULL;$/;"	v	typeref:struct:task_struct
-ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon6
+ldiv_t	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	t	typeref:struct:__anon5
 ldt	include/linux/sched.h	/^	long	ldt;		\/* 16 high bits zero *\/$/;"	m	struct:tss_struct
 ldt	include/linux/sched.h	/^	struct desc_struct ldt[3];$/;"	m	struct:task_struct	typeref:struct:task_struct::desc_struct
 leader	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
@@ -1438,12 +1436,12 @@ mount_root	fs/super.c	/^void mount_root(void)$/;"	f
 move_to_user_mode	include/asm/system.h	1;"	d
 msg1	boot/bootsect.s	/^msg1:$/;"	l
 n_desc	include/a.out.h	/^  short n_desc;$/;"	m	struct:nlist
-n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon4
-n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon4	typeref:struct:nlist::__anon4::nlist
+n_name	include/a.out.h	/^    char *n_name;$/;"	m	union:nlist::__anon3
+n_next	include/a.out.h	/^    struct nlist *n_next;$/;"	m	union:nlist::__anon3	typeref:struct:nlist::__anon3::nlist
 n_other	include/a.out.h	/^  char n_other;$/;"	m	struct:nlist
-n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon4
+n_strx	include/a.out.h	/^    long n_strx;$/;"	m	union:nlist::__anon3
 n_type	include/a.out.h	/^  unsigned char n_type;$/;"	m	struct:nlist
-n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon4
+n_un	include/a.out.h	/^  } n_un;$/;"	m	struct:nlist	typeref:union:nlist::__anon3
 n_value	include/a.out.h	/^  unsigned long n_value;$/;"	m	struct:nlist
 name	include/linux/fs.h	/^	char name[NAME_LEN];$/;"	m	struct:dir_entry
 name	kernel/sys_sem.c	/^	char name[SIZE_NAM];$/;"	m	struct:__anon1	file:
@@ -1487,6 +1485,29 @@ outb	include/asm/io.h	1;"	d
 outb_p	include/asm/io.h	11;"	d
 output_byte	kernel/blk_drv/floppy.c	/^static void output_byte(char byte)$/;"	f	file:
 overflow	kernel/asm.s	/^overflow:$/;"	l
+p_cancel_jmp	lib/pthread.c	/^	sigjmp_buf * p_cancel_jmp;    \/* where to siglongjmp on a cancel or NULL *\/$/;"	m	struct:_pthread	file:
+p_canceled	lib/pthread.c	/^  	char p_canceled;              \/* cancellation request pending *\/$/;"	m	struct:_pthread	file:
+p_cancelstate	lib/pthread.c	/^  	char p_cancelstate;           \/* cancellation state *\/$/;"	m	struct:_pthread	file:
+p_cleanup	lib/pthread.c	/^    struct _pthread_cleanup_buffer * p_cleanup; \/* cleanup functions *\/$/;"	m	struct:_pthread	typeref:struct:_pthread::_pthread_cleanup_buffer	file:
+p_detached	lib/pthread.c	/^  	char p_detached;              \/* true if detached *\/$/;"	m	struct:_pthread	file:
+p_errno	lib/pthread.c	/^    int p_errno;                  \/* error returned by last system call *\/$/;"	m	struct:_pthread	file:
+p_exited	lib/pthread.c	/^    char p_exited;                \/* true if the assoc. process terminated *\/$/;"	m	struct:_pthread	file:
+p_h_errno	lib/pthread.c	/^  	int p_h_errno;                \/* error returned by last netdb function *\/$/;"	m	struct:_pthread	file:
+p_initial_fn	lib/pthread.c	/^    void *(*p_initial_fn)(void *); \/* function to call on thread start *\/$/;"	m	struct:_pthread	file:
+p_initial_fn_arg	lib/pthread.c	/^  	void *p_initial_fn_arg;   \/* argument to give that function *\/$/;"	m	struct:_pthread	file:
+p_initial_mask	lib/pthread.c	/^    sigset_t p_initial_mask;  \/* signal mask on thread start *\/$/;"	m	struct:_pthread	file:
+p_joining	lib/pthread.c	/^	pthread_t p_joining;          \/* thread joining on that thread or NULL *\/$/;"	m	struct:_pthread	file:
+p_nextlive	lib/pthread.c	/^	pthread_t p_nextlive, p_prevlive; \/* Double chaining of active threads *\/$/;"	m	struct:_pthread	file:
+p_nextwaiting	lib/pthread.c	/^    pthread_t p_nextwaiting;      \/* Next element in the queue holding the thr *\/$/;"	m	struct:_pthread	file:
+p_pid	lib/pthread.c	/^	int p_pid;                    \/* PID of Unix process *\/$/;"	m	struct:_pthread	file:
+p_prevlive	lib/pthread.c	/^	pthread_t p_nextlive, p_prevlive; \/* Double chaining of active threads *\/$/;"	m	struct:_pthread	file:
+p_retcode	lib/pthread.c	/^    int p_retcode;                \/* placeholder for return code *\/$/;"	m	struct:_pthread	file:
+p_retval	lib/pthread.c	/^  	void * p_retval;              \/* placeholder for return value *\/$/;"	m	struct:_pthread	file:
+p_signal	lib/pthread.c	/^  	int p_signal;                 \/* last signal received *\/$/;"	m	struct:_pthread	file:
+p_signal_jmp	lib/pthread.c	/^    sigjmp_buf * p_signal_jmp;    \/* where to siglongjmp on a signal or NULL *\/$/;"	m	struct:_pthread	file:
+p_specific	lib/pthread.c	/^	void * p_specific[PTHREAD_KEYS_MAX]; \/* thread-specific data *\/$/;"	m	struct:_pthread	file:
+p_spinlock	lib/pthread.c	/^    int p_spinlock;               \/* Spinlock for synchronized accesses *\/$/;"	m	struct:_pthread	file:
+p_terminated	lib/pthread.c	/^    char p_terminated;            \/* true if terminated e.g. by pthread_exit *\/$/;"	m	struct:_pthread	file:
 page	lib/malloc.c	/^	void			*page;$/;"	m	struct:bucket_desc	file:
 page_fault	mm/page.s	/^page_fault:$/;"	l
 panic	kernel/panic.c	/^volatile void panic(const char * s)$/;"	f
@@ -1501,7 +1522,7 @@ pg3	boot/head.s	/^pg3:$/;"	l
 pg_dir	boot/head.s	/^pg_dir:$/;"	l
 pgrp	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
 pgrp	include/linux/tty.h	/^	int pgrp;$/;"	m	struct:tty_struct
-phy_addr	mm/shm.c	/^	unsigned long phy_addr;$/;"	m	struct:__anon3	file:
+phy_addr	mm/shm.c	/^	unsigned long phy_addr;$/;"	m	struct:__anon6	file:
 pid	include/linux/sched.h	/^	long pid,father,pgrp,session,leader;$/;"	m	struct:task_struct
 pid_t	include/sys/types.h	/^typedef int pid_t;$/;"	t
 pop	boot/bootsect.s	/^	pop dx$/;"	d
@@ -1520,14 +1541,12 @@ proc_read	fs/proc.c	/^int proc_read(struct m_inode *inode, char *buf, int count,
 ps_content	fs/proc.c	/^static char *ps_content = NULL;$/;"	v	file:
 pthread_attr_init	lib/pthread.c	/^int pthread_attr_init(pthread_attr_t *attr)$/;"	f
 pthread_attr_setdetachstate	lib/pthread.c	/^int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate)$/;"	f
-pthread_attr_t	include/pthread.h	/^}pthread_attr_t;$/;"	t	typeref:struct:_pthread_attr_t_
 pthread_cancel	lib/pthread.c	/^int pthread_cancel(pthread_t thread)$/;"	f
-pthread_cleanup_pop	lib/pthread.c	/^void pthread_cleanup_pop(int execute)$/;"	f
-pthread_cleanup_push	lib/pthread.c	/^void pthread_cleanup_push(void (*routine)(void *), void *arg)$/;"	f
+pthread_cleanup_pop	include/pthread.h	15;"	d
+pthread_cleanup_push	include/pthread.h	11;"	d
 pthread_create	lib/pthread.c	/^int pthread_create(pthread_t *thread, const pthread_attr_t *attr,$/;"	f
 pthread_exit	lib/pthread.c	/^void pthread_exit(void *retval)$/;"	f
 pthread_setcancelstate	lib/pthread.c	/^int pthread_setcancelstate(int state, int *oldstate)$/;"	f
-pthread_t	include/pthread.h	/^typedef int pthread_t;$/;"	t
 pthread_testcancel	lib/pthread.c	/^void pthread_testcancel(void)$/;"	f
 ptrdiff_t	include/stddef.h	/^typedef long ptrdiff_t;$/;"	t
 ptrdiff_t	include/sys/types.h	/^typedef long ptrdiff_t;$/;"	t
@@ -1540,8 +1559,8 @@ put_queue	kernel/chr_drv/keyboard.S	/^put_queue:$/;"	l
 put_super	fs/super.c	/^void put_super(int dev)$/;"	f
 pwd	include/linux/sched.h	/^	struct m_inode * pwd;$/;"	m	struct:task_struct	typeref:struct:task_struct::m_inode
 ques	kernel/chr_drv/console.c	/^static unsigned long	ques=0;$/;"	v	file:
-quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon5
-quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon6
+quot	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon4
+quot	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon5
 quotient	kernel/chr_drv/tty_ioctl.c	/^static unsigned short quotient[] = {$/;"	v	file:
 r_address	include/a.out.h	/^  int r_address;$/;"	m	struct:relocation_info
 r_extern	include/a.out.h	/^  unsigned int r_extern:1;$/;"	m	struct:relocation_info
@@ -1572,8 +1591,8 @@ refcnt	lib/malloc.c	/^	unsigned short		refcnt;$/;"	m	struct:bucket_desc	file:
 release	include/sys/utsname.h	/^	char release[9];$/;"	m	struct:utsname
 release	kernel/exit.c	/^void release(struct task_struct * p)$/;"	f
 relocation_info	include/a.out.h	/^struct relocation_info$/;"	s
-rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon5
-rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon6
+rem	include/sys/types.h	/^typedef struct { int quot,rem; } div_t;$/;"	m	struct:__anon4
+rem	include/sys/types.h	/^typedef struct { long quot,rem; } ldiv_t;$/;"	m	struct:__anon5
 remove_from_queues	fs/buffer.c	/^static inline void remove_from_queues(struct buffer_head * bh)$/;"	f	file:
 remove_page	mm/shm.c	/^int remove_page(unsigned long vir_addr)				\/\/on the basis of put_page$/;"	f
 rep_int	kernel/chr_drv/rs_io.s	/^rep_int:$/;"	l
@@ -1702,9 +1721,9 @@ setup_rw_floppy	kernel/blk_drv/floppy.c	/^inline void setup_rw_floppy(void)$/;"	
 sgid	include/linux/sched.h	/^	unsigned short gid,egid,sgid;$/;"	m	struct:task_struct
 share_page	mm/memory.c	/^static int share_page(unsigned long address)$/;"	f	file:
 shift_map	kernel/chr_drv/keyboard.S	/^shift_map:$/;"	l
-shm_struct	mm/shm.c	/^}shm_struct;$/;"	t	typeref:struct:__anon3	file:
+shm_struct	mm/shm.c	/^}shm_struct;$/;"	t	typeref:struct:__anon6	file:
 shmat	lib/lib_shm.c	/^void *shmat(int shmid, void *shmaddr, int shmflg)$/;"	f
-shmid	mm/shm.c	/^	int shmid;$/;"	m	struct:__anon3	file:
+shmid	mm/shm.c	/^	int shmid;$/;"	m	struct:__anon6	file:
 shmid_arr	mm/shm.c	/^static shm_struct shmid_arr[SHM_NUM];$/;"	v	file:
 show_stat	kernel/sched.c	/^void show_stat(void)$/;"	f
 show_task	kernel/sched.c	/^void show_task(int nr,struct task_struct * p)$/;"	f
@@ -1719,7 +1738,7 @@ size	kernel/blk_drv/floppy.c	/^	unsigned int size, sect, head, track, stretch;$/
 size	kernel/chr_drv/keyboard.S	/^size	= 1024		\/* must be a power of two ! And MUST be the same$/;"	d
 size	kernel/chr_drv/rs_io.s	/^size	= 1024				\/* must be power of two !$/;"	d
 size	lib/malloc.c	/^	int			size;$/;"	m	struct:_bucket_dir	file:
-size	mm/shm.c	/^	unsigned int size;$/;"	m	struct:__anon3	file:
+size	mm/shm.c	/^	unsigned int size;$/;"	m	struct:__anon6	file:
 size_t	include/stddef.h	/^typedef unsigned long size_t;$/;"	t
 size_t	include/string.h	/^typedef unsigned int size_t;$/;"	t
 size_t	include/sys/types.h	/^typedef unsigned int size_t;$/;"	t

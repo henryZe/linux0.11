@@ -27,6 +27,31 @@ struct _pthread {
 };
 
 
+static inline pthread_t thread_self (void)
+{
+#ifdef THREAD_KERNEL
+	THREAD_SELF
+#else
+    char *sp = CURRENT_STACK_FRAME;
+	if (sp >= __pthread_initial_thread_bos)
+		return &__pthread_initial_thread;
+	else if (sp >= __pthread_manager_thread_bos 
+				&& sp < __pthread_manager_thread_tos)
+		return &__pthread_manager_thread;
+	else
+		return (pthread_t) (((unsigned long int) sp | (STACK_SIZE - 1)) + 1) - 1;
+#endif
+}
+
+static void pthread_perform_cleanup(void)
+{
+	pthread_t self = thread_self();
+	struct _pthread_cleanup_buffer * c;
+	
+	for (c = self->p_cleanup; c != NULL; c = c->prev)
+		c->routine(c->arg); 
+} 
+
 int pthread_attr_init(pthread_attr_t *attr)
 {
 	attr->detached = PTHREAD_CREATE_JOINABLE;
@@ -44,14 +69,35 @@ int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate)
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
                           void *(*start_routine) (void *), void *arg)
 {
-
+	pthread_t self = thread_self();
+	struct pthread_request request;
+	if (__pthread_manager_request < 0) {
+		if (pthread_initialize_manager() < 0) 
+			return EAGAIN;
+	}
+	request.req_thread = self;
+	request.req_kind = REQ_CREATE;
+	request.req_args.create.attr = attr;
+	request.req_args.create.fn = start_routine;
+	request.req_args.create.arg = arg;
+	sigprocmask(SIG_SETMASK, (const sigset_t *) NULL,
+	             &request.req_args.create.mask);
+	_libc_write(__pthread_manager_request, (char *) &request, sizeof(request));
+	suspend(self);
+	if (self->p_retcode == 0) 
+		*thread = (pthread_t) self->p_retval;
+	return self->p_retcode;
 }
 
 void pthread_exit(void *retval)
 {
-
+	pthread_perform_cleanup();
 }
 
+int pthread_join(pthread_t thread, void **value_ptr)
+{
+
+}
 
 int pthread_cancel(pthread_t thread)
 {
