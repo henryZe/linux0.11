@@ -479,8 +479,9 @@ PIPE_HEAD	include/linux/fs.h	58;"	d
 PIPE_SIZE	include/linux/fs.h	60;"	d
 PIPE_TAIL	include/linux/fs.h	59;"	d
 PLUS	kernel/vsprintf.c	29;"	d	file:
-PTHREAD_CANCEL_DISABLE	include/pthread.h	8;"	d
-PTHREAD_CANCEL_ENABLE	include/pthread.h	9;"	d
+PTHREAD_CANCELED	include/pthread.h	10;"	d
+PTHREAD_CANCEL_DISABLE	include/pthread.h	7;"	d
+PTHREAD_CANCEL_ENABLE	include/pthread.h	8;"	d
 PTHREAD_CREATE_DETACHED	include/pthread.h	5;"	d
 PTHREAD_CREATE_JOINABLE	include/pthread.h	4;"	d
 PUTCH	include/linux/tty.h	33;"	d
@@ -1542,10 +1543,13 @@ ps_content	fs/proc.c	/^static char *ps_content = NULL;$/;"	v	file:
 pthread_attr_init	lib/pthread.c	/^int pthread_attr_init(pthread_attr_t *attr)$/;"	f
 pthread_attr_setdetachstate	lib/pthread.c	/^int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate)$/;"	f
 pthread_cancel	lib/pthread.c	/^int pthread_cancel(pthread_t thread)$/;"	f
-pthread_cleanup_pop	include/pthread.h	15;"	d
-pthread_cleanup_push	include/pthread.h	11;"	d
+pthread_cleanup_pop	include/pthread.h	16;"	d
+pthread_cleanup_push	include/pthread.h	12;"	d
 pthread_create	lib/pthread.c	/^int pthread_create(pthread_t *thread, const pthread_attr_t *attr,$/;"	f
 pthread_exit	lib/pthread.c	/^void pthread_exit(void *retval)$/;"	f
+pthread_initialize_manager	lib/pthread.c	/^static int pthread_initialize_manager(void)$/;"	f	file:
+pthread_join	lib/pthread.c	/^int pthread_join(pthread_t thread, void **value_ptr)$/;"	f
+pthread_perform_cleanup	lib/pthread.c	/^static void pthread_perform_cleanup(void)$/;"	f	file:
 pthread_setcancelstate	lib/pthread.c	/^int pthread_setcancelstate(int state, int *oldstate)$/;"	f
 pthread_testcancel	lib/pthread.c	/^void pthread_testcancel(void)$/;"	f
 ptrdiff_t	include/stddef.h	/^typedef long ptrdiff_t;$/;"	t
@@ -1909,6 +1913,7 @@ tell_father	kernel/exit.c	/^static void tell_father(int pid)$/;"	f	file:
 termio	include/termios.h	/^struct termio {$/;"	s
 termios	include/linux/tty.h	/^	struct termios termios;$/;"	m	struct:tty_struct	typeref:struct:tty_struct::termios
 termios	include/termios.h	/^struct termios {$/;"	s
+thread_self	lib/pthread.c	/^static inline pthread_t thread_self (void)$/;"	f	file:
 ticks_to_floppy_on	kernel/sched.c	/^int ticks_to_floppy_on(unsigned int nr)$/;"	f
 time_init	init/main.c	/^static void time_init(void)$/;"	f	file:
 time_t	include/sys/types.h	/^typedef long time_t;$/;"	t

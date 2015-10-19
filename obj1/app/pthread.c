@@ -1,5 +1,5 @@
+#include "pthread.h"
 #include <stdio.h>
-#include <pthread.h>
 
 struct _pthread {
 	pthread_t p_nextlive, p_prevlive; /* Double chaining of active threads */
@@ -7,8 +7,6 @@ struct _pthread {
 	int p_pid;                    /* PID of Unix process */
     int p_spinlock;               /* Spinlock for synchronized accesses */
   	int p_signal;                 /* last signal received */
-    sigjmp_buf * p_signal_jmp;    /* where to siglongjmp on a signal or NULL */
-	sigjmp_buf * p_cancel_jmp;    /* where to siglongjmp on a cancel or NULL */
     char p_terminated;            /* true if terminated e.g. by pthread_exit */
   	char p_detached;              /* true if detached */
     char p_exited;                /* true if the assoc. process terminated */
@@ -22,7 +20,6 @@ struct _pthread {
   	int p_h_errno;                /* error returned by last netdb function */
     void *(*p_initial_fn)(void *); /* function to call on thread start */
   	void *p_initial_fn_arg;   /* argument to give that function */
-    sigset_t p_initial_mask;  /* signal mask on thread start */
 	void * p_specific[PTHREAD_KEYS_MAX]; /* thread-specific data */
 };
 

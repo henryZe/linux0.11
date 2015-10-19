@@ -1,0 +1,100 @@
+In file included from /usr/include/x86_64-linux-gnu/sys/types.h:271:0,
+                 from /usr/include/stdlib.h:320,
+                 from memtest.c:6:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:50:27: error: conflicting types for ‘pthread_t’
+pthread.h:29:27: note: previous declaration of ‘pthread_t’ was here
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:57:3: error: conflicting types for ‘pthread_attr_t’
+pthread.h:21:3: note: previous declaration of ‘pthread_attr_t’ was here
+memtest.c: In function ‘main’:
+memtest.c:103:2: error: unknown type name ‘regex_t’
+memtest.c:104:2: error: unknown type name ‘regmatch_t’
+memtest.c:111:2: warning: passing argument 1 of ‘pthread_attr_init’ from incompatible pointer type [enabled by default]
+pthread.h:31:5: note: expected ‘struct pthread_attr_t *’ but argument is of type ‘union pthread_attr_t *’
+memtest.c:112:2: warning: passing argument 1 of ‘pthread_attr_setdetachstate’ from incompatible pointer type [enabled by default]
+pthread.h:32:5: note: expected ‘struct pthread_attr_t *’ but argument is of type ‘union pthread_attr_t *’
+memtest.c:115:2: warning: implicit declaration of function ‘regcomp’ [-Wimplicit-function-declaration]
+memtest.c:115:28: error: ‘REG_EXTENDED’ undeclared (first use in this function)
+memtest.c:115:28: note: each undeclared identifier is reported only once for each function it appears in
+memtest.c:116:3: warning: implicit declaration of function ‘regerror’ [-Wimplicit-function-declaration]
+memtest.c:124:3: warning: implicit declaration of function ‘regexec’ [-Wimplicit-function-declaration]
+memtest.c:125:13: error: ‘REG_NOMATCH’ undeclared (first use in this function)
+memtest.c:136:35: error: request for member ‘rm_so’ in something not a structure or union
+memtest.c:139:19: error: request for member ‘rm_eo’ in something not a structure or union
+memtest.c:139:37: error: request for member ‘rm_so’ in something not a structure or union
+memtest.c:141:41: error: request for member ‘rm_so’ in something not a structure or union
+memtest.c:183:5: warning: passing argument 1 of ‘pthread_create’ from incompatible pointer type [enabled by default]
+pthread.h:33:5: note: expected ‘struct _pthread **’ but argument is of type ‘pthread_t *’
+memtest.c:183:5: warning: passing argument 2 of ‘pthread_create’ from incompatible pointer type [enabled by default]
+pthread.h:33:5: note: expected ‘const struct pthread_attr_t *’ but argument is of type ‘union pthread_attr_t *’
+memtest.c:201:5: warning: passing argument 1 of ‘pthread_cancel’ makes pointer from integer without a cast [enabled by default]
+pthread.h:37:5: note: expected ‘pthread_t’ but argument is of type ‘pthread_t’
+memtest.c: In function ‘memtest’:
+memtest.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+pthread.c:10:5: error: unknown type name ‘sigjmp_buf’
+pthread.c:11:2: error: unknown type name ‘sigjmp_buf’
+pthread.c:25:5: error: unknown type name ‘sigset_t’
+pthread.c:26:20: error: ‘PTHREAD_KEYS_MAX’ undeclared here (not in a function)
+pthread.c: In function ‘thread_self’:
+pthread.c:35:16: error: ‘CURRENT_STACK_FRAME’ undeclared (first use in this function)
+pthread.c:35:16: note: each undeclared identifier is reported only once for each function it appears in
+pthread.c:36:12: error: ‘__pthread_initial_thread_bos’ undeclared (first use in this function)
+pthread.c:37:11: error: ‘__pthread_initial_thread’ undeclared (first use in this function)
+pthread.c:38:17: error: ‘__pthread_manager_thread_bos’ undeclared (first use in this function)
+pthread.c:39:13: error: ‘__pthread_manager_thread_tos’ undeclared (first use in this function)
+pthread.c:40:11: error: ‘__pthread_manager_thread’ undeclared (first use in this function)
+pthread.c:42:50: error: ‘STACK_SIZE’ undeclared (first use in this function)
+pthread.c: In function ‘pthread_initialize_manager’:
+pthread.c:74:2: error: ‘__pthread_manager_thread_bos’ undeclared (first use in this function)
+pthread.c:74:2: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+pthread.c:74:33: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+pthread.c:74:40: error: ‘THREAD_MANAGER_STACK_SIZE’ undeclared (first use in this function)
+pthread.c:78:2: error: ‘pthread_manager_thread_tos’ undeclared (first use in this function)
+pthread.c:81:2: warning: implicit declaration of function ‘pipe’ [-Wimplicit-function-declaration]
+pthread.c:82:3: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+pthread.c:82:3: warning: incompatible implicit declaration of built-in function ‘free’ [enabled by default]
+pthread.c:85:2: error: ‘__pthread_manager_request’ undeclared (first use in this function)
+pthread.c:86:2: error: ‘__pthread_manager_reader’ undeclared (first use in this function)
+pthread.c:88:2: warning: implicit declaration of function ‘__clone’ [-Wimplicit-function-declaration]
+pthread.c:88:14: error: ‘__pthread_manager’ undeclared (first use in this function)
+pthread.c:89:13: error: ‘__pthread_manager_thread_tos’ undeclared (first use in this function)
+pthread.c:90:5: error: ‘CLONE_VM’ undeclared (first use in this function)
+pthread.c:90:16: error: ‘CLONE_FS’ undeclared (first use in this function)
+pthread.c:90:27: error: ‘CLONE_FILES’ undeclared (first use in this function)
+pthread.c:90:41: error: ‘CLONE_SIGHAND’ undeclared (first use in this function)
+pthread.c:92:3: warning: incompatible implicit declaration of built-in function ‘free’ [enabled by default]
+pthread.c:93:3: warning: implicit declaration of function ‘__libc_close’ [-Wimplicit-function-declaration]
+pthread.c: In function ‘pthread_create’:
+pthread.c:105:25: error: storage size of ‘request’ isn’t known
+pthread.c:106:6: error: ‘__pthread_manager_request’ undeclared (first use in this function)
+pthread.c:108:11: error: ‘EAGAIN’ undeclared (first use in this function)
+pthread.c:112:21: error: ‘REQ_CREATE’ undeclared (first use in this function)
+pthread.c:116:2: warning: implicit declaration of function ‘sigprocmask’ [-Wimplicit-function-declaration]
+pthread.c:116:14: error: ‘SIG_SETMASK’ undeclared (first use in this function)
+pthread.c:116:2: error: unknown type name ‘sigset_t’
+pthread.c:118:2: warning: implicit declaration of function ‘_libc_write’ [-Wimplicit-function-declaration]
+pthread.c:119:2: warning: implicit declaration of function ‘suspend’ [-Wimplicit-function-declaration]
+pthread.c:105:25: warning: unused variable ‘request’ [-Wunused-variable]
+pthread.c: In function ‘pthread_exit’:
+pthread.c:129:25: error: storage size of ‘request’ isn’t known
+pthread.c:137:2: warning: implicit declaration of function ‘__pthread_destroy_specifics’ [-Wimplicit-function-declaration]
+pthread.c:150:3: warning: implicit declaration of function ‘restart’ [-Wimplicit-function-declaration]
+pthread.c:155:14: error: ‘__pthread_main_thread’ undeclared (first use in this function)
+pthread.c:155:39: error: ‘__pthread_manager_request’ undeclared (first use in this function)
+pthread.c:157:22: error: ‘REQ_MAIN_THREAD_EXIT’ undeclared (first use in this function)
+pthread.c:158:3: warning: implicit declaration of function ‘__libc_write’ [-Wimplicit-function-declaration]
+pthread.c:164:2: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+pthread.c:164:2: warning: incompatible implicit declaration of built-in function ‘exit’ [enabled by default]
+pthread.c:129:25: warning: unused variable ‘request’ [-Wunused-variable]
+pthread.c: In function ‘pthread_join’:
+pthread.c:170:25: error: storage size of ‘request’ isn’t known
+pthread.c:172:6: error: ‘th’ undeclared (first use in this function)
+pthread.c:173:10: error: ‘EDEADLK’ undeclared (first use in this function)
+pthread.c:177:10: error: ‘EINVAL’ undeclared (first use in this function)
+pthread.c:187:6: error: ‘thread_return’ undeclared (first use in this function)
+pthread.c:191:6: error: ‘__pthread_manager_request’ undeclared (first use in this function)
+pthread.c:193:22: error: ‘REQ_FREE’ undeclared (first use in this function)
+pthread.c:170:25: warning: unused variable ‘request’ [-Wunused-variable]
+pthread.c: In function ‘pthread_setcancelstate’:
+pthread.c:215:10: error: ‘EINVAL’ undeclared (first use in this function)
+pthread.c: In function ‘thread_self’:
+pthread.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
