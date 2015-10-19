@@ -1,5 +1,7 @@
 #include "pthread.h"
 #include <stdio.h>
+#include <errno.h>
+#include <unistd.h>
 
 struct _pthread {
 	pthread_t p_nextlive, p_prevlive; /* Double chaining of active threads */
@@ -20,7 +22,6 @@ struct _pthread {
   	int p_h_errno;                /* error returned by last netdb function */
     void *(*p_initial_fn)(void *); /* function to call on thread start */
   	void *p_initial_fn_arg;   /* argument to give that function */
-	void * p_specific[PTHREAD_KEYS_MAX]; /* thread-specific data */
 };
 
 
@@ -161,7 +162,7 @@ void pthread_exit(void *retval)
 	exit(0);
 }
 
-int pthread_join(pthread_t thread, void **value_ptr)
+int pthread_join(pthread_t th, void **thread_return)
 {
 	volatile pthread_t self = thread_self();
 	struct pthread_request request;

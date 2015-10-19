@@ -44,7 +44,7 @@ void handler(void *stat)
 	struct task_status *t_stat = (struct task_status *)stat;
 
 	t_stat->run = 0;
-	printf("thread %ld(%d) is aborted.\n", t_stat->tid, t_stat->count);
+	printf("thread %p(%d) is aborted.\n", t_stat->tid, t_stat->count);
 }
 
 void *memtest(void *stat)

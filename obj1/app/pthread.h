@@ -26,7 +26,7 @@ struct _pthread_cleanup_buffer {
 	struct _pthread_cleanup_buffer *prev; /* Chaining of cleanup functions.  */
 };
 
-typedef struct _pthread * pthread_t;
+typedef struct _pthread *pthread_t;
 
 int pthread_attr_init(pthread_attr_t *attr);
 int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate);
