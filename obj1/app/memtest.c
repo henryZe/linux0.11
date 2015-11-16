@@ -112,7 +112,6 @@ int main()
 	pthread_attr_init(&attr);
 /*	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
 */
-
 /*	if(regcomp(&reg, pattern, REG_EXTENDED)<0){
 		regerror(err, &reg, errbuf, sizeof(errbuf));
 		printf("err:%s\n",errbuf);

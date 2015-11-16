@@ -5,22 +5,22 @@
 
 struct _pthread {
 	pthread_t p_nextlive, p_prevlive; /* Double chaining of active threads */
-    pthread_t p_nextwaiting;      /* Next element in the queue holding the thr */
+    	pthread_t p_nextwaiting;      /* Next element in the queue holding the thr */
 	int p_pid;                    /* PID of Unix process */
-    int p_spinlock;               /* Spinlock for synchronized accesses */
+   	int p_spinlock;               /* Spinlock for synchronized accesses */
   	int p_signal;                 /* last signal received */
-    char p_terminated;            /* true if terminated e.g. by pthread_exit */
+    	char p_terminated;            /* true if terminated e.g. by pthread_exit */
   	char p_detached;              /* true if detached */
-    char p_exited;                /* true if the assoc. process terminated */
+    	char p_exited;                /* true if the assoc. process terminated */
   	void * p_retval;              /* placeholder for return value */
-    int p_retcode;                /* placeholder for return code */
+   	int p_retcode;                /* placeholder for return code */
 	pthread_t p_joining;          /* thread joining on that thread or NULL */
-    struct _pthread_cleanup_buffer * p_cleanup; /* cleanup functions */
+    	struct _pthread_cleanup_buffer * p_cleanup; /* cleanup functions */
   	char p_cancelstate;           /* cancellation state */
   	char p_canceled;              /* cancellation request pending */
-    int p_errno;                  /* error returned by last system call */
+   	int p_errno;                  /* error returned by last system call */
   	int p_h_errno;                /* error returned by last netdb function */
-    void *(*p_initial_fn)(void *); /* function to call on thread start */
+    	void *(*p_initial_fn)(void *); /* function to call on thread start */
   	void *p_initial_fn_arg;   /* argument to give that function */
 };
 
@@ -29,8 +29,8 @@ static inline pthread_t thread_self (void)
 {
 #ifdef THREAD_KERNEL
 	THREAD_SELF
-#else
-    char *sp = CURRENT_STACK_FRAME;
+#else   
+	char *sp = CURRENT_STACK_FRAME;
 	if (sp >= __pthread_initial_thread_bos)
 		return &__pthread_initial_thread;
 	else if (sp >= __pthread_manager_thread_bos 
@@ -190,8 +190,8 @@ int pthread_join(pthread_t th, void **thread_return)
 		request.req_thread = self;
 		request.req_kind = REQ_FREE;
 		request.req_args.free.thread = th;
-	    __libc_write(__pthread_manager_request,
-						(char *) &request, sizeof(request));
+		__libc_write(__pthread_manager_request,
+			(char *) &request, sizeof(request));
 	}
 	
 	return 0;
@@ -228,7 +228,7 @@ void _pthread_cleanup_push(struct _pthread_cleanup_buffer *buffer, void (*routin
 	pthread_t self = thread_self();
 	
 	buffer->routine = routine;
-    buffer->arg = arg;
+	buffer->arg = arg;
 	
 	buffer->prev = self->p_cleanup;
 	self->p_cleanup = buffer;
