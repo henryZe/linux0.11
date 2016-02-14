@@ -44,8 +44,8 @@ go:
 	int	0x10
 
 jmp_setup:
-	jmpi	0,INITSEG
-!	jmp	jmp_setup
+	jmp	jmp_setup
+!	jmp	go
 
 sectors:
 	.word 0
@@ -54,7 +54,7 @@ msg1:
 	.byte 13,10,13,10
 	.ascii "======================"
 	.byte 13,10
-	.ascii "  ZeOS is Coming ...  "
+	.ascii "  HenryX is Coming ..."
 	.byte 13,10
 	.ascii "======================"
 	.byte 13,10,13,10
