@@ -90,8 +90,6 @@ void runcmd(struct cmd *cmd)
 }
 
 
-
-
 int main(void)
 {
 	static char buf[100];
