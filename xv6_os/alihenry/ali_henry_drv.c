@@ -14,9 +14,8 @@ static int henry_open
 )
 {
 	struct henry_drv *drv =
-		container_of(file->f_dentry->d_inode->i_cdev, struct henry_drv, cdev);
-
-	
+		container_of(file->f_dentry->d_inode->i_cdev,
+		struct henry_drv, cdev);
 
 	dev_info(drv->dev, "henry_drv_open\n");
 	return 0;
@@ -29,7 +28,8 @@ static int henry_close
 )
 {
 	struct henry_drv *drv =
-		container_of(file->f_dentry->d_inode->i_cdev, struct henry_drv, cdev);
+		container_of(file->f_dentry->d_inode->i_cdev,
+		struct henry_drv, cdev);
 
 	dev_info(drv->dev, "henry_drv_close\n");
 	return 0;
@@ -39,7 +39,8 @@ static ssize_t henry_read(struct file *file,
 	char __user *buf, size_t size, loff_t *f_pos)
 {
 	struct henry_drv *drv =
-		container_of(file->f_dentry->d_inode->i_cdev, struct henry_drv, cdev);
+		container_of(file->f_dentry->d_inode->i_cdev,
+		struct henry_drv, cdev);
 
 	dev_info(drv->dev, "henry_drv_read\n");
 	return 0;
@@ -49,7 +50,8 @@ static ssize_t henry_write(struct file *file,
 	const char __user *buf, size_t size, loff_t *offset)
 {
 	struct henry_drv *drv =
-		container_of(file->f_dentry->d_inode->i_cdev, struct henry_drv, cdev);
+		container_of(file->f_dentry->d_inode->i_cdev,
+		struct henry_drv, cdev);
 
 	dev_info(drv->dev, "henry_drv_write\n");
 	return 0;
@@ -61,7 +63,6 @@ static const struct file_operations g_henry_fops = {
 
 	.read = henry_read,
 	.write = henry_write,
-	
 };
 
 static int henry_drv_probe(struct see_client *clnt)
@@ -100,7 +101,7 @@ static int henry_drv_probe(struct see_client *clnt)
 	dev_set_drvdata(&clnt->dev, drv);
 
 	sha_dbgfs_create(drv);
-	
+
 	dev_info(&clnt->dev, "HENRY driver probed\n");
 
 out:
@@ -130,7 +131,7 @@ int henry_drv_remove(struct see_client *clnt)
 	cdev_del(&drv->cdev);
 	class_destroy(drv->dev_class);
 	kfree(drv);
-	
+
 	sha_dbgfs_remove(drv);
 
 	dev_info(&clnt->dev, "HENRY driver removed\n");
@@ -147,7 +148,7 @@ static struct see_client_driver henry_drv = {
 	.probe	= henry_drv_probe,
 	.remove	= henry_drv_remove,
 	.driver	= {
-        .name = "HENRY",
+		.name = "HENRY",
 		.of_match_table	= see_henry_matchtbl,
 	},
 	.see_min_version = SEE_MIN_VERSION(0, 1, 1, 0),

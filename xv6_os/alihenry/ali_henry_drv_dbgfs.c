@@ -3,7 +3,7 @@
 
 #include "ali_henry_priv.h"
 
-static int sha_show_status(struct seq_file *f, void *p)
+static int henry_show_status(struct seq_file *f, void *p)
 {
 	struct ca_dsc_session *s = f->private;
 
@@ -26,9 +26,9 @@ static int sha_show_status(struct seq_file *f, void *p)
 	return 0;
 }
 
-static int sha_debugfs_open(struct inode *i, struct file *f)
+static int henry_debugfs_open(struct inode *i, struct file *f)
 {
-	return single_open(f, sha_show_status, i->i_private);
+	return single_open(f, henry_show_status, i->i_private);
 }
 
 static const struct file_operations sha_status_ops = {
@@ -39,7 +39,7 @@ static const struct file_operations sha_status_ops = {
 	.owner = THIS_MODULE,
 };
 
-void sha_dbgfs_create(struct henry_drv *drv)
+void henry_dbgfs_create(struct henry_drv *drv)
 {
 	drv->debugfs_dir = debugfs_create_dir(HENRY_DEV, NULL);
 
@@ -47,7 +47,7 @@ void sha_dbgfs_create(struct henry_drv *drv)
 		dev_err(drv->dev, "debugfs create dentry failed\n");
 }
 
-void sha_dbgfs_remove(struct henry_drv *drv)
+void henry_dbgfs_remove(struct henry_drv *drv)
 {
 	if (drv && drv->debugfs_dir)
 		debugfs_remove_recursive(drv->debugfs_dir);

@@ -7,7 +7,7 @@
 
 struct henry_drv {
 	dev_t dev_num;
-    struct cdev cdev;
+	struct cdev cdev;
 	struct class *dev_class;
 	struct device *dev;
 
