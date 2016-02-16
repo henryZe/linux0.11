@@ -1,0 +1,8 @@
+* Ali DSC
+
+Required properties :
+- compatible : should be "alitech,dsc"
+- reg : unique index within the see_bus
+- clocks : defines the dsc pin number of the clock gating
+- clock-names : should be "dsc_clk"
+
