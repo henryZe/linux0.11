@@ -1,1 +1,0 @@
-cmd_/zhsa022/usrhome/henry.zeng/cap210_release/linux-kernel/drivers/alidrivers/modules/alihenry/built-in.o :=  rm -f /zhsa022/usrhome/henry.zeng/cap210_release/linux-kernel/drivers/alidrivers/modules/alihenry/built-in.o; ar rcsD /zhsa022/usrhome/henry.zeng/cap210_release/linux-kernel/drivers/alidrivers/modules/alihenry/built-in.o
