@@ -1,16 +1,16 @@
 /* shell */
 
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <string.h>
-
-#include "types.h"
-/*#include "user.h"
-#include "fcntl.h"
 */
+#include "types.h"
+#include "user.h"
+#include "fcntl.h"
 
 /* parsed command representation */
 #define EXEC	1
