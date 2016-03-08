@@ -2,8 +2,7 @@ CC=gcc
 
 BINDIR=./hdc/usr/bin
 
-SRC=$(wildcard *.c)
-TARGET=$(patsubst %.c,%,$(SRC))
+TARGET=cat sh
 
 FLAG=-I../include
 
@@ -14,6 +13,5 @@ all:$(TARGET)
 	cp $@ $(BINDIR)
 
 .PHONY:clean
-
 clean:
-	-rm $(TARGET)
+	-rm $(OBJ)

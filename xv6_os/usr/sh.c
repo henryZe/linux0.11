@@ -8,9 +8,9 @@
 #include <fcntl.h>
 #include <string.h>
 */
-#include "types.h"
-#include "user.h"
-#include "fcntl.h"
+#include <types.h>
+#include <user.h>
+#include <fcntl.h>
 
 /* parsed command representation */
 #define EXEC	1
