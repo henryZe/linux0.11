@@ -21,7 +21,7 @@ void bootmain(void)
 
 
 
-
+	return 0;
 }
 
 
